@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
-  
 }
-
+   
 body {
   margin: 0;
   padding: 0;
@@ -10,14 +9,16 @@ body {
   position: relative;
   height: 100%;
 }
-
+   
 .app-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: #000000;
   height: 100vh;
+  padding: 0 5rem;
+  align-items: center;
 }
-
+   
 .recs{
 margin: auto;
 }
@@ -29,8 +30,4 @@ margin: auto;
 
 video{
   height: 100%;
-}
-
-.others{
-  margin: auto 0;
 }
