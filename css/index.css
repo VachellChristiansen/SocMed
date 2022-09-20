@@ -20,13 +20,14 @@ body {
 }
    
 .recs{
+margin: auto;
 }
 
 .content{
   height:100vh;
+  margin: 0 auto;
 }
 
 video{
   height: 100%;
 }
-   
