@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  position: relative;
+  height: 100%;
+}
+
+.app-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #000000;
+  height: 100vh;
+}
+
+.recs{
+margin: auto;
+}
+
+.content{
+  height:100vh;
+  margin: 0 auto;
+}
+
+video{
+  height: 100%;
+}
+
+.others{
+  margin: auto 0;
+}
