@@ -116,3 +116,55 @@ video{
 
 }
 
+/* RECOMMENDED USER */
+img{
+  border-radius: 100%;
+  }
+  
+  .profile-card{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-card .username{
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(253, 249, 249);
+  }
+  
+  .sub-text{
+    color: rgb(253, 249, 249);
+    font-size:12px;
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  
+  .action-btn{
+    width: 70px;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    color: rgb(0, 162, 255);
+    opacity: 1;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  
+  .suggestion-text{
+    font-size: 14px;
+    color: rgba(253, 249, 249, 0.678);
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  
+  .tops-text{
+    font-size: 14px;
+    color:rgba(253, 249, 249, 0.678);
+    font-weight: 700;
+    margin: 20px 0;
+  }
