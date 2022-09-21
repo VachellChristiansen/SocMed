@@ -1,18 +1,13 @@
-/* IMPORTING FONT POPPIN FROM GOOGLE FONT*/
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
     border: none;
 }
-
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -53,11 +48,6 @@ nav .search-bar{
   border-radius: 2rem;
   padding: 0.6rem 1rem;
   color: hsl(252, 30%, 10%);
-  /* width: 350px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  padding: 0 15px; */
 }
 
 nav .search-bar input[type="search"]{
