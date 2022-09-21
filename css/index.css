@@ -107,14 +107,36 @@ nav .profile-photo{
 }
 
 .recs{
-margin: auto;
+  margin: auto;
 }
 
 .content{
   height:100vh;
+  width: 100%;
   margin: 0 auto;
 }
 
 video{
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
 }
+
+/* OTHERS SECTION */
+.circle{
+  color:var(--color-primary);
+  background-color: var(--color-light);
+  display: flex;
+  width: 5%;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin: 1em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.others {
+
+}
+
