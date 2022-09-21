@@ -17,7 +17,33 @@ body {
   height: 100%;
   color: whitesmoke;
   background: hsl(252, 30%, 95%);
+  background-color: #000000;
   overflow-x: hidden;
+}
+
+.column {
+  float: left;
+  padding: 70px;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 }
 
 /* NAVBAR SECTION */
@@ -80,6 +106,7 @@ nav .profile-photo{
   height: 100vh;
   padding: 0 5rem;
   align-items: center;
+  width: 50%;
 }
 
 .recs{
