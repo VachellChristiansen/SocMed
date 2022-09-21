@@ -33,7 +33,6 @@ body {
 .column.middle {
   width: 50%;
 }
-
 .row:after {
   content: "";
   display: table;
@@ -137,10 +136,10 @@ video{
   margin: 1em 0;
   justify-content: center;
   align-items: center;
+  margin-left: 470px;
 }
 
 .others {
-
 }
 
 /* RECOMMENDED USER */
