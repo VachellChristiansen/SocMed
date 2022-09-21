@@ -95,8 +95,8 @@ video{
 
 /* OTHERS SECTION */
 .circle{
-  color:var(--color-primary);
-  background-color: var(--color-light);
+  color: hsl(252, 75%, 60%);
+  background-color: hsl(252, 30%, 95%);
   display: flex;
   width: 5%;
   height: 60px;
