@@ -41,6 +41,11 @@ nav .container {
 
 nav .logo{
   color: hsl(252, 75%, 60%);
+  display: flex;
+  align-items: center;
+}
+nav .logo .icon{
+  margin-right: 8px;
 }
 
 nav .search-bar{
