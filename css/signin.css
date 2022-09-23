@@ -83,7 +83,7 @@ body{
     background: url('../img/background.jpg') center no-repeat;
     background-size: cover;
     border: 5px solid #191919;
-    border-radius: 20px;
+    border-radius: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -96,14 +96,14 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: stars-rotate 100s linear forwards;
+    animation: stars-rotate 100s linear forwards infinite;
 }
 
 .astronaut {
-    top: 40px;
-    right: 10px;
+    top: 80px;
+    right: -60px;
     width: 40px;
-    animation: astronaut-move 20s forwards;
+    animation: astronaut-move 20s forwards infinite;
 }
 
 .ship {
@@ -111,14 +111,14 @@ body{
     left: 120px;
     width: 50px;
     transform: scale(0);
-    animation: ship-move 15s 3s forwards;
+    animation: ship-move 15s 3s forwards infinite;
 }
 
 .comet {
     top: 150px;
     left: -250px;
     width: 150px;
-    animation: comet-move 20s 5s forwards;
+    animation: comet-move 20s 5s forwards infinite;
 }
 
 .moon {
@@ -154,8 +154,14 @@ body{
 @keyframes comet-move {
     to {
         transform:
-            translate(500px, -150px);
+            translate(800px, -150px);
         filter: hue-rotate(360deg);
     }
 }
 
+.astronaut-back{
+  position: fixed;
+  transform: scale(2);
+  bottom: -10em;
+  left: 5em;
+}
