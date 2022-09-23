@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+
+input,button{
+    font-size: 1em;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.title{
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.gambar{
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-image: url("../img/space.jpg");
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-box{
+    width:50%;
+    height: 50%;
+    padding: 5px;
+    margin: 0 auto;
+    background: hsl(0, 0%, 0%);
+    position: relative;
+    border-radius: 10px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group input{
+    padding: 15px 25px;
+}
+
+.signin-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 30px;
+    max-width: 400px;
+}
+
+.account{
+    width: 100%;
+    padding: 0 auto;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+
+}
+
+.login button{
+    border-radius: 2em;
+    padding: 10px 20px;
+}
+
+.login{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
