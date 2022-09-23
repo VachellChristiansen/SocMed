@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    border: none;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border: none;
 }
 
 body {
@@ -30,24 +30,16 @@ body {
   width: 25%;
 }
 
-.column.middle {
-  width: 50%;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 @media screen and (max-width: 600px) {
-  .column.side, .column.middle {
+
+  .column.side,
+  .column.middle {
     width: 100%;
   }
 }
 
 /* NAVBAR SECTION */
-
-nav{
+nav {
   width: 100%;
   background: hsl(252, 30%, 100%);
   padding: 0.7rem 0;
@@ -64,23 +56,24 @@ nav .container {
   margin: 0 auto;
 }
 
-nav .logo{
+nav .logo {
   color: hsl(252, 75%, 60%);
   display: flex;
   align-items: center;
 }
-nav .logo .icon{
+
+nav .logo .icon {
   margin-right: 8px;
 }
 
-nav .search-bar{
+nav .search-bar {
   background: hsl(252, 30%, 95%);
   border-radius: 2rem;
   padding: 0.6rem 1rem;
   color: hsl(252, 30%, 10%);
 }
 
-nav .search-bar input[type="search"]{
+nav .search-bar input[type="search"] {
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
@@ -88,44 +81,44 @@ nav .search-bar input[type="search"]{
   color: hsl(252, 30%, 17%);
 }
 
-nav .search-bar input[type="search"]::placeholder{
+nav .search-bar input[type="search"]::placeholder {
   color: hsl(252, 15%, 65%);
 }
 
-nav .profile-photo{
+nav .profile-photo {
   color: hsl(252, 30%, 10%);
 }
 
 
 /* CONTENT SECTION */
-.app-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: #000000;
-  height: 100vh;
-  padding: 0 5rem;
-  align-items: center;
-  width: 50%;
+.card {
+  width: 30rem;
+  ;
+  background-color: #000;
+  color: white;
+  padding: 1.5rem;
+  border-radius: .4rem;
 }
 
-.recs{
-  margin: auto;
-}
+@media screen and (min-width: 34.375em) {
+  .card {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
 
-.content{
-  height:100vh;
-  width: 100%;
-  margin: 0 auto;
-}
+  .card__video {
+    flex: 0 0 2rem;
+  }
 
-video{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
+  .card__information-description {
+    font-size: 1.6rem;
+  }
 }
 
 /* OTHERS SECTION */
-.circle{
+.circle {
   color: hsl(252, 75%, 60%);
   background-color: hsl(252, 30%, 95%);
   display: flex;
@@ -136,61 +129,61 @@ video{
   margin: 1em 0;
   justify-content: center;
   align-items: center;
-  margin-left: 470px;
 }
 
 .others {
+  padding-top: 50px;
 }
 
 /* RECOMMENDED USER */
-img{
+img {
   border-radius: 100%;
-  }
-  
-  .profile-card{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .profile-card .username{
-    font-weight: 500;
-    font-size: 14px;
-    color: rgb(253, 249, 249);
-  }
-  
-  .sub-text{
-    color: rgb(253, 249, 249);
-    font-size:12px;
-    font-weight: 500;
-    margin-top: 5px;
-  }
-  
-  .action-btn{
-    width: 70px;
-    height: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    text-transform: capitalize;
-    color: rgb(0, 162, 255);
-    opacity: 1;
-    font-weight: 700;
-    font-size: 12px;
-  }
-  
-  .suggestion-text{
-    font-size: 14px;
-    color: rgba(253, 249, 249, 0.678);
-    font-weight: 700;
-    margin: 20px 0;
-  }
-  
-  .tops-text{
-    font-size: 14px;
-    color:rgba(253, 249, 249, 0.678);
-    font-weight: 700;
-    margin: 20px 0;
-  }
+}
+
+.profile-card {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-card .username {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(253, 249, 249);
+}
+
+.sub-text {
+  color: rgb(253, 249, 249);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.action-btn {
+  width: 70px;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  opacity: 1;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.suggestion-text {
+  font-size: 14px;
+  color: rgba(253, 249, 249, 0.678);
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.tops-text {
+  font-size: 14px;
+  color: rgba(253, 249, 249, 0.678);
+  font-weight: 700;
+  margin: 20px 0;
+}
