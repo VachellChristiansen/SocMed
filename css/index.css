@@ -106,6 +106,7 @@ nav .profile-photo {
     display: flex;
     align-items: center;
     column-gap: 1.5rem;
+    padding: 70px;
   }
 
   .card__video {
