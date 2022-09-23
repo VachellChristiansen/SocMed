@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding:0;
 
@@ -11,6 +12,8 @@ input,button{
 }
 
 body{
+    font-family: 'Poppins', sans-serif;
+    background: black;
     background-color: black;
     color: white;
 }
