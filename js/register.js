@@ -5,11 +5,13 @@ function checkPasswordMatch() {
     if (password != confirmPassword ){
       $("#checkMatch").css('color','#ff0000');
       $("#checkMatch").html("Passwords does not match!");
+      $(".submit").attr('disabled','disabled');
     }
     else
       {
         $("#checkMatch").css('color','#00ff84');
         $("#checkMatch").html("Passwords match.");
+        $(".submit").removeAttr('disabled');
       }
   }
   

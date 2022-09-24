@@ -1,23 +1,23 @@
+var toggleMargin = false;
 $('#comment-button').click((event)=>{
- var checkMargin= $('.others').css('margin');
-//  if(checkMargin==='auto'){
-//   console.log("A");
-//   $('.others').css('margin','0');
-//  } else {
-//   console.log("B");
-//   $('.others').css('margin','auto');
-//  }
+  if(!toggleMargin){
+    $('.others').css('margin','0px');
+  
+   } else {
+    $('.others').css('margin','auto');
+   }
+   toggleMargin=!toggleMargin;
 
   $('.comment').toggle();
 });
 
-function redirectLogin(){
-
-console.log("A");
-};
 
 $('.log-in').click((event)=>{
   window.location.href="../html/signin.html";
+});
+
+$('.sign-up').click((event)=>{
+  window.location.href="../html/register.html";
 });
 
 /* add button micro */
