@@ -88,14 +88,15 @@ body{
 form i{
     float: right;
     margin-left: -40px;
-    margin-top: -40px;
+    margin-top:-40px;
     margin-right: -5px;
+    transform: scale(1.3);
     position: relative;
     color: black;
     cursor: pointer;
     z-index: 2;
   }
-
+  
 /* animation */
 .scene {
     width: 530px;
