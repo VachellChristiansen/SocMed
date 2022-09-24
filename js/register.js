@@ -21,3 +21,24 @@ $(document).ready(function () {
   $("#passInput").keyup(checkPasswordMatch);
  $("#confInput").keyup(checkPasswordMatch);
 });
+
+$('#togglePassword').click((event)=>{
+var type=$('#passInput').attr('type');
+if(type==="password"){
+  $('#passInput').attr('type','text');
+} else {
+  $('#passInput').attr('type','password');
+}
+$('#togglePassword').toggleClass("bi-eye bi-eye-slash");
+});
+$('#toggleConfirm').click((event)=>{
+  var type=$('#confInput').attr('type');
+  if(type==="password"){
+    $('#confInput').attr('type','text');
+  } else {
+    $('#confInput').attr('type','password');
+  }
+  $('#toggleConfirm').toggleClass("bi-eye bi-eye-slash");
+
+  });
+

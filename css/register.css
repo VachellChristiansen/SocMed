@@ -67,6 +67,19 @@ button {
 #checkMatch{
   color:#00ff84;
 }
+
+form i{
+  float: right;
+  margin-left: -40px;
+  margin-top:-50px;
+  margin-right: -5px;
+  transform: scale(1.3);
+  position: relative;
+  color: black;
+  cursor: pointer;
+  z-index: 2;
+}
+
 /*animation*/
 body .scene_saturn__ring .layer_part, body .scene_saturn__ring .small_part, body .scene_saturn__ring .small, body .scene_saturn__ring, body .scene_saturn__sparks .spark, body .scene_saturn__sparks, body .scene_saturn__face .face_clip .mouth, body .scene_saturn__face, body .scene_saturn__shadowRing, body .scene_saturn__shadow, body .scene_saturn, body .scene_titan, body .scene_titanShadow, body .scene, body .scene_saturn__face .face_clip .eye, body .scene_titan .eyes .eye {
     position: absolute;
