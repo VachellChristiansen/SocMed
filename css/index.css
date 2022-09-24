@@ -110,58 +110,60 @@ left: 5.4em;
   /* align-items: center; */
 }
 /* recommended */
-  .recs{
-align-self: center;
-  }
-  .profile-card{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0.25em 0;
-    cursor: pointer;
-  }
-  
-  .profile-card .username{
-    font-weight: 500;
-    font-size: 0.8em;
-    color: rgb(253, 249, 249);
-  }
-  .profile-card img{
-    border-radius: 100%;
-    width: 2em;
-    height: 2em;
-    }
+.recs{
+  align-self: center;
+}
 
-    .user-info{
-      margin-left: 0.3em;
-    }
+.profile-card{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0.25em 0;
+  cursor: pointer;
+}
   
-  .sub-text{
-    color: rgb(253, 249, 249);
-    font-size:0.7em;
-    font-weight: 500;
-  }
+.profile-card .username{
+  font-weight: 500;
+  font-size: 0.8em;
+  color: rgb(253, 249, 249);
+}
+
+.profile-card img {
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+}
+
+.user-info{
+  margin-left: 0.3em;
+}
+
+.sub-text{
+  color: rgb(253, 249, 249);
+  font-size:0.7em;
+  font-weight: 500;
+}
   
-  .action-btn{
-    width: 70px;
-    height: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    text-transform: capitalize;
-    color: rgb(0, 162, 255);
-    opacity: 1;
-    font-weight: 700;
-    font-size: 12px;
-  }
-  
-  .suggestion-text{
-    font-size: 14px;
-    color: rgba(253, 249, 249, 0.678);
-    font-weight: 700;
-    margin: 0.5em 0;
-  }
+.action-btn{
+  width: 70px;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  opacity: 1;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.suggestion-text{
+  font-size: 14px;
+  color: rgba(253, 249, 249, 0.678);
+  font-weight: 700;
+  margin: 0.5em 0;
+}
   
   
 
