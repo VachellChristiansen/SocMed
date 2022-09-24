@@ -1,10 +1,13 @@
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: black;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
 }
 
 .container {
@@ -44,7 +47,7 @@ main {
 
 input {
     margin-bottom: 1.2em;
-    padding: 0.7em 1em;
+    padding: 1em 1em;
     border-radius: 10em;
     width: 100%;
     max-width: 500px;
@@ -54,8 +57,16 @@ button {
     margin-top: 3em;
     padding: 1em 3em;
     border-radius: 10em;
+    cursor: pointer;
 }
 
+::placeholder{
+  font-size: 1.1em;
+}
+
+#checkMatch{
+  color:green;
+}
 /*animation*/
 body .scene_saturn__ring .layer_part, body .scene_saturn__ring .small_part, body .scene_saturn__ring .small, body .scene_saturn__ring, body .scene_saturn__sparks .spark, body .scene_saturn__sparks, body .scene_saturn__face .face_clip .mouth, body .scene_saturn__face, body .scene_saturn__shadowRing, body .scene_saturn__shadow, body .scene_saturn, body .scene_titan, body .scene_titanShadow, body .scene, body .scene_saturn__face .face_clip .eye, body .scene_titan .eyes .eye {
     position: absolute;

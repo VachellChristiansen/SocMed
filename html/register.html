@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./../css/index.css">
   <link rel="stylesheet" href="../css/register.css">
   <title>DeepSpace - Register</title>
 </head>
@@ -14,22 +13,26 @@
   <div class="container">
     <main class="register-form">
       <h1 class="title">Welcome to DeepSpace!</h1>
-      <div>
-        <input type="text" name="username" class="name" placeholder="Username" required>
-      </div>
-      <div>
-        <input type="text" name="name" class="name" placeholder="Name" required>
-      </div>
-      <div>
-        <input type="password" name="pass" class="akun" placeholder="Password" required>
-      </div>
-      <div>
-        <input type="password" name="pass" class="akun" placeholder="Confirm Password" required>
-      </div>
-      <div>
-        <input type="email" name="email" class="email" placeholder="E-mail" required>
-      </div>
-      <button type="submit" class="submit">Register</button>
+      <form action="../html/index.html" class="sign-up">
+        <div>
+          <input type="text" name="username" class="name" placeholder="Username" required>
+        </div>
+        <div>
+          <input type="text" name="name" class="name" placeholder="Name" required>
+        </div>
+        <div>
+          <input type="password" name="pass" class="akun" placeholder="Password" id="passInput" required>
+        </div>
+        <div>
+          <input type="password" name="confirmPass" class="akun" placeholder="Confirm Password" id="confInput" required>
+        </div>
+          <label for="confirmPass" id="checkMatch"></label>
+        <div>
+          <input type="email" name="email" class="email" placeholder="E-mail" required>
+        </div>
+        <button type="submit" class="submit">Register</button>
+      </form>
+ 
     </main>
     <aside>
       <div class='scene'>
@@ -280,6 +283,8 @@
   <footer>
 
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="../js/register.js"></script>
 </body>
 
 </html>

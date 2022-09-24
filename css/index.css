@@ -219,7 +219,9 @@ button{
 
 /* add buttton micro */
 .wrapper{
-  position: relative;
+  position:absolute;
+  top:3em;
+  left: 10em;
 }
 .wrapper :is(.btn, .link){
   display: inline-flex;
