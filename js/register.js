@@ -3,12 +3,12 @@ function checkPasswordMatch() {
   var confirmPassword = $("#confInput").val();
   if(password.length>0 && confirmPassword.length>0){
     if (password != confirmPassword ){
-      $("#checkMatch").attr('color','red');
+      $("#checkMatch").css('color','#ff0000');
       $("#checkMatch").html("Passwords does not match!");
     }
     else
       {
-        $("#checkMatch").attr('color','green');
+        $("#checkMatch").css('color','#00ff84');
         $("#checkMatch").html("Passwords match.");
       }
   }
