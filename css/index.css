@@ -226,8 +226,7 @@ button{
 
 /* ADDD BUTTON MICRO*/
 .wrapper{
-  margin-top: 90px;
-  position:fixed;
+  position:absolute;
   top:3em;
   left: 10em;
 }
