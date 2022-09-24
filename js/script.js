@@ -1,15 +1,23 @@
 var toggleMargin = false;
 $('#comment-button').click((event)=>{
-  if(!toggleMargin){
-    $('.others').css('margin','0px');
-  
-   } else {
-    $('.others').css('margin','auto');
-   }
-   toggleMargin=!toggleMargin;
-
-  $('.comment').toggle();
+  hehe();
 });
+
+async function hehe() {
+  if(!toggleMargin){
+    $('.others').toggleClass('open');
+    setTimeout(() => {
+      $('.comment').toggle();
+      setTimeout(() => {$('.comment').toggleClass('show');}, 100)
+    }, 700)
+  } else {
+    $('.comment').toggleClass('show');
+    setTimeout(() => {$('.comment').toggle();}, 700);
+    setTimeout(() => {$('.others').toggleClass('open');}, 700);
+  }
+  toggleMargin=!toggleMargin;
+  
+}
 
 
 $('.log-in').click((event)=>{

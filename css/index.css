@@ -212,17 +212,27 @@ button{
   position: sticky;
   padding-top: 3em;
   height: 40%;
-
 }
 
 .comment{
   overflow-y: auto;
   display: none;
+  opacity: 0;
   height: 50%;
+  transition: all 700ms;
 }
+.comment.show {
+  opacity: 1;
+}
+
 .others{
-  margin: auto;
+  margin-top: 50%;
   max-height: 100vh;
+  transition: all 700ms;
+}
+
+.others.open {
+  margin: 0;
 
 }
 
