@@ -1,4 +1,13 @@
 $('#comment-button').click((event)=>{
+ var checkMargin= $('.others').css('margin');
+//  if(checkMargin==='auto'){
+//   console.log("A");
+//   $('.others').css('margin','0');
+//  } else {
+//   console.log("B");
+//   $('.others').css('margin','auto');
+//  }
+
   $('.comment').toggle();
 });
 
@@ -8,7 +17,6 @@ console.log("A");
 };
 
 $('.log-in').click((event)=>{
-  console.log("A");
   window.location.href="../html/signin.html";
 });
 
