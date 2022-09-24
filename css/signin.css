@@ -63,7 +63,16 @@ body{
     border: 0;
     outline: none;
     border-radius: 10em;
+}
 
+#password{
+    width: 100%;
+    padding: 0 auto;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius: 10em;
 }
 
 .login button{
@@ -75,6 +84,17 @@ body{
     margin-bottom: 1.3em;
     margin-top: 0.7em;
 }
+
+form i{
+    float: right;
+    margin-left: -40px;
+    margin-top: -40px;
+    margin-right: -5px;
+    position: relative;
+    color: black;
+    cursor: pointer;
+    z-index: 2;
+  }
 
 /* animation */
 .scene {

@@ -217,9 +217,10 @@ button{
 
 }
 
-/* add buttton micro */
+/* ADDD BUTTON MICRO*/
 .wrapper{
-  position:absolute;
+  margin-top: 90px;
+  position:fixed;
   top:3em;
   left: 10em;
 }
@@ -242,7 +243,7 @@ button{
   transition: outline  .25s;
 }
 .active .btn{
-outline:2px solid #bb935c;
+outline:2px solid blue;
 outline-offset: -4px;
 }
 .item{
