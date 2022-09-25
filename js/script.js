@@ -42,3 +42,9 @@ const toggleOptions = () => {
     }
 };
 btnEl.addEventListener('click', toggleOptions);
+
+/* PROFILE NAVBAR */
+function menuToggle() {
+  const toggleMenu = document.querySelector(".menu");
+  toggleMenu.classList.toggle("active");
+  }
