@@ -163,10 +163,14 @@ body {
 .main {
   position: absolute;
   z-index: 10;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 .slide {
   grid-template-columns: 30% 40% 30%;
   height: 100vh;
+  scroll-snap-align: start;
 }
 
 .recommended {
