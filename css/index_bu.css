@@ -1,0 +1,285 @@
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  color: whitesmoke;
+  background: hsl(252, 30%, 95%);
+  overflow-x: hidden;
+}
+
+/* NAVBAR SECTION */
+
+.ghost-nav {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+nav{
+  width: 100%;
+  background: hsla(252, 30%, 100%,100%);
+  padding: 0.7rem 0;
+  position: fixed;
+  top: -20%;
+  z-index: 10;
+  transition: 800ms ease;
+}
+
+.ghost-nav:hover + nav, nav:hover {
+  top: 0;
+}
+
+.profile-photo{
+  cursor: pointer;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav .logo{
+  color: hsl(0, 0%, 0%);
+}
+
+nav .search-bar{
+  background: hsl(252, 30%, 95%);
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  color: hsl(252, 30%, 10%);
+}
+
+nav .search-bar input[type="search"]{
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: hsl(252, 30%, 17%);
+}
+
+nav .search-bar input[type="search"]::placeholder{
+  color: hsl(252, 15%, 65%);
+}
+
+nav .profile-photo{
+  color: hsl(252, 30%, 10%);
+}
+nav button{
+  padding: 0.5em 1em;
+  border-radius: 100em;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0.5em;
+}
+
+/* logo disp */
+#logo-disp{
+position: fixed;
+top:0.6em;
+left: 5.4em;
+  color: hsl(252, 75%, 60%);
+ 
+
+}
+/* CONTENT SECTION */
+.app-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #000000;
+  height: 100vh;
+  padding: 0 5rem;
+  /* align-items: center; */
+}
+/* recommended */
+.recs{
+  align-self: center;
+}
+
+.profile-card{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0.25em 0;
+  cursor: pointer;
+}
+  
+.profile-card .username{
+  font-weight: 500;
+  font-size: 0.8em;
+  color: rgb(253, 249, 249);
+}
+
+.profile-card img {
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+}
+
+.user-info{
+  margin-left: 0.3em;
+}
+
+.sub-text{
+  color: rgb(253, 249, 249);
+  font-size:0.7em;
+  font-weight: 500;
+}
+  
+.action-btn{
+  width: 70px;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  opacity: 1;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.suggestion-text{
+  font-size: 14px;
+  color: rgba(253, 249, 249, 0.678);
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+  
+  
+
+.content{
+  height:100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+video{
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+}
+
+/* OTHERS SECTION */
+.circle{
+  color: hsl(252, 75%, 60%);
+  background-color: hsl(252, 30%, 95%);
+
+  vertical-align: middle;
+  display: inline-flex;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 100%;
+  margin: 0.4em 0.2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-caption{
+  font-size: 0.8em;
+}
+
+.number{
+  /* change inline to block for normal */
+  display:inline;
+}
+
+/* users */
+button{
+  cursor: pointer;
+}
+.caption{
+  position: sticky;
+  padding-top: 3em;
+  height: 40%;
+}
+
+.comment{
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+  height: 50%;
+  transition: all 700ms;
+}
+.comment.show {
+  opacity: 1;
+}
+
+.others{
+  margin-top: 50%;
+  max-height: 100vh;
+  transition: all 700ms;
+}
+
+.others.open {
+  margin: 0;
+
+}
+
+/* ADDD BUTTON MICRO*/
+.wrapper{
+  position:absolute;
+  top:3em;
+  left: 10em;
+}
+.wrapper :is(.btn, .link){
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #151515;
+  border-radius: 50%;
+  margin-top: 450px;
+}
+.btn{
+  position:absolute;
+  border:none;
+  cursor:pointer;
+  z-index:10;
+  transition: outline  .25s;
+}
+.active .btn{
+outline:2px solid blue;
+outline-offset: -4px;
+}
+.item{
+  position:absolute;
+  list-style:none;
+  transition: transform  .5s;
+  transition-delay: var(0.5s);
+}
+
+.item a{
+  text-decoration: none;
+}
+.wrapper.active .item:nth-child(1){
+  transform:translateX(-65px);
+}
+.wrapper.active .item:nth-child(2){
+  transform:translateY(-65px);
+}
+.wrapper.active .item:nth-child(3){
+  transform:translateX(65px);
+}

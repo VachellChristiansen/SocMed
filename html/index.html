@@ -1,310 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/index.css" />
-  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-  <title>DeepSpace</title>
-  <!-- <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');</style>
+  <title>DeepSpace-Solo</title>
 </head>
-
-
 <body>
-  <header>
-    <div class="ghost-nav"></div>
-    <nav>
-      <div class="container">
-        <h2 class="logo">DeepSpace</h2>
-        <div class="search-bar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-            viewBox="0 0 16 16">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-          </svg>
-          <input type="search" placeholder="Searching for Something?">
-        </div>
-        <!-- <div class="profile-card">
-          <img id="user-card" src="https://catilmu.com/cara-mengganti-foto-profil-twitter/foto-profil-twitter-aesthetic-5/" width= "70px" height="70px">
-        </div> -->
-        <div class="logged-out">
-          <button class="sign-up">
-            Sign Up
-          </button>
-          <button class="log-in">
-            Login
-          </button>
-        </div>
+  <video autoplay loop muted id="background-video">
+    <source src="../assets/Live Wallpaper For Pc Stars Sky Constellation 4K.mp4">
+  </video>
+  <div class="ghost-header"></div>
+  <header class="primary-header">
+    <div class="container grid navbar">
+      <div class="flex-row align-cen">
+        <a href="index.html" class="logo">DeepSpace</a>
       </div>
-    </nav>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Search something...">
+        </form>
+      </div>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="../../html/register.html" class="btn signup">Sign Up</a>
+        <a href="../../html/signin.html" class="btn signin">Sign In</a>
+      </div>
+    </div>
   </header>
-  <h2 class="logo" id="logo-disp">DeepSpace</h2>
-  <div class="app-content">
-
-    <div class="recs">
-
-      <section class="main">
-        <div class="wrapper">
-          <button class="btn">
-            <iconify-icon icon="carbon:add"></iconify-icon>
-          </button>
-          <ul class="list">
-            <li class="item">
-              <a href="#" class="link">
-                <iconify-icon icon="clarity:notification-line"></iconify-icon>
-              </a> 
-            </li>
-            <li class="item">
-              <a href="#" class="link">
-                <iconify-icon icon="ant-design:upload-outlined"></iconify-icon>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" class="link">
-                <iconify-icon icon="ant-design:message-outlined"></iconify-icon>
-              </a>
-            </li>
+  <main>
+    <div class="container main">
+      <div class="grid slide">
+        <!-- Recommendation Section / Left Part -->
+        <div class="recommended grid">
+          <div class="recommended-container">
+            <div class="recommended-text">
+              <span>Recommended for you</span>
+            </div>
+            <div class="recommended-user flex-col flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
           </div>
-          
-        <div class="recs-section">
-          <div class="left-col">
-            <div class="profile-card">
-              <img id="user-card"
-                src="https://catilmu.com/cara-mengganti-foto-profil-twitter/foto-profil-twitter-aesthetic-5/"
-                width="70px" height="70px">
-              <div class="user-info">
-                <p class="username">@SupperBuzz</p>
-                <p class="sub-text">Realitea</p>
-              </div>
-              <button class="action-btn">switch</button>
+          <div class="recommended-container top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
             </div>
-            <p class="suggestion-text">Recommended for you</p>
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img
-                  src="https://img.wattpad.com/0e62773968a570f888807ffca0efc2b0b438c110/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f34644b4947787968654572384d673d3d2d3835363936343835372e313630313137373262663838343338643134313937383136363938332e6a7067?s=fit&w=720&h=720">
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
               </div>
-              <div class="user-info">
-                <p class="username">@daylight</p>
-                <p class="sub-text">d_acher</p>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
               </div>
-              <button class="action-btn">follow</button>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
             </div>
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img
-                  src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
-              </div>
-              <div class="user-info">
-                <p class="username">@virgo_gurl</p>
-                <p class="sub-text">after_glow</p>
-              </div>
-              <button class="action-btn">follow</button>
-            </div>
-
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img
-                  src="https://i0.wp.com/dianisa.com/wp-content/uploads/2022/08/6.-Profil-WA-Illustrasi.jpg?resize=1000%2C580&ssl=1">
-              </div>
-              <div class="user-info">
-                <p class="username">@ngopi_yuk</p>
-                <p class="sub-text">study__</p>
-              </div>
-              <button class="action-btn">follow</button>
-            </div>
-
-            <p class="suggestion-text">Top Accounts</p>
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/21/2851880457.jpg">
-              </div>
-              <div class="user-info">
-                <p class="username">@bts_official_bighit</p>
-                <p class="sub-text">BTS OFFICIAL</p>
-              </div>
-              <button class="action-btn">follow</button>
-            </div>
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL2hBLp9PBeaHwGRyP0OHDAnPeRrdktUINEA&usqp=CAU">
-              </div>
-              <div class="user-info">
-                <p class="username">@yg_blankpink</p>
-                <p class="sub-text">BLANKPINK OFFICIAL</p>
-              </div>
-              <button class="action-btn">follow</button>
-            </div>
-
-            <div class="profile-card">
-              <div class="profile-pic">
-                <img src="https://awsimages.detik.net.id/community/media/visual/2021/08/02/red-velvet-3_43.jpeg?w=1200">
-              </div>
-              <div class="user-info">
-                <p class="username">@redvelvet_official</p>
-                <p class="sub-text">SM REDVELVET</p>
-              </div>
-              <button class="action-btn">follow</button>
-            </div>
-      </section>
-    </div>
-
-    <div class="content">
-      <video autoplay loop controls="">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-family-walking-together-in-nature-39767-large.mp4"
-          type="video/mp4" />
-      </video>
-    </div>
-
-    <div class="others">
-      <div class="caption">
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://img.wattpad.com/0e62773968a570f888807ffca0efc2b0b438c110/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f34644b4947787968654572384d673d3d2d3835363936343835372e313630313137373262663838343338643134313937383136363938332e6a7067?s=fit&w=720&h=720">
           </div>
-          <div class="user-info">
-            <p class="username">@daylight</p>
-            <p class="sub-text">d_acher</p>
+        </div>
+
+        <!-- Content Section / Middle Part -->
+        <div class="content">
+          <video autoplay loop muted class="content-video">
+            <source src="../assets/heart.mp4">
+          </video>
+        </div>
+
+        <!-- Caption Section / Right Part -->
+        <div class="caption-container">
+          <div class="user">
+            <div class="user-profile-pic">
+              <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+            </div>
+            <div class="user-detail">
+              <div class="user-name">
+                User_1
+              </div>
+              <div class="user-tag">
+                @User_1
+              </div>
+            </div>
+            <div class="user-follow">
+              <a>Follow</a>
+            </div>
           </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod mattis arcu, vitae lacinia
-          magna congue luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </div>
-        <div class="number">
-          <button class="circle" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-              class="bi bi-chat-right-heart" viewBox="0 0 16 16">
-              <path
-                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2Zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Z" />
-              <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z" />
-            </svg>
-          </button>
 
-          <span id="like-number">1234</span>
-        </div>
-        <div class="number">
-          <button class="circle"  id="comment-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-              class="bi bi-chat-right-dots" viewBox="0 0 16 16">
-              <path
-                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
-              <path
-                d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-            </svg>
-          </button>
+          <div class="caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
+          </div>
 
-          <span id="comment-number">1234</span>
-        </div>
-        <div class="number">
-          <button class="circle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-share"
-              viewBox="0 0 16 16">
-              <path
-                d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-            </svg>
-          </button>
+          <div class="music">
+            Original Sound - User_1
+          </div>
+
+          <div class="interactive-bubble">
+            <div class="like">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="comment">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="share">
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="grid slide">
+        <!-- Recommendation Section / Left Part -->
+        <div class="recommended grid">
+          <div class="recommended-container">
+            <div class="recommended-text">
+              <span>Recommended for you</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommended-container top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="comment">
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
-          </div>
-          <div class="user-info">
-            <p class="username">@virgo_gurl</p>
-            <p class="sub-text">after_glow</p>
-          </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Etiam euismod mattis arcu, vitae lacinia magna congue luctus. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
+        <!-- Content Section / Middle Part -->
+        <div class="content">
+          <video autoplay loop muted class="content-video">
+            <source src="../assets/heart.mp4">
+          </video>
         </div>
 
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
+        <!-- Caption Section / Right Part -->
+        <div class="caption-container">
+          <div class="user">
+            <div class="user-profile-pic">
+              <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+            </div>
+            <div class="user-detail">
+              <div class="user-name">
+                <span>User_1</span>
+              </div>
+              <div class="user-tag">
+                <span>@user_1</span>
+              </div>
+            </div>
+            <div class="user-follow">
+              <a>Follow</a>
+            </div>
           </div>
-          <div class="user-info">
-            <p class="username">@virgo_gurl</p>
-            <p class="sub-text">after_glow</p>
-          </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Etiam euismod mattis arcu, vitae lacinia magna congue luctus. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </div>
 
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
+          <div class="caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
           </div>
-          <div class="user-info">
-            <p class="username">@virgo_gurl</p>
-            <p class="sub-text">after_glow</p>
-          </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Etiam euismod mattis arcu, vitae lacinia magna congue luctus. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </div>
 
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
+          <div class="music">
+            Original Sound - User_1
           </div>
-          <div class="user-info">
-            <p class="username">@virgo_gurl</p>
-            <p class="sub-text">after_glow</p>
-          </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Etiam euismod mattis arcu, vitae lacinia magna congue luctus. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </div>
 
-        <div class="profile-card">
-          <div class="profile-pic">
-            <img
-              src="https://1.bp.blogspot.com/-U3NY_Fvj_tc/YUQg5bWT3UI/AAAAAAAAEf0/8ZsioDQfs_Iwmpv0aFFcktpmakhGg4-JACLcBGAsYHQ/s16000/FOTO-PROFIL-WA-PEREMPUAN-KEREN%2B%25289%2529.jpg">
+          <div class="interactive-bubble">
+            <div class="like">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="comment">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="share">
+              <i class="fa-solid fa-share"></i>
+            </div>
           </div>
-          <div class="user-info">
-            <p class="username">@virgo_gurl</p>
-            <p class="sub-text">after_glow</p>
-          </div>
-          <button class="action-btn">follow</button>
-        </div>
-        <div class="user-caption">
-          Etiam euismod mattis arcu, vitae lacinia magna congue luctus. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
         </div>
       </div>
-    </div>
-  </div>
-  
-  <footer></footer>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"
-  ></script>
-  <script src="../js/script.js"></script>
+      <div class="grid slide">
+        <!-- Recommendation Section / Left Part -->
+        <div class="recommended grid">
+          <div class="recommended-container">
+            <div class="recommended-text">
+              <span>Recommended for you</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommended-container top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Section / Middle Part -->
+        <div class="content">
+          <video autoplay loop muted class="content-video">
+            <source src="../assets/heart.mp4">
+          </video>
+        </div>
+
+        <!-- Caption Section / Right Part -->
+        <div class="caption-container">
+          <div class="user">
+            <div class="user-profile-pic">
+              <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+            </div>
+            <div class="user-detail">
+              <div class="user-name">
+                <span>User_1</span>
+              </div>
+              <div class="user-tag">
+                <span>@user_1</span>
+              </div>
+            </div>
+            <div class="user-follow">
+              <a>Follow</a>
+            </div>
+          </div>
+
+          <div class="caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
+          </div>
+
+          <div class="music">
+            Original Sound - User_1
+          </div>
+
+          <div class="interactive-bubble">
+            <div class="like">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="comment">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="share">
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid slide">
+        <!-- Recommendation Section / Left Part -->
+        <div class="recommended grid">
+          <div class="recommended-container">
+            <div class="recommended-text">
+              <span>Recommended for you</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommended-container top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>User_1</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@user_1</span>
+                  </div>
+                </div>
+                <div class="user-follow">
+                  <a>Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Section / Middle Part -->
+        <div class="content">
+          <video autoplay loop muted class="content-video">
+            <source src="../assets/heart.mp4">
+          </video>
+        </div>
+
+        <!-- Caption Section / Right Part -->
+        <div class="caption-container">
+          <div class="user">
+            <div class="user-profile-pic">
+              <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
+            </div>
+            <div class="user-detail">
+              <div class="user-name">
+                <span>User_1</span>
+              </div>
+              <div class="user-tag">
+                <span>@user_1</span>
+              </div>
+            </div>
+            <div class="user-follow">
+              <a>Follow</a>
+            </div>
+          </div>
+
+          <div class="caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
+          </div>
+
+          <div class="music">
+            Original Sound - User_1
+          </div>
+
+          <div class="interactive-bubble">
+            <div class="like">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="comment">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="share">
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </main>
 </body>
-
 </html>
