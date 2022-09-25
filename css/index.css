@@ -88,7 +88,7 @@ body {
   background-color: hsla(252, 30%, 100%,100%);
   z-index: 100;
   transition: 0.5s ease;
-  top: -7%;
+  top: -10%;
 }
 
 .ghost-header {
