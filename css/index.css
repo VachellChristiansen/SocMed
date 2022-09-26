@@ -104,7 +104,7 @@ body {
 }
 
 .ghost-header {
-  height: 7%;
+  height: 10%;
   width: 100%;
   position: fixed;
   z-index: 99;

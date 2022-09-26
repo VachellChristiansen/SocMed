@@ -91,23 +91,8 @@ body {
   height: 10%;
   background-color: hsla(252, 30%, 100%,100%);
   z-index: 100;
-  transition: 0.5s ease;
-  top: -10%;
 }
 
-.ghost-header {
-  height: 7%;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-}
-
-.ghost-header:hover + .primary-header {
-  top: 0;
-}
-.primary-header:hover {
-  top: 0;
-}
 
 .navbar {
   grid-template-columns: 30% 40% 30%;
@@ -174,8 +159,7 @@ body {
   position: absolute;
   z-index: 10;
   height: 100%;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  margin-top: 5%;
 }
 .slide {
   grid-template-columns: 30% 70%;
