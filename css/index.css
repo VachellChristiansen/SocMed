@@ -1,3 +1,5 @@
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --fw-thin: 100;
   --fw-extra-light: 200;
@@ -19,13 +21,14 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: whitesmoke;
 }
 
 body {
   width: 100%;
   height: 100%;
+  font-size: smaller;
 }
 
 
@@ -56,7 +59,7 @@ body {
 .btn {
   text-decoration: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 10em;
   background-color: whitesmoke;
   transition: 0.3s ease;
   font-weight: var(--fw-medium);
@@ -149,16 +152,16 @@ body {
   width: 100%;
 }
 .signup {
-  width: 6rem;
-  padding: 0.1rem 1rem;
+  width: fit-content;
+  padding: 0.3rem 1rem;
   color: black;
   margin: 0.2rem;
   border: 0.1em solid hsl(252, 15%, 65%);
   text-align: center;
 }
 .signin {
-  width: 6rem;
-  padding: 0.1rem 1rem;
+  width: fit-content;
+  padding: 0.3rem 1rem;
   color: black;
   margin: 0.2rem;
   border: 0.1em solid hsl(252, 15%, 65%);
@@ -181,7 +184,6 @@ body {
 
 .recommended {
   grid-template-rows: auto auto;
-  padding: 5rem 0;
   height: 100vh;
 }
 
@@ -196,12 +198,17 @@ body {
 }
 
 .recommended-text {
-  font-size: var(--fs-small-up);
+  font-size: var(--fs-small);
   font-weight: var(--fw-semi-bold);
+  margin: 1rem 0;
+}
+
+.recommended-text span{
+  color: rgba(253, 249, 249, 0.678);
 }
 
 .recommended-user {
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .user {
@@ -234,9 +241,11 @@ body {
 }
 
 .user-follow a{
-  color: whitesmoke;
   border: none;
   background-color: transparent;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
 }
 .user-follow a:hover{
   cursor: pointer;
@@ -253,4 +262,9 @@ body {
 
 .caption-container {
   padding: 5rem 0;
+}
+
+.music{
+  margin: 0.3em 0;
+  color: rgba(253, 249, 249, 0.678);
 }
