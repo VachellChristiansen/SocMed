@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+body {
+  height: 100vh;
+}
+
+.comments {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.comment {
+  height: 200px;
+  width: 100%;
+  background-color: beige;
+}
+
+.user {
+  width: 100%;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+.comment-text {
+  width: 100%;
+  height: 150px;
+  background-color: palevioletred;
+}

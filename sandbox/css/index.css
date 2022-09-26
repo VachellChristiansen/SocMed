@@ -28,18 +28,21 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 /* Utilities */
 .grid {
   display: grid;
 }
+.flex {
+  display: flex;
+}
 .flex-col {
   display: flex;
   flex-direction: column;
-}
-.flex-row {
-  display: flex;
-  flex-direction: row;
 }
 .justify-end {
   justify-content: flex-end;
@@ -47,15 +50,20 @@ body {
 .justify-spb {
   justify-content: space-between;
 }
+.justify-spa {
+  justify-content: space-around;
+}
 .justify-cen{
   justify-content: center;
 }
 .align-cen {
   align-items: center;
 }
+.hidden {
+  display: none;
+}
 .btn {
   border: none;
-  border-radius: 15px;
   background-color: whitesmoke;
   transition: 0.3s ease;
   font-weight: var(--fw-medium);
@@ -63,6 +71,9 @@ body {
 .btn:hover {
   cursor: pointer;
   filter: brightness(80%);
+}
+.btn:active{
+  filter: brightness(100%);
 }
 .container {
   width: 100%;
@@ -144,6 +155,7 @@ body {
 }
 .signup {
   width: 6rem;
+  border-radius: 15px;
   padding: 0.1rem 1rem;
   color: black;
   margin: 0.2rem;
@@ -152,6 +164,7 @@ body {
 }
 .signin {
   width: 6rem;
+  border-radius: 15px;
   padding: 0.1rem 1rem;
   margin: 0.2rem;
   background-color: transparent;
@@ -173,6 +186,8 @@ body {
   scroll-snap-align: start;
 }
 
+/* Recommended Section */
+
 .recommended {
   grid-template-rows: auto auto;
   padding: 5rem 0;
@@ -180,8 +195,6 @@ body {
 }
 
 .recommended-container {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
 }
 
@@ -209,22 +222,10 @@ body {
   border-radius: 50%;
 }
 
-.user-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .user-name,
 .user-tag {
   height: 1rem;
   word-wrap: break-word;
-}
-
-.user-follow {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .user-follow a{
@@ -236,6 +237,8 @@ body {
   cursor: pointer;
 }
 
+/* Content Section */
+
 .content {
   height: 100vh;
   display: flex;
@@ -245,6 +248,77 @@ body {
   height: 100vh;
 }
 
-.caption-container {
+
+
+/* Caption & Comment Section */
+
+.caption-comment {
   padding: 5rem 0;
+  max-height: 100vh;
+  gap: 2rem;
+  grid-template-rows: auto;
+}
+
+.show-comments {
+  grid-template-rows: auto auto;
+}
+
+.caption-container {
+  height: 100%;
+}
+
+.comment-container {
+  max-height: 100%;
+  padding: 1rem;
+  gap: 2rem;
+  overflow-y: scroll
+}
+.comment {
+  background-color: rgba(255 255 255 / 0.5);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.comment-user {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: auto 85%;
+}
+
+.interactive-bubble {
+  --bubble-size: 3rem;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+.small {
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+.interactive-parts {
+  height: var(--bubble-size);
+}
+
+.bubble {
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  background-color: whitesmoke;
+  border-radius: 50%;
+  color: black;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.bubble > i {
+  color: inherit;
+}
+
+.user-caption {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.music-bubble {
+  justify-content: flex-end;
+  gap: 1rem;
 }
