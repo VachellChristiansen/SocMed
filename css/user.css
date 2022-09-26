@@ -188,11 +188,77 @@ body {
   gap: 0.5rem;
 }
 
+.user-star {
+  font-size: larger;
+  height: 10rem;
+  /* display: grid;
+  grid-template-columns: auto 70% auto; */
+}
+
+.user-main-star{
+  display: flex;
+}
+
+.user-profile-pic-star {
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.user-detail-star {
+  align-self: center;
+  padding-right: 3em;
+}
+
+.user-name-star,
+.user-tag-star {
+  padding: 1rem 0.5rem;
+  height: 1rem;
+  word-wrap: break-word;
+}
+.user-name-star{
+  font-weight: 800;
+  font-size: x-large;
+}
+.user-follow-star {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.user-follow-star a{
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
+}
+.user-follow-star a:hover{
+  cursor: pointer;
+}
+
+.user-followings-star{
+display: flex;
+
+}
+
+.user-numbers{
+  padding: 0 0.4rem;
+  font-weight: bold;
+  color:rgb(29, 29, 208)
+}
+.user-description-star{
+  padding: 0.5rem 0;
+}
+
+
+
 .user {
   height: 3rem;
   display: grid;
   grid-template-columns: auto 70% auto;
 }
+
 
 .user-profile-pic {
   height: 3rem;
@@ -229,10 +295,12 @@ body {
 }
 
 /* Content Section */
-
+.user-page {
+  margin-top: 7%;
+  margin-left:20em;
+}
 .content {
-  margin-left:20rem;
-  margin-top: 5%;
+ 
   height: 100%;
   display: grid;
   grid-template-columns:repeat(5,1fr);
