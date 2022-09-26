@@ -12,4 +12,4 @@ function comment(count) {
 
   comment.classList.toggle("hidden");
   captionComment.classList.toggle("show-comments");
-;}
+}
