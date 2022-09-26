@@ -36,6 +36,9 @@ body {
 .grid {
   display: grid;
 }
+.flex {
+  display: flex;
+}
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -47,6 +50,9 @@ body {
 .justify-end {
   justify-content: flex-end;
 }
+.justify-spa {
+  justify-content: space-around;
+}
 .justify-spb {
   justify-content: space-between;
 }
@@ -55,6 +61,9 @@ body {
 }
 .align-cen {
   align-items: center;
+}
+.hidden {
+  display: none;
 }
 .btn {
   text-decoration: none;
@@ -251,6 +260,8 @@ body {
   cursor: pointer;
 }
 
+/* Content Section */
+
 .content {
   height: 100vh;
   display: flex;
@@ -260,11 +271,78 @@ body {
   height: 100vh;
 }
 
-.caption-container {
+
+
+/* Caption & Comment Section */
+
+.caption-comment {
   padding: 5rem 0;
+  max-height: 100vh;
+  gap: 2rem;
+  grid-template-rows: auto;
 }
 
-.music{
-  margin: 0.3em 0;
-  color: rgba(253, 249, 249, 0.678);
+.show-comments {
+  grid-template-rows: auto auto;
+}
+
+.caption-container {
+  height: 100%;
+}
+
+.comment-container {
+  max-height: 100%;
+  padding: 1rem;
+  gap: 2rem;
+  overflow-y: scroll
+}
+.comment {
+  display: hidden;
+  background-color: rgba(255 255 255 / 0.5);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.comment-user {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: auto 85%;
+}
+
+.interactive-bubble {
+  --bubble-size: 3rem;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+.small {
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+.interactive-parts {
+  height: var(--bubble-size);
+}
+
+.bubble {
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  background-color: whitesmoke;
+  border-radius: 50%;
+  color: black;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.bubble > i {
+  color: inherit;
+}
+
+.user-caption {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.music-bubble {
+  justify-content: flex-end;
+  gap: 1rem;
 }
