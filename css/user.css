@@ -155,18 +155,11 @@ body {
 }
 
 /* Main Style */
-.main {
-  position: absolute;
-  z-index: 10;
-  height: 100%;
-  margin-top: 5%;
-}
-.slide {
-  grid-template-columns: 30% 70%;
-  height: 100%;
-}
+
 
 .recommended {
+  z-index: 1;
+  position: fixed;
   grid-template-rows: auto auto;
   height: 100%;
 }
@@ -238,6 +231,8 @@ body {
 /* Content Section */
 
 .content {
+  margin-left:20rem;
+  margin-top: 5%;
   height: 100%;
   display: grid;
   grid-template-columns:repeat(5,1fr);
