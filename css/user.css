@@ -177,10 +177,13 @@ body {
 }
 
 /* Main Style */
-
+.main{
+  margin-left: 3rem;
+}
 
 .recommended {
-  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  z-index: 10;
   position: fixed;
   grid-template-rows: auto auto;
   height: 100%;
@@ -278,7 +281,7 @@ display: flex;
 .user {
   height: 3rem;
   display: grid;
-  grid-template-columns: auto 70% auto;
+  grid-template-columns: auto 50% auto;
 }
 
 
