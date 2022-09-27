@@ -5,6 +5,29 @@
     padding: 0;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.9em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: black;

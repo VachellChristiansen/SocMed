@@ -4,3 +4,7 @@ $(".content-video").mouseenter(function(){
 $(".content-video").mouseout(function(){
   this.pause();
 });
+//will integrate later
+function redirectUser(profile) {
+  location.replace(`profiles/${profile}.html`);
+}

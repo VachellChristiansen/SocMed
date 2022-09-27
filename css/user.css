@@ -84,6 +84,28 @@ body {
   margin: 0 auto;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.9em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* Header Style */
 .primary-header {
   position:fixed;
