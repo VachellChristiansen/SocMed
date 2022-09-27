@@ -333,8 +333,6 @@ display: flex;
 }
 .content-video {
   width: 100%;
-  height: 100%;
-  padding: 1em;
   filter: grayscale(1);
   transition: 0.3s ease;
   
@@ -342,4 +340,12 @@ display: flex;
 .content-video:hover {
   transition: 0.3s ease;
   filter: grayscale(0);
+}
+.thumbnails{
+  max-height: 15em;
+  padding: 1em;
+}
+
+.views{
+size: 3em;
 }
