@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/upload.css">
     <title>DeepSpace - Upload</title>
 </head>
 <body>
-    
+    <div class="drop-zone">
+      <span class="drop-zone__prompt">Drop file here or click to upload</span>
+      <!-- <div class="drop-zone__thumb" data-label="myfile.txt"></div> -->
+      <input type="file" name="myFile" class="drop-zone__input" required>
+    </div>
+
+    <script src="../js/upload.js"></script>
 </body>
 </html>
