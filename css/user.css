@@ -270,7 +270,7 @@ display: flex;
 .user-numbers{
   padding: 0 0.4rem;
   font-weight: bold;
-  color:rgb(29, 29, 208)
+  color:rgb(29, 29, 208);
 }
 .user-description-star{
   padding: 0.5rem 0;
@@ -325,8 +325,6 @@ display: flex;
   margin-left:20em;
 }
 .content {
- 
-  height: 100%;
   display: grid;
   grid-template-columns:repeat(5,1fr);
   justify-items: center;
@@ -342,10 +340,28 @@ display: flex;
   filter: grayscale(0);
 }
 .thumbnails{
-  max-height: 15em;
   padding: 1em;
 }
 
-.views{
-size: 3em;
+/* Back to top button */
+#button-top {
+  display: none;
+  position: fixed; 
+  bottom: 1em;
+  right: 1em; 
+  z-index: 99; 
+  border: none;
+  outline: none;
+  background-color: rgb(0, 162, 255);
+  color: white;
+  cursor: pointer;
+  border-radius: 100em;
+  height: 4em;
+  width: 4em;
+  transition: 0.3s ease;
+}
+
+#button-top:hover {
+  transition: 0.3s ease;
+  background-color: rgb(29, 29, 208); ;
 }
