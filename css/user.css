@@ -29,6 +29,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: smaller;
+  background-color: black;
 }
 
 
@@ -83,15 +84,6 @@ body {
   margin: 0 auto;
 }
 
-#background-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 0;
-}
-
 /* Header Style */
 .primary-header {
   position:fixed;
@@ -99,23 +91,8 @@ body {
   height: 10%;
   background-color: hsla(252, 30%, 100%,100%);
   z-index: 100;
-  transition: 0.5s ease;
-  top: -10%;
 }
 
-.ghost-header {
-  height: 10%;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-}
-
-.ghost-header:hover + .primary-header {
-  top: 0;
-}
-.primary-header:hover {
-  top: 0;
-}
 
 .navbar {
   grid-template-columns: 30% 40% 30%;
@@ -157,9 +134,6 @@ body {
 .submit-search i{
   color: rgb(60, 60, 60);
 }
-.upload-bar {
-  
-}
 .sign-button {
   width: 100%;
 }
@@ -179,31 +153,15 @@ body {
   border: 0.1em solid hsl(252, 15%, 65%);
   text-align: center;
 }
-.upload {
-  width: fit-content;
-  padding: 0.3rem 1rem;
-  color: black;
-  margin: 0.2rem;
-  text-align: center;
-}
 
 /* Main Style */
-.main {
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-.slide {
-  grid-template-columns: 30% 40% 30%;
-  height: 100vh;
-  scroll-snap-align: start;
-}
+
 
 .recommended {
+  z-index: 1;
+  position: fixed;
   grid-template-rows: auto auto;
-  height: 100vh;
+  height: 100%;
 }
 
 .recommended-container {
@@ -230,11 +188,77 @@ body {
   gap: 0.5rem;
 }
 
+.user-star {
+  font-size: larger;
+  height: 10rem;
+  /* display: grid;
+  grid-template-columns: auto 70% auto; */
+}
+
+.user-main-star{
+  display: flex;
+}
+
+.user-profile-pic-star {
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.user-detail-star {
+  align-self: center;
+  padding-right: 3em;
+}
+
+.user-name-star,
+.user-tag-star {
+  padding: 1rem 0.5rem;
+  height: 1rem;
+  word-wrap: break-word;
+}
+.user-name-star{
+  font-weight: 800;
+  font-size: x-large;
+}
+.user-follow-star {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.user-follow-star a{
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
+}
+.user-follow-star a:hover{
+  cursor: pointer;
+}
+
+.user-followings-star{
+display: flex;
+
+}
+
+.user-numbers{
+  padding: 0 0.4rem;
+  font-weight: bold;
+  color:rgb(29, 29, 208)
+}
+.user-description-star{
+  padding: 0.5rem 0;
+}
+
+
+
 .user {
   height: 3rem;
   display: grid;
   grid-template-columns: auto 70% auto;
 }
+
 
 .user-profile-pic {
   height: 3rem;
@@ -271,88 +295,26 @@ body {
 }
 
 /* Content Section */
-
+.user-page {
+  margin-top: 7%;
+  margin-left:20em;
+}
 .content {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+ 
+  height: 100%;
+  display: grid;
+  grid-template-columns:repeat(5,1fr);
+  justify-items: center;
 }
 .content-video {
-  height: 100vh;
-}
-
-
-
-/* Caption & Comment Section */
-
-.caption-comment {
-  padding: 5rem 0;
-  max-height: 100vh;
-  gap: 2rem;
-  grid-template-rows: auto;
-}
-
-.show-comments {
-  grid-template-rows: auto auto;
-}
-
-.caption-container {
+  width: 100%;
   height: 100%;
-}
-
-.comment-container {
-  max-height: 100%;
-  padding: 1rem;
-  gap: 2rem;
-  overflow-y: scroll
-}
-.comment {
-  display: hidden;
-  background-color: rgba(255 255 255 / 0.5);
-  border-radius: 15px;
-  padding: 1rem;
-}
-.comment-user {
-  height: 3rem;
-  display: grid;
-  grid-template-columns: auto 85%;
-}
-
-.interactive-bubble {
-  --bubble-size: 3rem;
-  grid-template-columns: auto;
-  gap: 1rem;
-}
-
-.small {
-  grid-template-columns: auto auto auto;
-  gap: 1rem;
-}
-
-.interactive-parts {
-  height: var(--bubble-size);
-}
-
-.bubble {
-  width: var(--bubble-size);
-  height: var(--bubble-size);
-  background-color: whitesmoke;
-  border-radius: 50%;
-  color: black;
-  border: none;
+  padding: 1em;
+  filter: grayscale(1);
   transition: 0.3s ease;
+  
 }
-
-.bubble > i {
-  color: inherit;
-}
-
-.user-caption {
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-.music-bubble {
-  justify-content: flex-end;
-  gap: 1rem;
+.content-video:hover {
+  transition: 0.3s ease;
+  filter: grayscale(0);
 }
