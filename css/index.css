@@ -148,6 +148,9 @@ body {
 .submit-search i{
   color: rgb(60, 60, 60);
 }
+.upload-bar {
+  
+}
 .sign-button {
   width: 100%;
 }
@@ -165,6 +168,13 @@ body {
   color: black;
   margin: 0.2rem;
   border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+}
+.upload {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  margin: 0.2rem;
   text-align: center;
 }
 
