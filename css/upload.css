@@ -1,8 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+<<<<<<< HEAD
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+.drop-zone {
+  position: fixed;
+  width: 100%;
+  max-width: 300px;
+  height: 50vh;
+  padding: 1.5rem 2.0rem;
+  margin-top: 10%;
+  margin-left: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+=======
 .card h3 {
   font-size: 22px;
   font-weight: 600;
+>>>>>>> 6246604ad3839a7f598f54fa610c1eb031c573b3
 }
 
 body {
