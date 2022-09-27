@@ -4,10 +4,26 @@ $(".content-video").mouseenter(function(){
 $(".content-video").mouseout(function(){
   this.pause();
 });
-//will integrate later
-function redirectUser(profile) {
-  location.replace(`profiles/${profile}.html`);
-}
+
+
+//this works but no parameter
+// $('.user-star').click(()=>{
+//   // var destination=this.attr('id');
+//   // console.log(destination);
+//   location.replace(`profiles/user1.html`);
+// });
+// function redirectUser(profile) {
+  
+// }
+
+$('.user-star').click(function(event) {
+  var status = $(this).attr('id');
+ if(status===""){
+
+ } else {
+  location.replace(`profiles/${status}.html`);
+ }
+});
 
 //back to top
 // Get the button:
