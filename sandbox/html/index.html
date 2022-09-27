@@ -10,9 +10,7 @@
   <title>DeepSpace-Solo</title>
 </head>
 <body>
-  <video autoplay loop muted id="background-video">
-    <source src="../assets/Live Wallpaper For Pc Stars Sky Constellation 4K.mp4">
-  </video>
+  <div class="background"></div>
   <div class="ghost-header"></div>
   <header class="primary-header">
     <div class="container grid navbar">
@@ -27,9 +25,14 @@
           <input class="search" type="search" placeholder="Search something...">
         </form>
       </div>
-      <div class="sign-button flex justify-end align-cen">
+      <div class="sign-button flex justify-end align-cen hidden">
         <a class="btn signup">Sign Up</a>
         <a class="btn signin">Sign In</a>
+      </div>
+      <div class="profile-button flex justify-end align-cen">
+        <a href="user.html" class="btn no-bg">
+          <img class="user-profile-pic h-100" src="../assets/astro.jpeg" alt="profile">
+        </a>
       </div>
     </div>
   </header>
