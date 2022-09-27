@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-<<<<<<< HEAD
 #background-video {
   position: fixed;
   right: 0;
@@ -29,11 +28,6 @@
   color: #cccccc;
   border: 4px dashed #009578;
   border-radius: 10px;
-=======
-.card h3 {
-  font-size: 22px;
-  font-weight: 600;
->>>>>>> 6246604ad3839a7f598f54fa610c1eb031c573b3
 }
 
 body {
