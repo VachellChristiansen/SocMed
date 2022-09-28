@@ -251,7 +251,8 @@ body {
 .user {
   height: 3rem;
   display: grid;
-  grid-template-columns: auto 70% auto;
+  grid-template-columns: auto 50% auto;
+  cursor: pointer;
 }
 
 .user-profile-pic {
@@ -286,6 +287,18 @@ body {
 }
 .user-follow a:hover{
   cursor: pointer;
+}
+.follow{
+  font-weight: 700;
+  color: rgb(0, 162, 255);
+}
+.followed{
+  font-weight: 700;
+  color: rgb(122, 122, 122);
+}
+.unfollow{
+  font-weight: 700;
+  color: rgb(255, 0, 0);
 }
 
 /* Content Section */

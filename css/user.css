@@ -212,6 +212,18 @@ body {
 .recommended-user {
   gap: 0.5rem;
 }
+.follow{
+  font-weight: 700;
+  color: rgb(0, 162, 255);
+}
+.followed{
+  font-weight: 700;
+  color: rgb(122, 122, 122);
+}
+.unfollow{
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
 
 .user-star {
   font-size: larger;

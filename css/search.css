@@ -318,6 +318,20 @@ display: flex;
   cursor: pointer;
 }
 
+.follow{
+  font-weight: 700;
+  color: rgb(0, 162, 255);
+}
+.followed{
+  font-weight: 700;
+  color: rgb(122, 122, 122);
+}
+.unfollow{
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
+
+
 /* Content Section */
 .user-page {
   margin-top: 7%;
