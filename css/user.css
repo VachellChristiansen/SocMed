@@ -32,6 +32,16 @@ body {
   background-color: black;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+button:hover {
+  cursor:pointer;
+}
 
 /* Utilities */
 .grid {
@@ -260,18 +270,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: x-large;
 }
 
-.user-follow-star a{
+.user-follow-star button{
   border: none;
   background-color: transparent;
   text-transform: capitalize;
   color: rgb(0, 162, 255);
   font-weight: 700;
-}
-.user-follow-star a:hover{
-  cursor: pointer;
+  font-size: x-large;
 }
 
 .user-followings-star{
@@ -320,15 +327,12 @@ display: flex;
   justify-content: center;
 }
 
-.user-follow a{
+.user-follow button{
   border: none;
   background-color: transparent;
   text-transform: capitalize;
   color: rgb(0, 162, 255);
   font-weight: 700;
-}
-.user-follow a:hover{
-  cursor: pointer;
 }
 
 /* Content Section */
