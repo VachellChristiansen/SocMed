@@ -58,6 +58,56 @@ body{
   border-radius: 5px;
 } */
 
+
+/* Utilities */
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-cen {
+  align-items: center;
+}
+.btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 10em;
+  background-color: whitesmoke;
+  transition: 0.3s ease;
+  font-weight: var(--fw-medium);
+}
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+.container {
+  width: 100%;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-size: smaller;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+/* Drop Zone */
 .drop-zone {
   position: fixed;
   width: 100%;
