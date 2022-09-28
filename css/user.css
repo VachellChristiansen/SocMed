@@ -282,7 +282,9 @@ button:hover {
   font-weight: 700;
   font-size: x-large;
 } */
-
+.star {
+  font-size: x-large;
+}
 .star button{
   border: none;
   background-color: transparent;
