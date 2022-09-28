@@ -31,6 +31,16 @@ body {
   font-size: smaller;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -169,7 +179,6 @@ body {
 .search:focus {
   outline: none;
 }
-
 .submit-search {
   padding: 0;
   border: none;
@@ -178,6 +187,7 @@ body {
 .submit-search i{
   color: rgb(60, 60, 60);
 }
+
 .sign-button {
   width: 100%;
 }
@@ -329,7 +339,7 @@ body {
 }
 
 .show-comments {
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
 }
 
 .caption-container {
@@ -391,4 +401,35 @@ body {
 .music-bubble {
   justify-content: flex-end;
   gap: 1rem;
+}
+
+.comment-add {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  background: hsl(252, 30%, 95%);
+  margin: auto;
+}
+.comment-text-box {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  appearance: none;
+  margin-left: 5px;
+  color: black;
+  resize: none;
+}
+.comment-text-box:focus {
+  outline: none;
+}
+.submit-comment {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  color: rgb(0, 162, 255);
+}
+.submit-comment:hover {
+  cursor: pointer;
+  filter: brightness(80%);
 }

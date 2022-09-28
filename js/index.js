@@ -9,8 +9,10 @@ function comment(count) {
 
   var comment = document.getElementsByClassName("comment-container")[count];
   var captionComment = document.getElementsByClassName("caption-comment")[count];
+  var commentAdd = document.getElementsByClassName("comment-add")[count];
 
   comment.classList.toggle("hidden");
+  commentAdd.classList.toggle("hidden");
   captionComment.classList.toggle("show-comments");
 }
 
