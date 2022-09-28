@@ -266,6 +266,8 @@ button:hover {
   font-weight: 800;
   font-size: x-large;
 }
+
+/* Recommendation to remove due to duplicate code for same button
 .user-follow-star {
   display: flex;
   flex-direction: column;
@@ -273,6 +275,15 @@ button:hover {
 }
 
 .user-follow-star button{
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
+  font-size: x-large;
+} */
+
+.star button{
   border: none;
   background-color: transparent;
   text-transform: capitalize;
