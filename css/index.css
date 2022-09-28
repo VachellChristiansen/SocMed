@@ -250,9 +250,13 @@ body {
 
 .user {
   height: 3rem;
-  display: grid;
-  grid-template-columns: auto 50% auto;
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
   cursor: pointer;
+  gap: 1rem;
 }
 
 .user-profile-pic {
@@ -262,6 +266,7 @@ body {
 
 .user-detail {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-around;
 }
