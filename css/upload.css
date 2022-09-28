@@ -120,13 +120,27 @@ body {
   height: 3rem;
   border-radius: 50%;
 }
+.upload-icon {
+  height: 3rem;
+  border-radius: 50%;  
+  color: black;
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  margin: 0.2rem;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 /* Drop Zone */
 .drop-zone {
   position: fixed;
   width: 100%;
   max-width: 300px;
-  min-height: 50vh;
+  height: 200px;
   padding: 1.5rem 2.0rem;
   margin-top: 10%;
   margin-left: 40%;
@@ -170,6 +184,6 @@ body {
   padding: 5px 0;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.75);
-font-size: 14px;
-text-align: center;
+  font-size: 14px;
+  text-align: center;
 }
