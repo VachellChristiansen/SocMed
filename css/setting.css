@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    max-width: 800px;
+    background-color: hsl(0, 0%, 20%);
+    margin: auto;
+    padding: 3em;
+}
+
+.leftside{
+    width: 80vh;
+    height: 100%;
+    display: flex;
+    border-right: 2px solid whitesmoke;
+    align-items: center;
+}
+
+.point{
+    font-size: 20px;
+    list-style: none;
+    padding: 2.5em auto;
+}
+
+.point li{
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.rightbox{
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em; 
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.eprofile{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em 1em;
+}
+
+form input {
+    margin-bottom: 1vh;
+    border-radius: 2em;
+    font-size: 2vh;
+    padding: 0.4em 1em;
+    color: black;
+}
+
+.malee{
+    display: flex;
+    align-items: center;
+}
+
+.malee input{
+    margin: 0;
+}
+
+.malee label{
+    margin-right: 1em;
+}
+
+.btnsumit{
+    display: flex;
+}
+
+.sumit{
+    color: black;
+    border-radius: 3em;
+    font-size: 1.25em;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+
+.btnupdt{
+    display: flex;
+}
+
+.updtbtn{
+    color: black;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 1em;
+}
+
+.chngpict{
+    display: none;
+}
+
+.chng-photo{
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 1.5em;
+}
+
+.pht-and-usr{
+    display: flex;
+    flex-direction: row;
+}
+
+.username-and-pp{
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.username-and-pp span{
+    cursor: pointer;
+}
