@@ -89,25 +89,29 @@ form input {
 
 .btnsumit{
     display: flex;
+    background-color: beige;
+    width: max-content;
+    border-radius: 3em;
+    font-size: 1.25em;
+    padding: 0.5em 1.5em;
 }
 
 .sumit{
     color: black;
-    border-radius: 3em;
-    font-size: 1.25em;
-    padding: 0.5em 1.5em;
     cursor: pointer;
 }
 
 .btnupdt{
     display: flex;
+    background-color: beige;
+    width: max-content;
+    border-radius: 3em;
+    font-size: 1.25em;
+    padding: 0.5em 1.5em;
 }
 
 .updtbtn{
     color: black;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border-radius: 1em;
 }
 
 .chngpict{

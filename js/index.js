@@ -16,14 +16,10 @@ function comment(count) {
   captionComment.classList.toggle("show-comments");
 }
 
-// $('.user').click(function(event) {
-//   var status = $(this).attr('id');
-//  if(status===""){
-
-//  } else {
-//  location.href=`profiles/${status}.html`;
-//  }
-// });
+$('.like').click(function(event){
+ console.log("A");
+  $(this).find('i').toggleClass("fa-solid");
+});
 
 $('.user-follow').click(function(event) {
 if($(this).hasClass("follow")){
