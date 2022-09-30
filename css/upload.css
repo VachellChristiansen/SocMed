@@ -71,7 +71,8 @@ body {
 	font-size: 19px;
 }
 .drag-file-area label .browse-files-text {
-	color: blue;
+	background-color: blue;
+	color: whitesmoke;
 	font-weight: bolder;
 	cursor: pointer;
 }
