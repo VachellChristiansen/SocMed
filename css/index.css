@@ -433,3 +433,41 @@ button:hover {
   cursor: pointer;
   filter: brightness(80%);
 }
+
+/* Share Button */
+.share-container{
+  position: relative;
+  
+}
+.share-container button{
+  transform: scale(2.5);
+  margin: auto;
+}
+
+.facebook-app i{
+  color:rgb(66,103,178);
+}
+.facebook-app i:hover{
+  color:rgb(54, 83, 143);
+}
+
+.whatsapp-app i{
+  color:rgb(37,211,102);
+}
+.whatsapp-app i:hover{
+  color:rgb(29, 160, 77);
+}
+
+.twitter-app i{
+  color:#00acee;
+}
+.twitter-app i:hover{
+  color:#008bc2;
+}
+
+.line-app i{
+  color:#06C755;
+}
+.line-app i:hover{
+  color:#069742;
+}

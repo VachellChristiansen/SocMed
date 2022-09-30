@@ -16,8 +16,12 @@ function comment(count) {
   captionComment.classList.toggle("show-comments");
 }
 
+function share(count){
+  var share = $('.share-container')[count];
+share.classList.toggle("hidden");
+};
+
 $('.like').click(function(event){
- console.log("A");
   $(this).find('i').toggleClass("fa-solid");
 });
 
@@ -47,3 +51,12 @@ $('.user-follow').mouseenter(function(event) {
       $(this).removeClass("unfollow");
     }
     });
+
+  // $('.share').click(function(event){
+  //   if($('.share-container').hasClass("hidden")){
+  //     $('.share-container').removeClass("hidden");
+  //   } else {
+  //     $('.share-container').addClass("hidden");
+  //   }
+
+  // });
