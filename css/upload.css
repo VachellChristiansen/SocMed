@@ -154,30 +154,46 @@ body {
 	border: none;
 	border-radius: 20px;
 	margin: 10px;
-	padding: 7.5px 50px;
+	padding: 0.5rem 3rem;
 	cursor: pointer;
 }
 .cancel-button {
-  font-family: 'Montserrat';
-  background-color: red;
-  color: #f7fff7;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  border: none;
-  border-radius: 20px;
-  padding: 7.5px 50px;
-  cursor: pointer;
- }
+	font-family: 'Montserrat';
+	background-color: red;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	padding: 0.5rem 3rem;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn {
+	text-decoration: none;
+	border: none;
+	border-radius: 10em;
+	transition: 0.3s ease;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.btn:hover {
+	cursor: pointer;
+	filter: brightness(80%);
+}
 
 textarea{
-  width: 100%;
-  border: none;
-  background: #E8E8E8;
-  padding: 5px 10px;
-  height: 50%;
-  border-radius: 5px 5px 0px 0px;
-  border-bottom: 2px solid #016BA8;
-  transition: all 0.5s;
-  margin-top: 15px;
-  }
+	width: 100%;
+	border: none;
+	background: #E8E8E8;
+	padding: 5px 10px;
+	height: 50%;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 2px solid #016BA8;
+	transition: all 0.5s;
+	margin-top: 15px;
+}
