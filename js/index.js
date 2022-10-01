@@ -52,6 +52,12 @@ $('.user-follow').mouseenter(function(event) {
     }
     });
 
+    /* PROFILE NAVBAR */
+function menuToggle() {
+  const toggleMenu = document.querySelector(".menu");
+  toggleMenu.classList.toggle("active");
+  }
+
   // $('.share').click(function(event){
   //   if($('.share-container').hasClass("hidden")){
   //     $('.share-container').removeClass("hidden");
