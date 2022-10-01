@@ -1,49 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/upload.css">
-    <title>DeepSpace - Upload</title>
+  <title>DeepSpace - Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="../css/upload.css">
 </head>
+
 <body>
   <div class="fullscreen-bg">
     <video autoplay loop muted id="background-video">
-      <source src="../assets/background-video.mp4">
-    </video>
-</div>
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
-<form class="form-container" enctype='multipart/form-data'>
-	<div class="upload-files-container">
-		<div class="drag-file-area">
-			<span class="material-icons-outlined upload-icon"> file_upload </span>
-			<h3 class="dynamic-message"> Drag & drop any file here </h3>
-			<label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
-      <div class="card">
-        <div class="card-header bg-primary text-white"></div>
-        <div class="card-body">
-          <form action="caption">
-            <div class="form-group">
-               <textarea type="text" class="input" placeholder="Write a caption" v-model="newItem" @keyup.enter="addItem()"></textarea>
-            </div>
-          </form>
-        </div>
+    <source src="../assets/background-video.mp4">
+  </video>
+</div> 
+  <form class="form-container">
+  <div class="upload-files-container">
+    <div class="drop-zone">
+      <span class="drop-zone__prompt">Drop file here or click to upload</span>
+      <input type="file" name="myFile" class="drop-zone__input">
+    </div>
+    <div class="card">
+      <div class="card-header bg-primary text-white"></div>
+      <div class="card-body">
+        <form action="caption">
+          <div class="form-group">
+            <textarea type="text" class="input" placeholder="Write a caption" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          </div>
+        </form>
       </div>
-		</div>
-		<span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
-		<div class="file-block">
-			<div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
-			<span class="material-icons remove-file-icon">delete</span>
-			<div class="progress-bar"> </div>
-		</div>
-    <div>
-      <span class="btn upload-button">Upload</span>
-      <span class="btn"><a href="../html/profiles/user1.html" class="cancel-button"> Cancel </a></span>
-    </div>   
-	</div>
+    </div>
+    <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+      <div class="file-block">
+        <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+        <span class="material-icons remove-file-icon">delete</span>
+        <div class="progress-bar"> </div>
+      </div>
+      <div>
+        <span class="btn upload-button">Upload</span>
+        <span class="btn"><a href="../html/profiles/user1.html" class="cancel-button"> Cancel </a></span>
+      </div>   
+  </div>
 </form>
-
-    <script src="../js/upload.js"></script>
+  <script src="../js/upload.js"></script>
 </body>
+
 </html>
