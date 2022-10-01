@@ -276,6 +276,11 @@ button:hover {
   border-radius: 50%;
 }
 
+.user-profile-pic:hover {
+  cursor: pointer;
+}
+
+
 .user-detail {
   display: flex;
   flex: 1 1 auto;
@@ -499,8 +504,8 @@ button:hover {
 
 .action .menu {
   position: absolute;
-  top: 120px;
-  right: -10px;
+  top: 0;
+  right: 60px;
   padding: 10px 20px;
   background: #fff;
   width: 200px;
@@ -512,7 +517,7 @@ button:hover {
 }
 
 .action .menu.active {
-  top: 80px;
+  top: 50px;
   visibility: visible;
   opacity: 1;
 }

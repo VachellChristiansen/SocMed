@@ -21,7 +21,7 @@ async function hehe() {
 
 /* PROFILE NAVBAR */
 function menuToggle() {
-  const toggleMenu = document.querySelector(".menu");
-  toggleMenu.classList.toggle("active");
-  }
+  const toggleMenu = $('.action');
+  toggleMenu.classList.toggle("hidden");
+}
 
