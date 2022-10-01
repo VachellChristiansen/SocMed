@@ -51,15 +51,17 @@ $('.user-follow').mouseout(function(event) {
 });
 
 /* PROFILE NAVBAR */
-function menuToggle() {
-  $('.menu').toggleClass('active');
-}
-
-$('header').mouseleave(function() {
-  if($('.menu').hasClass('active')) {
-    $('.menu').removeClass('active');
-  }
-})
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+  
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+  
+  $('main').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
 
 // function menuToggle() {
 //   const toggleMenu = document.querySelector(".menu");
