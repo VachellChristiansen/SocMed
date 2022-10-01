@@ -481,8 +481,12 @@ button:hover {
 
 /*profile */
 .action {
-  position: relative;
+  position: absolute;
   margin-left: auto;
+  height: 400px;
+  width: 200px;
+  top: 80px;
+  right: 40px;
 }
 
 .action .profile {
@@ -505,7 +509,7 @@ button:hover {
 .action .menu {
   position: absolute;
   top: 0;
-  right: 60px;
+  right: 0;
   padding: 10px 20px;
   background: #fff;
   width: 200px;
