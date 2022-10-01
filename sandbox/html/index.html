@@ -12,7 +12,7 @@
 <body>
   <div class="background"></div>
   <div class="ghost-header"></div>
-  <header class="primary-header">
+  <header onmouseleave="profileMouseOver(this)" class="primary-header">
     <div class="container grid navbar">
       <div class="flex align-cen">
         <a href="index.html" class="logo">DeepSpace</a>
@@ -31,8 +31,22 @@
       </div>
       <div class="profile-button flex justify-end align-cen">
         <a href="user.html" class="btn no-bg">
-          <img class="user-profile-pic h-100" src="../assets/astro.jpeg" alt="profile">
+          <img onmouseover="profileMouseOver(this)" class="user-profile-pic master h-100" src="../assets/astro.jpeg" alt="profile">
         </a>
+      </div>
+      <div class="profile-menu grid">
+        <div class="menu-item flex justify-cen align-cen">
+          <button class="btn no-bg">Settings</button>
+        </div>
+        <div class="menu-item flex justify-cen align-cen">
+          <button class="btn no-bg">Help</button>
+        </div>
+        <div class="menu-item flex justify-cen align-cen">
+          <button class="btn no-bg">Privacy & Policy</button>
+        </div>
+        <div class="menu-item flex justify-cen align-cen">
+          <button class="btn no-bg">Logout</button>
+        </div>
       </div>
     </div>
   </header>

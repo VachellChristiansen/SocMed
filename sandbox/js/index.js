@@ -13,3 +13,12 @@ function comment(count) {
   comment.classList.toggle("hidden");
   captionComment.classList.toggle("show-comments");
 }
+
+function profileMouseOver(elem) {
+  if(elem.classList.contains("master")) {
+    if(document.getElementsByClassName("profile-menu")[0].classList.contains("show")) {
+      return;
+    }
+  }
+  document.getElementsByClassName("profile-menu")[0].classList.toggle("show");
+}
