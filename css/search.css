@@ -187,6 +187,7 @@ body {
   position: fixed;
   grid-template-rows: auto auto;
   height: 100%;
+  padding-right: 1em;
 }
 
 .recommended-container {
@@ -250,17 +251,6 @@ body {
   font-size: x-large;
 }
 
-.user-follow-star a{
-  border: none;
-  background-color: transparent;
-  text-transform: capitalize;
-  color: rgb(0, 162, 255);
-  font-weight: 700;
-}
-.user-follow-star a:hover{
-  cursor: pointer;
-}
-
 .user-followings-star{
 display: flex;
 
@@ -307,14 +297,14 @@ display: flex;
   justify-content: center;
 }
 
-.user-follow a{
+.user-follow button{
   border: none;
   background-color: transparent;
   text-transform: capitalize;
   color: rgb(0, 162, 255);
   font-weight: 700;
 }
-.user-follow a:hover{
+.user-follow button:hover{
   cursor: pointer;
 }
 

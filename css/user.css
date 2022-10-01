@@ -33,13 +33,6 @@ body {
 }
 
 button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-}
-
-button:hover {
   cursor:pointer;
 }
 
@@ -197,6 +190,7 @@ button:hover {
   position: fixed;
   grid-template-rows: auto auto;
   height: 100%;
+  padding-right: 1em;
 }
 
 .recommended-container {
@@ -267,21 +261,6 @@ button:hover {
   font-size: x-large;
 }
 
-/* Recommendation to remove due to duplicate code for same button
-.user-follow-star {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.user-follow-star button{
-  border: none;
-  background-color: transparent;
-  text-transform: capitalize;
-  color: rgb(0, 162, 255);
-  font-weight: 700;
-  font-size: x-large;
-} */
 .star {
   font-size: x-large;
 }
