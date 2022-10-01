@@ -32,6 +32,19 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255 255 255 / 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255 255 255 / 0.5);
+}
+
+
 
 /* Utilities */
 .grid {
@@ -182,6 +195,41 @@ a {
   text-align: center;
 }
 
+/* Profile On Hover Style */
+.profile-menu {
+  position: fixed;
+  top: -50%;
+  right: 5rem;
+  width: 15%;
+  height: 40%;
+  z-index: 98;
+  grid-template-columns: auto;
+  transition: 1s ease;
+}
+
+.profile-menu.show {
+  top: 10%;
+}
+
+.menu-item {
+  border-bottom: 3px solid black;
+  width: 100%;
+  background-color: white;
+}
+
+.menu-item > button {
+  color: black;
+}
+
+.menu-item:hover {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.menu-item:nth-last-child(1){
+  border: none;
+}
+
 /* Main Style */
 .main {
   position: absolute;
@@ -223,13 +271,29 @@ a {
 
 .user {
   height: 3rem;
-  display: grid;
-  grid-template-columns: auto 70% auto;
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  cursor: pointer;
+  gap: 0.5rem;
 }
 
 .user-profile-pic {
   height: 3rem;
   border-radius: 50%;
+}
+
+.user-profile-pic:hover {
+  cursor: pointer;
+}
+
+.user-detail {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .user-name,
@@ -238,10 +302,18 @@ a {
   word-wrap: break-word;
 }
 
+.user-follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .user-follow a{
-  color: whitesmoke;
   border: none;
   background-color: transparent;
+  text-transform: capitalize;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
 }
 .user-follow a:hover{
   cursor: pointer;
