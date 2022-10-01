@@ -63,6 +63,10 @@ $('.master,.profile-menu').mouseover(function(event){
     $('.profile-menu').addClass("hidden");
     });
 
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
+
 // function menuToggle() {
 //   const toggleMenu = document.querySelector(".menu");
 //   toggleMenu.classList.toggle("active");
