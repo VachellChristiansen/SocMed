@@ -18,6 +18,27 @@ body{
     color: white;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.9em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
 .title{
     font-size: 5em;
     margin-bottom: 0.25em;
@@ -181,8 +202,9 @@ form i{
 }
 
 .astronaut-back{
-  position: fixed;
+  position: absolute;
   transform: scale(2);
-  bottom: -10em;
+  bottom: 1vh;
+  overflow: hidden;
   left: 5em;
 }

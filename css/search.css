@@ -109,7 +109,7 @@ body {
 /* Header Style */
 .primary-header {
   position:fixed;
-  width: 100%;
+  width: 100vw;
   height: 10%;
   background-color: hsla(252, 30%, 100%,100%);
   z-index: 100;
@@ -117,7 +117,7 @@ body {
 
 
 .navbar {
-  grid-template-columns: 30% 40% 30%;
+  grid-template-columns: auto 40% 30%;
   height: 100%;
 }
 
@@ -166,6 +166,7 @@ body {
   margin: 0.2rem;
   border: 0.1em solid hsl(252, 15%, 65%);
   text-align: center;
+  max-height: 100%;
 }
 .signin {
   width: fit-content;
@@ -174,6 +175,7 @@ body {
   margin: 0.2rem;
   border: 0.1em solid hsl(252, 15%, 65%);
   text-align: center;
+  max-height: 100%;
 }
 
 /* Main Style */
@@ -369,3 +371,16 @@ display: flex;
   transition: 0.3s ease;
   background-color: rgb(29, 29, 208); ;
 }
+@media screen and (max-width: 800px) {
+.signin,.signup{
+  font-size: smaller;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+  .signin,.signup{
+   font-size: xx-small;
+  }
+  
+  }

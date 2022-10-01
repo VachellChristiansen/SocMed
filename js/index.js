@@ -58,11 +58,10 @@ function menuToggle() {
   toggleMenu.classList.toggle("active");
   }
 
-  // $('.share').click(function(event){
-  //   if($('.share-container').hasClass("hidden")){
-  //     $('.share-container').removeClass("hidden");
-  //   } else {
-  //     $('.share-container').addClass("hidden");
-  //   }
+// $('.profile').mouseenter(function(event) {
+//   $('.menu').addClass("active");
+//  });
 
-  // });
+//  $('.navbar').mouseout(function(event) {
+//   $('.menu').removeClass("active");
+//  });
