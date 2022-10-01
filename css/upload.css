@@ -35,6 +35,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 .form-container {
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -44,7 +45,7 @@ body {
 .upload-files-container {
 	background-color: #f7fff7;
 	width: 420px;
-	padding: 30px 60px;
+	padding: 2rem 3.5rem;
 	border-radius: 40px;
 	display: flex;
    	align-items: center;
@@ -52,6 +53,8 @@ body {
 	flex-direction: column;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
 }
+/*
+
 .drag-file-area {
 	border: 2px dashed #7b2cbf;
 	border-radius: 40px;
@@ -82,7 +85,7 @@ body {
 }
 .default-file-input {
 	opacity: 0;
-}
+} */
 .cannot-upload-message {
 	background-color: #ffc6c4;
 	font-size: 17px;
@@ -196,4 +199,60 @@ textarea{
 	border-bottom: 2px solid #016BA8;
 	transition: all 0.5s;
 	margin-top: 15px;
+}
+
+
+/* TAMBAHAN */
+/* Drop Zone */
+.drop-zone {
+  position: fixed;
+  width: 100%;
+  max-width: 300px;
+  height: 100px;
+  padding: 1.5rem 2.0rem;
+  margin-bottom: 20%;
+  /* margin-left: 20%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+  background-color: #f7fff7;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
 }
