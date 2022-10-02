@@ -9,39 +9,72 @@
 </head>
 
 <body>
-  <div class="fullscreen-bg">
-    <video autoplay loop muted id="background-video">
-    <source src="../assets/background-video.mp4">
-  </video>
-</div> 
-  <form class="form-container">
-  <div class="upload-files-container">
-    <div class="drop-zone">
-      <span class="drop-zone__prompt">Drop file here or click to upload</span>
-      <input type="file" name="myFile" class="drop-zone__input">
-    </div>
-    <div class="card">
-      <div class="card-header bg-primary text-white"></div>
-      <div class="card-body">
-        <form action="caption">
-          <div class="form-group">
-            <textarea type="text" class="input" placeholder="Write a caption" v-model="newItem" @keyup.enter="addItem()"></textarea>
-          </div>
+
+  <header class="primary-header">
+    <div class="container grid navbar">
+      <div class="flex-row align-cen">
+        <a href="../index.html" class="logo">DeepSpace</a>
+      </div>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row" action="../search.html">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-    </div>
-    <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
-      <div class="file-block">
-        <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
-        <span class="material-icons remove-file-icon">delete</span>
-        <div class="progress-bar"> </div>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="../../html/upload.html" class="btn signup">+ Upload</a>
+        <a href="../../html/signin.html" class="btn signin">Sign In</a>
       </div>
-      <div>
-        <span class="btn upload-button">Upload</span>
-        <span class="btn"><a href="../html/profiles/user1.html" class="cancel-button"> Cancel </a></span>
-      </div>   
-  </div>
-</form>
+    </div>
+  </header>
+
+  <div class="fullscreen-bg">
+    <video autoplay loop muted id="background-video">
+      <source src="../assets/background-video.mp4">
+    </video>
+  </div> 
+
+<div class="conts flex justify-cen align-cen">
+  <form class="form-container flex-col align-cen" action="../search.html">
+    <div class="text-title-big">Upload Post</div>
+   <div class="flex-row justify-cen align-cen">
+      <div class="drop">
+        <div class="drop-zone">
+          <span class="drop-zone__prompt">Drop file here or click to upload</span>
+          <input type="file" name="myFile" class="drop-zone__input">
+        </div>
+      </div>
+      <div class="right grid justify-ite">
+        <div class="text-title">Post Title</div>
+        <div class="comment-add justify-cen align-cen flex-row">
+            <textarea class="comment-text-box" placeholder="Title" rows="1" cols="40"></textarea>
+        </div>
+        <div class="text-title">Caption</div>
+        <div class="comment-add justify-cen align-cen flex-row">
+          <textarea class="comment-text-box" placeholder="Put your caption here..." rows="3" cols="40"></textarea>
+      </div>
+        <div class="text-title">Music Used</div>
+        <div class="comment-add justify-cen align-cen flex-row">
+          <textarea class="comment-text-box" placeholder="[Artist] - [Music]" rows="1" cols="40"></textarea>
+      </div>
+      
+      </div>
+   </div>
+
+
+
+    <div class="buttons-form flex">
+      <div class="upload-button buttons-below">
+        <button type="submit">Upload</button>
+      </div>
+      <div class="cancel-button buttons-below">
+        <button>Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
   <script src="../js/upload.js"></script>
 </body>
 

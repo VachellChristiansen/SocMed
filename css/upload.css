@@ -1,4 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-small-down: 12px;
+  --fs-small: 16px;
+  --fs-small-up: 20px;
+  --fs-medium: 24px;
+  --fs-large-down: 28px;
+  --fs-large: 32px;
+  --fs-large-up: 36px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: smaller;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.9em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Utilities */
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-spa {
+  justify-content: space-around;
+}
+.justify-spb {
+  justify-content: space-between;
+}
+.justify-cen{
+  justify-content: center;
+}
+.justify-ite{
+  justify-items: center;
+}
+.align-cen {
+  align-items: center;
+}
+.align-sel{
+  align-self: center;
+}
+.align-con{
+  align-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 10em;
+  background-color: whitesmoke;
+  transition: 0.3s ease;
+  font-weight: var(--fw-medium);
+}
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+.container {
+  width: 100%;
+  padding: 0 5vw;
+  margin: 0 auto;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+/* Header Style */
+.primary-header {
+  position:fixed;
+  width: 100vw;
+  height: 10%;
+  background-color: hsla(252, 30%, 100%,100%);
+  z-index: 100;
+}
+
+
+.navbar {
+  grid-template-columns: auto 40% 30%;
+  height: 100%;
+}
+
+.logo {
+  color:black;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+}
+
+.search-bar {
+  width: 20vw;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  background: hsl(252, 30%, 95%);
+  margin: auto;
+}
+.search {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  appearance: none;
+  margin-left: 5px;
+  color: black;
+}
+.search:focus {
+  outline: none;
+}
+
+.submit-search {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+.submit-search i{
+  color: rgb(60, 60, 60);
+}
+.sign-button {
+  width: 100%;
+}
+.signup {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  margin: 0.2rem;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+  max-height: 100%;
+}
+.signin {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  margin: 0.2rem;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+  max-height: 100%;
+}
+
+
 
 .fullscreen-bg {
   position: fixed;
@@ -28,200 +236,34 @@
   z-index: 0;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-}
-.form-container {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-  justify-content: center;
-	align-items: center;
-}
-.upload-files-container {
-	background-color: #f7fff7;
-	width: 420px;
-	padding: 2rem 3.5rem;
-	border-radius: 40px;
-	display: flex;
-   	align-items: center;
-   	justify-content: center;
-	flex-direction: column;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
-}
-/*
+.conts{
+width: 100%;
+height: 100%;
 
-.drag-file-area {
-	border: 2px dashed #7b2cbf;
-	border-radius: 40px;
-	margin: 10px 0 15px;
-	padding: 30px 50px;
-	width: 350px;
-	text-align: center;
-}
-.drag-file-area .upload-icon {
-	font-size: 50px;
-}
-.drag-file-area h3 {
-	font-size: 26px;
-	margin: 15px 0;
-}
-.drag-file-area label {
-	font-size: 19px;
-}
-.drag-file-area label .browse-files-text {
-	background-color: blue;
-	color: whitesmoke;
-	font-weight: bolder;
-	cursor: pointer;
-}
-.browse-files span {
-	position: relative;
-	top: -25px;
-}
-.default-file-input {
-	opacity: 0;
-} */
-.cannot-upload-message {
-	background-color: #ffc6c4;
-	font-size: 17px;
-	display: flex;
-	align-items: center;
-	margin: 5px 0;
-	padding: 5px 10px 5px 30px;
-	border-radius: 5px;
-	color: #BB0000;
-	display: none;
-}
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-.cannot-upload-message span, .upload-button-icon {
-	padding-right: 10px;
-}
-.cannot-upload-message span:last-child {
-	padding-left: 20px;
-	cursor: pointer;
-}
-.file-block {
-	color: #f7fff7;
-	background-color: blue;
-  	transition: all 1s;
-	width: 390px;
-	position: relative;
-	display: none;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin: 10px 0 15px;
-	padding: 10px 20px;
-	border-radius: 25px;
-	cursor: pointer;
-}
-.file-info {
-	display: flex;
-	align-items: center;
-	font-size: 15px;
-}
-.file-icon {
-	margin-right: 10px;
-}
-.file-name, .file-size {
-	padding: 0 3px;
-}
-.remove-file-icon {
-	cursor: pointer;
-}
-.progress-bar {
-	display: flex;
-	position: absolute;
-	bottom: 0;
-	left: 4.5%;
-	width: 0;
-	height: 5px;
-	border-radius: 25px;
-	background-color: white;
-}
-.upload-button {
-	font-family: 'Montserrat';
-	background-color: blue;
-	color: #f7fff7;
-	display: flex;
-	align-items: center;
-	font-size: 18px;
-	border: none;
-	border-radius: 20px;
-	margin: 10px;
-	padding: 0.5rem 3rem;
-	cursor: pointer;
-}
-.cancel-button {
-	font-family: 'Montserrat';
-	background-color: red;
-	color: #f7fff7;
-	display: flex;
-	align-items: center;
-	font-size: 18px;
-	border: none;
-	border-radius: 20px;
-	padding: 0.5rem 3rem;
-	cursor: pointer;
-	text-decoration: none;
-}
-.btn {
-	text-decoration: none;
-	border: none;
-	border-radius: 10em;
-	transition: 0.3s ease;
-	font-weight: 500;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-.btn:hover {
-	cursor: pointer;
-	filter: brightness(80%);
 }
 
-textarea{
-	width: 100%;
-	border: none;
-	background: #E8E8E8;
-	padding: 5px 10px;
-	height: 50%;
-	border-radius: 5px 5px 0px 0px;
-	border-bottom: 2px solid #016BA8;
-	transition: all 0.5s;
-	margin-top: 15px;
+.form-container{
+  margin: 5em;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: rgb(82, 112, 172);
+  border-radius: 2em;
+  padding: 1em;
 }
 
-
-/* TAMBAHAN */
+/* Left Side */
 /* Drop Zone */
 .drop-zone {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
-  max-width: 300px;
+  max-width: 100%;
   height: 100px;
-  padding: 1.5rem 2.0rem;
-  margin-bottom: 20%;
-  /* margin-left: 20%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
   color: #cccccc;
-  border: 4px dashed #009578;
+  border: 4px solid rgb(255, 219, 41);
   border-radius: 10px;
   background-color: #f7fff7;
 }
@@ -246,7 +288,7 @@ textarea{
 
 .drop-zone__thumb::after {
   content: attr(data-label);
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -256,3 +298,71 @@ textarea{
   font-size: 14px;
   text-align: center;
 }
+
+.drop-zone__prompt{
+  color: rgb(19, 26, 82);
+}
+
+/* Right Side */
+.comment-add {
+  box-shadow: inset 0 0 10px #676767;
+  width: 90%;
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  background: hsl(252, 30%, 95%);
+  margin: auto;
+}
+.comment-text-box {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  appearance: none;
+  color: black;
+  resize: none;
+}
+.comment-text-box:focus {
+  outline: none;
+}
+.submit-comment {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  color: rgb(0, 162, 255);
+}
+.submit-comment:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.text-title{
+  font-size:medium;
+}
+.text-title-big{
+  font-size:xx-large;
+  font-weight:var(--fw-bold);
+  color: rgb(255, 225, 0);
+}
+.right{
+  gap:0.5em;
+}
+
+.buttons-form{
+padding: 1em;
+}
+
+.buttons-below{
+  padding: 1em 2em;
+  margin: 0 3em;
+  border-radius: 10em;
+}
+
+.upload-button{
+  background-color: rgb(0, 38, 255);
+}
+
+
+.cancel-button{
+  background-color: rgb(255, 0, 0);
+}
+
