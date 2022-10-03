@@ -229,11 +229,13 @@ button:hover {
   grid-template-columns: 30% 40% 30%;
   height: 100vh;
   scroll-snap-align: start;
+  margin-left: 570px;
 }
 
 .recommended {
   grid-template-rows: auto auto;
   height: 100vh;
+  position: fixed;
 }
 
 .recommended-container {
@@ -339,10 +341,12 @@ button:hover {
 /* Caption & Comment Section */
 
 .caption-comment {
-  padding: 5rem 0;
+  padding: 5rem 2rem;
   max-height: 100vh;
+  max-width: 50vh;
   gap: 2rem;
   grid-template-rows: auto;
+  margin-left: 150px;
 }
 
 .show-comments {
