@@ -1,5 +1,6 @@
 function showPassword(eye) {
-  var password = document.getElementsByClassName('password-input')[0];
+  var password = eye.closest('div').querySelector('input');
+  console.log(password);
   if(password.type === 'password') {
     password.type = 'text';
     eye.classList.remove('fa-eye');
