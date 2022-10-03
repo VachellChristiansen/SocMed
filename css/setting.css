@@ -144,6 +144,40 @@ form input {
     cursor: pointer;
 }
 
+
+.manage-account {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px 20px;
+    font-weight: 700;
+    color: white;
+}
+.manage-item {
+    box-sizing: border-box;
+}
+.acc-cntrl {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 16px 12px;
+}
+.acc-cntrl-option {    
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0 16px;
+}
+.delete-btn {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 16px;
+    color: #fe2c55;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    right: 0;
+}
 .privacysettings:not(:last-child) {
     position: relative;
 }
