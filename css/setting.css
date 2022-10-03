@@ -1,3 +1,5 @@
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -177,9 +179,6 @@ form input {
     margin-left: 16px;
 }
 .private-account-btn {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     position: absolute;
     top: 32px;
@@ -195,16 +194,10 @@ form input {
     padding: 0;
     position: relative;
     overflow: visible;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    color: rgba(22, 24, 35, 1);
-    font-family: ProximaNova,Arial,Tahoma,PingFangSC,sans-serif;
+    color: yellow;
+    font-family: Poppins,sans-serif;
     cursor: pointer;
 }
 .private-btn-style {
@@ -213,36 +206,56 @@ form input {
     height: 24px;
     left: 0;
     top: 0;
-    background: rgba(22, 24, 35, 0.12);
+    background: white;
     border-radius: 100px;
-    -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .private-btn-swtch {
     position: absolute;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 20px;
     height: 20px;
     left: 2px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: 100px;
-    background: #fff;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
-    -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: grey;
+    box-shadow: 0 1px 2px black;
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.privacy-data {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 16px 12px;
+}
+.data-account {
+    position: relative;
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+}
+.data-dwnld {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0 16px;
+}
+.download-desc {
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    margin-right: 84px;
+    margin-left: 16px;
+}
+.download-more {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    margin: 0 16px;
+    transform: translateY(-50%);
+    right: 0;
 }
