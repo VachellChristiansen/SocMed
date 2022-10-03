@@ -337,7 +337,8 @@ button:hover {
   .search-container,
   .right-container,
   .side-container,
-  .post-comments{
+  .post-details,
+  .post-comments {
     display: none;
   }
 
@@ -362,7 +363,8 @@ button:hover {
   .search-container,
   .right-container,
   .side-container,
-  .post-details{
+  .post-details,
+  .post-comments {
     display: none;
   }
 
@@ -385,8 +387,7 @@ button:hover {
   }
   .header-trigger,
   .search-container,
-  .side-container,
-  .post-comments {
+  .side-container {
     display: none;
   }
   
