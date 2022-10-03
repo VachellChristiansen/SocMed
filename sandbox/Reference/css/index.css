@@ -238,12 +238,13 @@ button:hover {
 }
 
 .main-item-container {
+  max-width: 100%;
   display: flex;
   scroll-snap-align: start;
 }
 
 .post-video video {
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .post-details {
@@ -274,7 +275,6 @@ button:hover {
 .post-comments {
   padding: 1em;
   max-width: 100%;
-  max-height: 70vh;
   margin-top: 60px;
   transition: 0.5s ease;
 }
@@ -284,7 +284,33 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-height: 70vh;
   overflow-y: auto;
+}
+
+.add-comment,
+.add-comment > form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.add-comment {
+  margin-top: 1em;
+}
+
+.add-comment > form {
+  justify-content: space-between;
+}
+
+.add-comment > form > textarea {
+  justify-self: stretch;
+  background-color: white;
+  border: 1px solid rgba(0 0 0 / 0.3);
+  resize: none;
+}
+.add-comment > form > textarea:focus {
+  outline: none;
 }
 
 .interactive-buttons {
@@ -412,7 +438,10 @@ button:hover {
   .side-container {
     display: none;
   }
-  
+
+  .comment-container {
+    max-height: 50vh;
+  } 
   .post-details {
     margin-top: 0;
   }
