@@ -95,3 +95,7 @@ aside {
   display: flex;
   margin-left: 8em;
 }
+
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>DeepSpace</title>
+</head>
+<body>
+  <div class="header-trigger"></div>
+  <div class="header">
+    <div class="header-wrapper">
+      <a href="index.html" class="deepspace-logo">DeepSpace</a>
+      <div class="search-container">
+        <form action="/search" class="search-button">
+          <input type="text" placeholder="Search.." name="search">
+          <span class="vert-line"></span>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="right-container">
+        <button class="upload-container">
+          Upload
+        </button>
+        <button class="login-container">
+          Log In
+        </button>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-wrapper">
+      <div class="side-container">
+        <div class="side-item-container">
+          <span class="item-title">Top Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="main-item-container">
+          <div>
+            <img src="../assets/astro.jpeg" alt="" class="users-pic">
+          </div>
+          <div class="post-video">
+            <video src="../assets/heart.mp4"></video>
+          </div>
+          <div class="post-details">
+            <div class="post-users">
+              <div class="users-name">
+                <span class="tag">astris</span>
+                <span class="name">Astroboy_2</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="post-caption">
+              <p>This video is the first one the admin ever made please do not replicate or try anything in this section because the developer is not just under-educated, he is also deprecated and depressed</p>
+            </div>
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(0)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-comments hidden opacity-0">
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(0)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+            <div class="comment-container">
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <form>
+                <textarea name="comment" cols="40" rows="3" maxlength="120" placeholder="Add Comment..."></textarea>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+        <div class="main-item-container">
+          <div>
+            <img src="../assets/astro.jpeg" alt="" class="users-pic">
+          </div>
+          <div class="post-video">
+            <video src="../assets/heart.mp4"></video>
+          </div>
+          <div class="post-details">
+            <div class="post-users">
+              <div class="users-name">
+                <span class="tag">astris</span>
+                <span class="name">Astroboy_2</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="post-caption">
+              <p>This video is the first one the admin ever made please do not replicate or try anything in this section because the developer is not just under-educated, he is also deprecated and depressed</p>
+            </div>
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(1)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-comments hidden opacity-0">
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(1)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+            <div class="comment-container">
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <form>
+                <textarea name="comment" cols="40" rows="3" max-length="120" placeholder="Add Comment..."></textarea>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/index.js"></script>
+</body>
+</html>

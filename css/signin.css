@@ -105,7 +105,11 @@ body{
     margin-bottom: 1.3em;
     margin-top: 0.7em;
 }
-
+.custom-control-label {
+    font-weight: 800;
+    font-size: 16px;
+    margin: 0.2rem 0rem;
+  }
 form i{
     float: right;
     margin-left: -40px;
@@ -207,4 +211,8 @@ form i{
   bottom: 1vh;
   overflow: hidden;
   left: 5em;
+}
+
+a{
+  text-decoration: none;
 }
