@@ -229,7 +229,7 @@ button:hover {
   grid-template-columns: 30% 40% 30%;
   height: 100vh;
   scroll-snap-align: start;
-  margin-left: 570px;
+  margin-left: 470px;
 }
 
 .recommended {
