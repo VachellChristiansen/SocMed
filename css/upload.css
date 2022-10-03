@@ -245,7 +245,7 @@ height: 100%;
 .form-container{
   max-width: 100vw;
   max-height: 100vh;
-  background-color: rgb(82, 112, 172);
+  background-color: rgb(102, 126, 145);
   border-radius: 2em;
   padding: 1em;
   margin-top: 10%;
@@ -263,7 +263,7 @@ height: 100%;
   font-size: 20px;
   cursor: pointer;
   color: #cccccc;
-  border: 4px solid rgb(255, 219, 41);
+  border: 4px solid rgb(43, 112, 186);
   border-radius: 10px;
   background-color: #f7fff7;
 }
@@ -341,7 +341,7 @@ height: 100%;
 .text-title-big{
   font-size:xx-large;
   font-weight:var(--fw-bold);
-  color: rgb(255, 225, 0);
+  color: rgb(255, 255, 255);
 }
 .right{
   gap:0.5em;

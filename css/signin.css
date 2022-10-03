@@ -212,3 +212,7 @@ form i{
   overflow: hidden;
   left: 5em;
 }
+
+a{
+  text-decoration: none;
+}
