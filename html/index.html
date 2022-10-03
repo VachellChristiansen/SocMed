@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon"> 
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
 
   
   <div class="ghost-header"></div>
-  <header class="primary-header">
+  <header class="primary-header"> 
     <div class="container grid navbar">
       <div class="flex-row align-cen">
         <a href="index.html" class="logo">DeepSpace</a>
@@ -41,31 +42,25 @@
         <a href="../../html/signin.html" class="btn signin">Sign In</a>
       </div>
       <div class="profile-button flex justify-end align-cen">
-        <img class="user-profile-pic h-100" src="../assets/astro.jpeg" alt="profile" onclick="menuToggle()">
+        <img class="user-profile-pic master h-100" src="../assets/astro.jpeg" id="user1" alt="profile">
       </div>
     </div>
-    <div class="action">
-      <div class="menu">
-        <h3>User_1<br /><span>@User_1</span></h3>
-        <ul>
-          <li>
-            <a href="#">My Profile</a>
-          </li>
-            <li>
-            <a href="#">Inbox</a>
-          </li>
-          <li>
-            <a href="../html/setting/edit-profile.html">Setting</a>
-          </li>
-          <li>
-          <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="../html/signin.html">Logout</a>
-          </li>
-        </ul>
-      </div>
+    
+    <div class="profile-menu grid hidden">
+      <a class="pop-up align-cen justify-cen flex" href="setting/edit-profile.html" >
+        Settings
+      </a>
+      <a class="pop-up align-cen justify-cen flex">
+        Help
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="setting/policy.html">
+        Privacy Policy
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="signin.html" >
+        Logout
+      </a>
     </div>
+
   </header>
   <main>
     <div class="container main">
@@ -336,6 +331,7 @@
               </div>
             </div>
           </div>
+
           <div class="comment-add hidden">
             <form class="justify-cen align-cen flex-row" action="../search.html">
               <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50"></textarea>

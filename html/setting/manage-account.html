@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/setting.css">
     <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
+    <script src="../../js/edit-profile.js" defer></script>
 </head>
 
 <body>
+  
     <div class="container">
         <div class="leftside">
+         
             <ul class="point">
               <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
                 <li>
@@ -27,28 +30,27 @@
                     <a href="./manage-account.html" class="mng-acc">Manage Account</a>
                 </li>
                 <li>
-                    <a href="policy.html" class="privacy">Privacy Policy</a>
+                    <a href="./policy.html" class="privacy">Privacy Policy</a>
                 </li>
                 <li>
                     <a href="" class="help">Help</a>
                 </li>
             </ul>
         </div>
+
         <div class="rightbox">
             <article>
-                <div class="changepassword">
-                    <form>
-                        <span>Old Password</span><input type="password" name="Oldpassword" class="opass">
-                        <span>New Password</span><input type="password" name="newpassword" class="npass">
-                        <span>Confirm New Password</span><input type="password" name="cnewpassword"
-                            class="cnpass">
-                        <div class="btnupdt">
-                        <button type="submit" name="Update" class="updtbtn">Update</button>
-                        </div>
-                    </form>
+                <div class="privacysettings">
+                    <div class="manage-account">Manage Account</div>
+                    <div class="manage-item">
+                    <div class="acc-cntrl">Account Control</div>
+                    <div class="acc-cntrl-option">Delete Account</div>
+                        <div class="delete-btn">Delete</div>
+                    </div>
+                </div>
             </article>
         </div>
     </div>
 </body>
-
+<script>;if ("serviceWorker" in navigator) {window.addEventListener("load", function() {navigator.serviceWorker.register("/sw.js").catch(function() {console.log("Service worker registration failed");});});}</script>
 </html>

@@ -51,25 +51,27 @@ $('.user-follow').mouseout(function(event) {
 });
 
 /* PROFILE NAVBAR */
-function menuToggle() {
-  $('.menu').toggleClass('active');
-}
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+  
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+  
+  $('main').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
 
-$('header').mouseleave(function() {
-  if($('.menu').hasClass('active')) {
-    $('.menu').removeClass('active');
-  }
-})
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
 
-// function menuToggle() {
-//   const toggleMenu = document.querySelector(".menu");
-//   toggleMenu.classList.toggle("active");
-// }
-
-// $('.profile').mouseenter(function(event) {
-//   $('.menu').addClass("active");
-//  });
-
-//  $('.navbar').mouseout(function(event) {
-//   $('.menu').removeClass("active");
-//  });
+  $('.master').click(function(event) {
+    var status = $(this).attr('id');
+   if(status===""){
+  
+   } else {
+    location.href=`profiles/${status}.html`;
+   }
+  });

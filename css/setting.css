@@ -1,3 +1,5 @@
+/* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -140,4 +142,154 @@ form input {
 
 .username-and-pp span{
     cursor: pointer;
+}
+
+
+.manage-account {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px 20px;
+    font-weight: 700;
+    color: white;
+}
+.manage-item {
+    box-sizing: border-box;
+}
+.acc-cntrl {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 16px 12px;
+}
+.acc-cntrl-option {    
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0 16px;
+}
+.delete-btn {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 16px;
+    color: #fe2c55;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    right: 0;
+}
+.privacysettings:not(:last-child) {
+    position: relative;
+}
+.privacy-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 8px 20px;
+        font-weight: 700;
+        color: white;
+}
+.privacy-item {
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+}
+.privacy-dscvr:not(:last-child) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 16px 12px;
+}
+.private-account {
+        font-size: 16px;
+        line-height: 22px;
+        color: white;
+        margin: 0 16px;
+}
+.private-account-desc{
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    margin-right: 84px;
+    margin-left: 16px;
+}
+.private-account-btn {
+    display: inline-flex;
+    position: absolute;
+    top: 32px;
+    margin: 0 16px;
+    right: 0;
+}
+.private-btn {
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    display: inline-flex;
+    align-items: center;
+    color: yellow;
+    font-family: Poppins,sans-serif;
+    cursor: pointer;
+}
+.private-btn-style {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 100px;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.private-btn-swtch {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    background: grey;
+    box-shadow: 0 1px 2px black;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.privacy-data {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 16px 12px;
+}
+.data-account {
+    position: relative;
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+}
+.data-dwnld {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0 16px;
+}
+.download-desc {
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    margin-right: 84px;
+    margin-left: 16px;
+}
+.download-more {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    margin: 0 16px;
+    transform: translateY(-50%);
+    right: 0;
 }
