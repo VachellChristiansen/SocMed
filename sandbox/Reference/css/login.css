@@ -67,6 +67,12 @@ button:hover {
   z-index: 1;
 }
 
+.deepspace {
+  font-size: 3em;
+  font-weight: var(--fw-bold);
+}
+
+
 .login-wrapper {
   width: 100%;
   height: 100%;
@@ -78,23 +84,50 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 1s ease;
+}
+.register-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 5vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease;
 }
 
-.deepspace {
-  font-size: 3em;
-  font-weight: var(--fw-bold);
+.disappear {
+  opacity: 0;
+}
+.hidden {
+  display: none !important;
 }
 
 .login-form {
   width: 50%;
   height: 50vh;
   max-width: 500px;
+  min-height: 450px;
+  border-radius: 1em;
+  background-color: rgba(255 255 255 / 0.2);
+  padding: 2em;
+}
+.register-form {
+  width: 50%;
+  height: 55vh;
+  max-width: 500px;
+  min-height: 470px;
   border-radius: 1em;
   background-color: rgba(255 255 255 / 0.2);
   padding: 2em;
 }
 
-.login {
+.login,
+.register {
   font-size: 2em;
   font-weight: var(--fw-semi-bold);
 }
@@ -104,7 +137,8 @@ button:hover {
   font-weight: var(--fw-light);
 }
 
-.login-form > form {
+.login-form > form,
+.register-form > form {
   margin-top: 2em;
 }
 
@@ -132,7 +166,8 @@ input[type="text"], input[type="password"] {
   outline: none
 }
 
-.password {
+.password,
+.confirm-password {
   padding: 1em;
   border-radius: 1.5em;
   border: 2px solid rgba(255 255 255);
@@ -142,18 +177,26 @@ input[type="text"], input[type="password"] {
   background-color: transparent;
 }
 
-.password > input {
+.register-form > form > .password,
+.register-form > form > .confirm-password {
+  margin: 1em 0;
+}
+
+.password > input,
+.confirm-password > input {
   width: 100%;
   background-color: transparent;;
   border: none;
   margin-left: 1em;
 }
 
-.password > input:focus {
+.password > input:focus,
+.confirm-password > input:focus {
   outline: none
 }
 
-.password > i:hover {
+.password > i:hover,
+.confirm-password > i:hover{
   cursor: pointer;
 }
 
