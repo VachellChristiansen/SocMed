@@ -192,7 +192,7 @@ form input {
     border-bottom: 1px solid white;
     padding-bottom: 16px;
 }
-.privacy-dscvr:not(:last-child) {
+.subtitle:not(:last-child) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
@@ -205,7 +205,7 @@ form input {
         color: white;
         margin: 0 16px;
 }
-.private-account-desc{
+.desc-txt{
     font-size: 12px;
     line-height: 15px;
     color: white;
@@ -260,13 +260,6 @@ form input {
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.privacy-data {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 600;
-    color: white;
-    margin: 0 16px 12px;
-}
 .data-account {
     position: relative;
     border-bottom: 1px solid white;
@@ -278,13 +271,6 @@ form input {
     color: white;
     margin: 0 16px;
 }
-.download-desc {
-    font-size: 12px;
-    line-height: 15px;
-    color: white;
-    margin-right: 84px;
-    margin-left: 16px;
-}
 .download-more {
     display: inline-flex;
     position: absolute;
@@ -292,4 +278,7 @@ form input {
     margin: 0 16px;
     transform: translateY(-50%);
     right: 0;
+}
+.settings:not(:last-child) {
+    position: relative;
 }
