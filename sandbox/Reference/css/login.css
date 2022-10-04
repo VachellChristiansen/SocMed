@@ -84,7 +84,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 1s ease;
+  transition: 0.2s ease;
 }
 .register-wrapper {
   width: 100%;
@@ -97,7 +97,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 1s ease;
+  transition: 0.2s ease;
 }
 
 .disappear {
@@ -142,7 +142,7 @@ button:hover {
   margin-top: 2em;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   font-size: 1.5em;
 }
 
@@ -167,7 +167,7 @@ input[type="text"], input[type="password"] {
 }
 
 .password,
-.confirm-password {
+.email {
   padding: 1em;
   border-radius: 1.5em;
   border: 2px solid rgba(255 255 255);
@@ -178,25 +178,25 @@ input[type="text"], input[type="password"] {
 }
 
 .register-form > form > .password,
-.register-form > form > .confirm-password {
+.register-form > form > .email {
   margin: 1em 0;
 }
 
 .password > input,
-.confirm-password > input {
+.email > input {
   width: 100%;
-  background-color: transparent;;
+  background-color: transparent;
   border: none;
   margin-left: 1em;
 }
 
 .password > input:focus,
-.confirm-password > input:focus {
+.email > input:focus {
   outline: none
 }
 
 .password > i:hover,
-.confirm-password > i:hover{
+.email > i:hover{
   cursor: pointer;
 }
 

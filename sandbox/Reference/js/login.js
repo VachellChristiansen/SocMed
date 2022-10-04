@@ -20,10 +20,10 @@ function register() {
   setTimeout(() => {
     login.classList.add('hidden');
     register.classList.remove('hidden');
-  }, 1000);
+  }, 200);
   setTimeout(() => {
     register.classList.remove('disappear');
-  }, 2000);
+  }, 400);
 }
 
 function login() {
@@ -33,8 +33,8 @@ function login() {
   setTimeout(() => {
     register.classList.add('hidden');
     login.classList.remove('hidden');
-  }, 1000);
+  }, 200);
   setTimeout(() => {
     login.classList.remove('disappear');
-  }, 2000);
+  }, 400);
 }

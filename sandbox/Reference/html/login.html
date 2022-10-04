@@ -47,6 +47,10 @@
       <br/>
       <span class="sub">Insert your data to register.</span>
       <form>
+        <div class="email">
+          <i class="fa fa-envelope fa-2x"></i>
+          <input type="email" name="email" class="email-input" autocomplete="off" placeholder="Email">
+        </div>
         <div class="username">
           <i class="fa fa-user fa-2x"></i>
           <input type="text" name="username" class="username-input" autocomplete="off" placeholder="Username">
@@ -54,10 +58,6 @@
         <div class="password">
           <i onclick="showPassword(this)" class="fa fa-eye fa-2x"></i>
           <input type="password" name="password" class="password-input" placeholder="Password">
-        </div>
-        <div class="confirm-password">
-          <i onclick="showPassword(this)" class="fa fa-eye fa-2x"></i>
-          <input type="password" name="password" class="password-input" placeholder="Confirm Password">
         </div>
         <input type="checkbox" id="remember" name="remember" value="remember">
         <label for="remember">Remember Me</label>
