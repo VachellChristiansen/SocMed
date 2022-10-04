@@ -237,18 +237,18 @@ button:hover {
   z-index: 0;
 }
 .app{
-  padding-top: 5em;
+  padding-top: 7%;
 }
 .left{
   flex:2;
   height: 85vh;
-  overflow: scroll;
+  overflow: auto;
 }
 .right{
   flex:10;
   height: 85vh;
-  overflow: scroll;
-  padding: 1em;
+  overflow: auto;
+  margin-left: 1em;
 }
 
 .accordion {
