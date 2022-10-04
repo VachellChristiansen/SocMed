@@ -273,6 +273,8 @@ button:hover {
 
 .user-profile-pic {
   height: 3rem;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 
