@@ -127,6 +127,7 @@ form input {
     width: 80px;
     height: 80px;
     margin: 1.5em;
+    object-fit: cover;
 }
 
 .pht-and-usr{
@@ -169,11 +170,14 @@ form input {
     margin: 0 16px;
 }
 .delete-btn {
-    font-size: 16px;
+    font-size: 1.5em;
     line-height: 22px;
+    padding: 0.5em 1em;
+    border-radius: 10em;
     margin: 0 16px;
+    width: max-content;
     color: #fe2c55;
-    position: absolute;
+    background-color:#530112 ;
     bottom: 0;
     cursor: pointer;
     right: 0;
