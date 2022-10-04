@@ -168,13 +168,15 @@ button:hover {
 }
 
 .side-container {
+  height: 100vh;
   min-height: 100%;
   width: 350px;
   min-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
   gap: 2em;
 }
 

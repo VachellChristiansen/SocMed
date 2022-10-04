@@ -16,12 +16,12 @@
       <a href="index.html" class="deepspace-logo">DeepSpace</a>
       <div class="search-container">
         <form action="/search" class="search-button">
-          <input type="text" placeholder="Search.." name="search">
+          <input type="text" autocomplete="off" placeholder="Search.." name="search">
           <span class="vert-line"></span>
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
-      <div class="right-container">
+      <div class="right-container-guest hidden">
         <button onclick="location.href='upload.html'" type="button" class="upload-container">
           Upload
         </button>
@@ -30,6 +30,11 @@
         </button>
         <i class="fa fa-ellipsis-v"></i>
       </div>
+      <div class="right-container-logged-in">
+        <a href="profile.html">
+          <img src="../assets/astro.jpeg" alt="" class="users-pic">
+        </a>
+      </div>
     </div>
   </div>
   <div class="main">
@@ -37,6 +42,122 @@
       <div class="side-container">
         <div class="side-item-container">
           <span class="item-title">Top Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
           <div class="users-container">
             <div class="users">
               <img src="../assets/astro.jpeg" alt="" class="users-pic">
@@ -431,7 +552,6 @@
         </div>
       </div>
       </div>
-    </div>
   </div>
   <script src="../js/index.js"></script>
 </body>
