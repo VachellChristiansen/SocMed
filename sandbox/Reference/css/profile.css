@@ -165,10 +165,9 @@ button:hover {
 }
 
 .side-container {
-  height: 100vh;
-  min-height: 100%;
+  height: calc(100vh - 60px - 2em);
   width: 350px;
-  min-width: 350px;
+  margin-right: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,6 +245,10 @@ button:hover {
   justify-content: space-around;
 }
 
+.count-info > * {
+  text-align: center;
+}
+
 .count-info > div > .count {
   font-weight: var(--fw-bold);
 }
@@ -258,7 +261,7 @@ button:hover {
 .main-container {
   margin-left: 3em;
   margin-top: 1em;
-  height: 100vh;
+  height: calc(100vh - 60px - 2em);
   width: 950px;
   max-width: 950px;
   overflow-y: auto;
@@ -291,7 +294,12 @@ button:hover {
   
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  
+  .contents {
+    gap: 0.3em;
+  }
+  .content > * {
+    flex-basis: 20%;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .contents {
