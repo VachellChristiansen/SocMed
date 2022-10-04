@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>DeepSpace-Gate</title>
+</head>
+<body>
+  <div class="background">
+    <div class="object-1"></div>
+    <div class="object-2"></div>
+  </div>
+  <div class="login-wrapper" id="login">
+    <span class="deepspace">DeepSpace</span>
+    <div class="login-form">
+      <span class="login">Log In</span>
+      <br/>
+      <span class="sub">Make sure your credentials matches.</span>
+      <form>
+        <div class="username">
+          <i class="fa fa-user fa-2x"></i>
+          <input type="text" name="username" class="username-input" autocomplete="off" placeholder="Username">
+        </div>
+        <div class="password">
+          <i onclick="showPassword(this)" class="fa fa-eye fa-2x"></i>
+          <input type="password" name="password" class="password-input" placeholder="Password">
+        </div>
+        <input type="checkbox" id="remember" name="remember" value="remember">
+        <label for="remember">Remember Me</label>
+        <br/>
+        <br/>
+        <span>New Here? Make your own space pass <a href="#" onclick="register(); return false;">here</a>.</span>
+        <br/>
+        <span>Just want to look around? Go <a href="index.html">back</a>.</span>
+        <button type="submit" class="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+  <div class="register-wrapper disappear hidden" id="register">
+    <span class="deepspace">DeepSpace</span>
+    <div class="register-form">
+      <span class="register">Register</span>
+      <br/>
+      <span class="sub">Insert your data to register.</span>
+      <form>
+        <div class="username">
+          <i class="fa fa-user fa-2x"></i>
+          <input type="text" name="username" class="username-input" autocomplete="off" placeholder="Username">
+        </div>
+        <div class="password">
+          <i onclick="showPassword(this)" class="fa fa-eye fa-2x"></i>
+          <input type="password" name="password" class="password-input" placeholder="Password">
+        </div>
+        <div class="confirm-password">
+          <i onclick="showPassword(this)" class="fa fa-eye fa-2x"></i>
+          <input type="password" name="password" class="password-input" placeholder="Confirm Password">
+        </div>
+        <input type="checkbox" id="remember" name="remember" value="remember">
+        <label for="remember">Remember Me</label>
+        <br/>
+        <br/>
+        <span>Already a member? Please <a href="#" onclick="login(); return false;">login</a>.</span>
+        <br/>
+        <span>Just want to look around? Go <a href="index.html">back</a>.</span>
+        <button type="submit" class="submit">Log In</button>
+      </form>
+    </div>
+  </div>
+  <script src="../js/login.js"></script>
+</body>
+</html>
