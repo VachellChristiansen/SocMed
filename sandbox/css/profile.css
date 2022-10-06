@@ -348,7 +348,7 @@ button:hover {
   display: block;
 }
 
-input,textarea {
+.change-input {
   width: 100%;
   padding: 0;
   background-color: rgba(0 0 0 / 0.2);
