@@ -300,9 +300,68 @@ button:hover {
 }
 
 .modal-container {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
+  padding: 3em;
+  display: flex;
   background-color: white;
+}
+
+.change-pic-container {
+  width: 40%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  border-right: 2px solid black;
+}
+
+.change-pic {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.change-pic-btn {
+  font-size: 1.2em;
+  font-weight: var(--fw-bold);
+  border: none;
+  background: none;
+}
+
+.change-details-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.change-details-container > form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2em;
+}
+.change-details-container > form > div > *{
+  display: block;
+}
+
+input,textarea {
+  width: 100%;
+  padding: 0;
+  background-color: rgba(0 0 0 / 0.2);
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none
+}
+
+textarea {
+  resize: none;
 }
 
 .pop-in {

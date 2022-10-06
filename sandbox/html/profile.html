@@ -94,7 +94,31 @@
 
   <div onclick="hideEditProfile()" class="modal hidden pop-in">
     <div onclick="stopPropagate(event)" class="modal-container">
-      <span>magical stuff</span>
+      <div class="change-pic-container">
+        <img src="../assets/astro.jpeg" alt="" class="change-pic">
+        <button class="change-pic-btn">Change Picture</button>
+      </div>
+      <div class="change-details-container">
+        <form>
+          <div class="change-name">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" id="name" autocomplete="off">
+          </div>
+          <div class="change-username">
+            <label for="name">Username</label>
+            <input type="text" placeholder="Username" id="username" autocomplete="off">
+          </div>
+          <div class="change-email">
+            <label for="name">E-mail</label>
+            <input type="email" placeholder="E-mail" id="email" autocomplete="off">
+          </div>
+          <div class="change-bio">
+            <label for="name">Bio</label>
+            <textarea placeholder="Bio" id="bio" rows="4" cols="20" maxlength="100"></textarea>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 
