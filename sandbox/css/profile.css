@@ -296,7 +296,6 @@ button:hover {
   position: fixed;
   z-index: 10001;
   background-color: rgba(255 255 255 / 0.4);
-  animation: createBox 0.3s;
 }
 
 .modal-container {
@@ -305,12 +304,31 @@ button:hover {
   background-color: green;
 }
 
-@keyframes createBox {
+.pop-in {
+  animation: popIn 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.pop-out {
+  animation: popOut 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popIn {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes popOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 
