@@ -296,12 +296,13 @@ button:hover {
   position: fixed;
   z-index: 10001;
   background-color: rgba(255 255 255 / 0.4);
+  backdrop-filter: blur(1em);
 }
 
 .modal-container {
   width: 80%;
   height: 80%;
-  background-color: green;
+  background-color: white;
 }
 
 .pop-in {

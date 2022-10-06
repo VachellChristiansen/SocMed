@@ -15,3 +15,7 @@ function hideEditProfile() {
   }, 300);
   console.log('successhide');
 }
+
+function stopPropagate(e) {
+  e.stopPropagation();
+}
