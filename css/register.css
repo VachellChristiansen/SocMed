@@ -28,6 +28,40 @@
 }
 
 
+/* Utilities */
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-spa {
+  justify-content: space-around;
+}
+.justify-spb {
+  justify-content: space-between;
+}
+.justify-cen{
+  justify-content: center;
+}
+.align-cen {
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: black;
@@ -42,17 +76,13 @@ body {
 main {
     width: 100%;
     max-width: 500px;
-}
-
-main {
     flex: 1;
-    padding: 4em 3em;
+    padding: 1em 2em;
     margin: 30px;
     background-color: hsl(0, 0%, 0%);
 }
 
 .title {
-    margin-bottom: 1.5em;
     color: white;
 }
 
@@ -65,10 +95,10 @@ input {
 }
 
 button {
-    margin-top: 3em;
-    padding: 1em 3em;
-    border-radius: 10em;
-    cursor: pointer;
+  margin:1em 0;
+  padding: 1em 3em;
+  border-radius: 10em;
+  cursor: pointer;
 }
 
 ::placeholder{
@@ -98,4 +128,10 @@ aside {
 
 a{
   text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+aside{
+  display: none;
+}
+
 }
