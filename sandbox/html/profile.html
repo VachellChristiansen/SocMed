@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/profile.css"><title>DeepSpace-Ship</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header-wrapper">
+      <a href="index.html" class="deepspace-logo">DeepSpace</a>
+      <div class="search-container">
+        <form action="/search" class="search-button">
+          <input type="text" autocomplete="off" placeholder="Search.." name="search">
+          <span class="vert-line"></span>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="right-container-guest">
+        <button onclick="location.href='upload.html'" type="button" class="upload-container">
+          Upload
+        </button>
+        <button onclick="location.href='login.html'" type="button" class="login-container">
+          Log In
+        </button>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+      <div class="right-container-logged-in hidden">
+        <a href="profile.html">
+          <img src="../assets/astro.jpeg" alt="" class="users-pic">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-wrapper">
+      <div class="side-container">
+        <div class="side-item-container">
+          <div class="profile-pic-container">
+            <img src="../assets/astro.jpeg" alt="" class="profile-pic">
+            <div onclick="showEditProfile()" class="edit-profile">
+              <i class="fa fa-pencil fa-4x"></i>
+              <span>Edit Profile</span>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <div class="name-tag">
+            <span class="username">Astro</span>
+            <span class="usertag">astroboy_1</span>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <div class="bio">
+            <p>The developers are deprecated and need more funds to function, please donate to our non-existent paypal. Thank you for reading this nonsense, please go on with your life and do something better than reading this.</p>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <div class="count-info">
+            <div>
+              <span class="count">123.4K</span><span class="infos"> Followings</span>
+            </div>
+            <div>
+              <span class="count">123.4K</span><span class="infos"> Followers</span>
+            </div>
+            <div>
+              <span class="count">123.4K</span><span class="infos"> Likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="contents">
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+          <video src="https://assets.mixkit.co/videos/preview/mixkit-beer-foam-spilling-into-a-glass-on-white-background-5066-large.mp4" class="content-video"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden">
+    <div class="modal-container">
+
+    </div>
+  </div>
+
+  <script src="../js/profile.js"></script>
+</body>
+</html>
