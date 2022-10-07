@@ -12,6 +12,7 @@ function hideEditProfile() {
     modal.classList.toggle('hidden');
     modal.classList.add('pop-in');
     modal.classList.remove('pop-out');
+    document.getElementById('edit-form').reset();
   }, 300);
   console.log('successhide');
 }
