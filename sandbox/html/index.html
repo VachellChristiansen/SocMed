@@ -4,1069 +4,555 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/index.css">
-  <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
-  <style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');</style>
-  <title>DeepSpace-Solo</title>
+  <title>DeepSpace</title>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="ghost-header"></div>
-  <header onmouseleave="profileMouseOver(this)" class="primary-header">
-    <div class="container grid navbar">
-      <div class="flex align-cen">
-        <a href="index.html" class="logo">DeepSpace</a>
-      </div>
-      <div class="search-bar">
-        <form class="justify-cen align-cen flex">
-          <button class="submit-search" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <input class="search" type="search" placeholder="Search something...">
+  <div class="header-trigger"></div>
+  <div class="header">
+    <div class="header-wrapper">
+      <a href="index.html" class="deepspace-logo">DeepSpace</a>
+      <div class="search-container">
+        <form action="/search" class="search-button">
+          <input type="text" autocomplete="off" placeholder="Search.." name="search">
+          <span class="vert-line"></span>
+          <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
-      <div class="sign-button flex justify-end align-cen hidden">
-        <a class="btn signup">Sign Up</a>
-        <a class="btn signin">Sign In</a>
+      <div class="right-container-guest hidden">
+        <button onclick="location.href='upload.html'" type="button" class="upload-container">
+          Upload
+        </button>
+        <button onclick="location.href='login.html'" type="button" class="login-container">
+          Log In
+        </button>
+        <i class="fa fa-ellipsis-v"></i>
       </div>
-      <div class="profile-button flex justify-end align-cen">
-        <a href="user.html" class="btn no-bg">
-          <img onmouseover="profileMouseOver(this)" class="user-profile-pic master h-100" src="../assets/astro.jpeg" alt="profile">
+      <div class="right-container-logged-in">
+        <a href="profile.html">
+          <img src="../assets/astro.jpeg" alt="" class="users-pic">
         </a>
       </div>
-      <div class="profile-menu grid">
-        <div class="menu-item flex justify-cen align-cen">
-          <button class="btn no-bg">Settings</button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-wrapper">
+      <div class="side-container">
+        <div class="side-item-container">
+          <span class="item-title">Top Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
         </div>
-        <div class="menu-item flex justify-cen align-cen">
-          <button class="btn no-bg">Help</button>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
         </div>
-        <div class="menu-item flex justify-cen align-cen">
-          <button class="btn no-bg">Privacy & Policy</button>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
         </div>
-        <div class="menu-item flex justify-cen align-cen">
-          <button class="btn no-bg">Logout</button>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="side-item-container">
+          <span class="item-title">Recommended Accounts</span>
+          <div class="users-container">
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="users">
+              <img src="../assets/astro.jpeg" alt="" class="users-pic">
+              <div class="users-name">
+                <span class="tag">astro</span>
+                <span class="name">Astroboy_1</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="main-item-container">
+          <div>
+            <img src="../assets/astro.jpeg" alt="" class="users-pic">
+          </div>
+          <div class="post-video">
+            <video src="../assets/heart.mp4"></video>
+          </div>
+          <div class="post-details">
+            <div class="post-users">
+              <div class="users-name">
+                <span class="tag">astris</span>
+                <span class="name">Astroboy_2</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="post-caption">
+              <p>This video is the first one the admin ever made please do not replicate or try anything in this section because the developer is not just under-educated, he is also deprecated and depressed</p>
+            </div>
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(0)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-comments hidden opacity-0">
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(0)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+            <div class="comment-container">
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <form>
+                <textarea name="comment" cols="40" rows="3" maxlength="120" placeholder="Add Comment..."></textarea>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+        <div class="main-item-container">
+          <div>
+            <img src="../assets/astro.jpeg" alt="" class="users-pic">
+          </div>
+          <div class="post-video">
+            <video src="../assets/heart.mp4"></video>
+          </div>
+          <div class="post-details">
+            <div class="post-users">
+              <div class="users-name">
+                <span class="tag">astris</span>
+                <span class="name">Astroboy_2</span>
+              </div>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="post-caption">
+              <p>This video is the first one the admin ever made please do not replicate or try anything in this section because the developer is not just under-educated, he is also deprecated and depressed</p>
+            </div>
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(1)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-comments hidden opacity-0">
+            <div class="interactive-buttons">
+              <div class="int-item">
+                <i class="fa fa-heart"></i>
+                <span>1234</span>
+              </div>
+              <div onclick="showComments(1)" class="int-item">
+                <i class="fa fa-comment"></i>
+                <span>1234</span>
+              </div>
+              <div class="int-item">
+                <i class="fa fa-share"></i>
+                <span>1234</span>
+              </div>
+            </div>
+            <div class="comment-container">
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+              <div class="comment-items">
+                <div class="users">
+                  <img src="../assets/astro.jpeg" alt="" class="users-pic">
+                  <div class="users-name">
+                    <span class="tag">astro</span>
+                    <span class="name">Astroboy_1</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <p>This man comments on some other man post, I'm trying to make it longer so i can see how it renders on the web</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <form>
+                <textarea name="comment" cols="40" rows="3" max-length="120" placeholder="Add Comment..."></textarea>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
-  </header>
-  <main>
-    <div class="container main">
-      <div class="grid slide">
-        <!-- Recommendation Section / Left Part -->
-        <div class="recommended grid">
-          <div class="recommended-container flex-col">
-            <div class="recommended-text">
-              <span>Recommended for you</span>
-            </div>
-            <div class="recommended-user flex-col flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="top-accounts flex-col">
-            <div class="recommended-text">
-              <span>Top Accounts</span>
-            </div>
-            <div class="recommended-user flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content Section / Middle Part -->
-        <div class="content">
-          <video autoplay loop muted class="content-video">
-            <source src="../assets/heart.mp4">
-          </video>
-        </div>
-
-        <!-- Caption and Comment Section / Right Part -->
-        <div class="caption-comment grid" id="caption-comment">
-          <div class="caption-container grid">
-            <div class="user-caption flex-col" id="user-caption">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow flex-col justify-cen">
-                  <a>Follow</a>
-                </div>
-              </div>
-    
-              <div class="caption-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
-              </div>
-            </div>
-              
-            <div class="music-bubble flex-col">
-              <div class="music" id="music">
-                Original Sound - User_1
-              </div>
-    
-              <div class="interactive-bubble grid" id="interactive-bubble">
-                <div class="interactive-parts">
-                  <button class="btn bubble">
-                    <i class="fa-solid fa-heart"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button onclick="comment(0)" class="btn bubble">
-                    <i class="fa-solid fa-comment"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts flex align-cen">
-                  <button class="btn bubble flex align-cen justify-cen">
-                    <i class="fa-solid fa-share"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="comment-container flex-col hidden" id="comment">
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div class="grid slide">
-        <!-- Recommendation Section / Left Part -->
-        <div class="recommended grid">
-          <div class="recommended-container flex-col">
-            <div class="recommended-text">
-              <span>Recommended for you</span>
-            </div>
-            <div class="recommended-user flex-col flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="top-accounts flex-col">
-            <div class="recommended-text">
-              <span>Top Accounts</span>
-            </div>
-            <div class="recommended-user flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content Section / Middle Part -->
-        <div class="content">
-          <video autoplay loop muted class="content-video">
-            <source src="../assets/heart.mp4">
-          </video>
-        </div>
-
-        <!-- Caption and Comment Section / Right Part -->
-        <div class="caption-comment grid" id="caption-comment">
-          <div class="caption-container grid">
-            <div class="user-caption flex-col" id="user-caption">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow flex-col justify-cen">
-                  <a>Follow</a>
-                </div>
-              </div>
-    
-              <div class="caption-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
-              </div>
-            </div>
-              
-            <div class="music-bubble flex-col">
-              <div class="music" id="music">
-                Original Sound - User_1
-              </div>
-    
-              <div class="interactive-bubble grid" id="interactive-bubble">
-                <div class="interactive-parts">
-                  <button class="btn bubble">
-                    <i class="fa-solid fa-heart"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button onclick="comment(1)" class="btn bubble">
-                    <i class="fa-solid fa-comment"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts flex align-cen">
-                  <button class="btn bubble flex align-cen justify-cen">
-                    <i class="fa-solid fa-share"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="comment-container flex-col hidden" id="comment">
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid slide">
-        <!-- Recommendation Section / Left Part -->
-        <div class="recommended grid">
-          <div class="recommended-container flex-col">
-            <div class="recommended-text">
-              <span>Recommended for you</span>
-            </div>
-            <div class="recommended-user flex-col flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="top-accounts flex-col">
-            <div class="recommended-text">
-              <span>Top Accounts</span>
-            </div>
-            <div class="recommended-user flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content Section / Middle Part -->
-        <div class="content">
-          <video autoplay loop muted class="content-video">
-            <source src="../assets/heart.mp4">
-          </video>
-        </div>
-
-        <!-- Caption and Comment Section / Right Part -->
-        <div class="caption-comment grid" id="caption-comment">
-          <div class="caption-container grid">
-            <div class="user-caption flex-col" id="user-caption">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow flex-col justify-cen">
-                  <a>Follow</a>
-                </div>
-              </div>
-    
-              <div class="caption-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
-              </div>
-            </div>
-              
-            <div class="music-bubble flex-col">
-              <div class="music" id="music">
-                Original Sound - User_1
-              </div>
-    
-              <div class="interactive-bubble grid" id="interactive-bubble">
-                <div class="interactive-parts">
-                  <button class="btn bubble">
-                    <i class="fa-solid fa-heart"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button onclick="comment(2)" class="btn bubble">
-                    <i class="fa-solid fa-comment"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts flex align-cen">
-                  <button class="btn bubble flex align-cen justify-cen">
-                    <i class="fa-solid fa-share"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="comment-container flex-col hidden" id="comment">
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid slide">
-        <!-- Recommendation Section / Left Part -->
-        <div class="recommended grid">
-          <div class="recommended-container flex-col">
-            <div class="recommended-text">
-              <span>Recommended for you</span>
-            </div>
-            <div class="recommended-user flex-col flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="top-accounts flex-col">
-            <div class="recommended-text">
-              <span>Top Accounts</span>
-            </div>
-            <div class="recommended-user flex-col">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-2.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow">
-                  <a>Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content Section / Middle Part -->
-        <div class="content">
-          <video autoplay loop muted class="content-video">
-            <source src="../assets/heart.mp4">
-          </video>
-        </div>
-
-        <!-- Caption and Comment Section / Right Part -->
-        <div class="caption-comment grid" id="caption-comment">
-          <div class="caption-container grid">
-            <div class="user-caption flex-col" id="user-caption">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro-3.jpg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@user_1</span>
-                  </div>
-                </div>
-                <div class="user-follow flex-col justify-cen">
-                  <a>Follow</a>
-                </div>
-              </div>
-    
-              <div class="caption-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices mi vitae dolor hendrerit, non fringilla lorem porta. Aenean consectetur lobortis condimentum. Suspendisse nec tempor tellus. Proin neque urna, consectetur eu congue rutrum, iaculis a nisl. Suspendisse rhoncus dolor eu erat cursus faucibus.</p>
-              </div>
-            </div>
-              
-            <div class="music-bubble flex-col">
-              <div class="music" id="music">
-                Original Sound - User_1
-              </div>
-    
-              <div class="interactive-bubble grid" id="interactive-bubble">
-                <div class="interactive-parts">
-                  <button class="btn bubble">
-                    <i class="fa-solid fa-heart"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button onclick="comment(3)" class="btn bubble">
-                    <i class="fa-solid fa-comment"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts flex align-cen">
-                  <button class="btn bubble flex align-cen justify-cen">
-                    <i class="fa-solid fa-share"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="comment-container flex-col hidden" id="comment">
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="../assets/astro.jpeg" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>User_1</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Fusce non enim justo. Maecenas varius suscipit felis non ultricies. Nulla facilisi. Praesent id consequat urna, nec mattis leo. Sed faucibus tempor commodo. Suspendisse et ipsum elementum, suscipit arcu non, interdum magna.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </main>
+  </div>
   <script src="../js/index.js"></script>
 </body>
 </html>
