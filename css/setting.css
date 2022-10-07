@@ -327,25 +327,6 @@ form input {
     border-radius: 50%;
   }
 
-.data-account {
-    position: relative;
-    border-bottom: 1px solid white;
-    padding-bottom: 16px;
-}
-.data-dwnld {
-    font-size: 16px;
-    line-height: 22px;
-    color: white;
-    margin: 0 16px;
-}
-.download-more {
-    display: inline-flex;
-    position: absolute;
-    top: 50%;
-    margin: 0 16px;
-    transform: translateY(-50%);
-    right: 0;
-}
 .settings:not(:last-child) {
     position: relative;
 }
@@ -357,3 +338,17 @@ form input {
     font-weight: 700;
     color: white;
 }
+
+.desciription-text-box {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border: none;
+    appearance: none;
+    margin-left: 5px;
+    color: black;
+  }
+  textarea {
+    resize: none;
+    color: black;
+  }
