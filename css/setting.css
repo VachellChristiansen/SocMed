@@ -348,3 +348,7 @@ form input {
     margin-left: 5px;
     color: black;
   }
+  textarea {
+    resize: none;
+    color: black;
+  }
