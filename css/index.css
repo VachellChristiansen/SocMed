@@ -488,8 +488,8 @@ button:hover {
 /* Profile On Hover Style */
 .profile-menu {
   position: fixed;
-  right: 5rem;
-  width: 15%;
+  right: 2%;
+  width: 12em;
   height: 50%;
   z-index: 90;
   grid-template-columns: auto;
@@ -560,6 +560,9 @@ button:hover {
   .primary-header {
     top: 0;
   }
+  .main-item-container{
+    justify-content: center;
+  }
   .header-trigger,
   .search-container,
   .right-container,
@@ -586,6 +589,9 @@ button:hover {
   .primary-header {
     top: 0;
   }
+  .main-item-container{
+    justify-content: center;
+  }
   .header-trigger,
   .search-container,
   .right-container,
@@ -608,15 +614,45 @@ button:hover {
     max-height: calc(100vh - 60px);
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width:650px){
   .primary-header {
     top: 0;
+  }
+  .main-item-container{
+    justify-content: center;
   }
   .header-trigger,
   .search-container,
   .side-container,
-  .user-caption,
-  .caption-comment{
+  .user-detail, .user-follow, .caption-text,.music-bubble
+  {
+    display: none;
+  }
+  
+  .post-details {
+    margin-top: 0;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+  .post-video video {
+    max-height: calc(100vh - 60px);
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .primary-header {
+    top: 0;
+  }
+  .main-item-container{
+    justify-content: center;
+  }
+  .header-trigger,
+  .search-container,
+  .side-container{
     display: none;
   }
   
@@ -641,6 +677,7 @@ button:hover {
   .side-container {
     display: none;
   }
+  
 
   .comment-container {
     max-height: 50vh;
