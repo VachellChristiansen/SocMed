@@ -345,7 +345,9 @@ button:hover {
   gap: 5em;
   border-right: 2px solid black;
 }
-
+#file-input{
+  display: none;
+}
 .change-pic {
   width: 80%;
   border-radius: 50%;
@@ -358,6 +360,7 @@ button:hover {
   font-weight: var(--fw-bold);
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .change-details-container {
