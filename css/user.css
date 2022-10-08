@@ -245,6 +245,8 @@ button {
 .user-profile-pic-star {
   height: 7rem;
   border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
 }
 
 .user-detail-star {
