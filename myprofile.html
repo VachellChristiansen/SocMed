@@ -6,40 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');</style>
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/myprofile.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/myprofile.css">
+
   <title>DeepSpace - My Profile</title>
   
 </head>
 <body>
-  <div class="header">
-    <div class="header-wrapper">
-      <a href="index.html" class="deepspace-logo">DeepSpace</a>
-      <div class="search-container">
-        <form action="search.html" class="search-button">
-          <input type="text" autocomplete="off" placeholder="Search.." name="search">
-          <span class="vert-line"></span>
-          <button type="submit"><i class="fa fa-search"></i></button>
+  <header class="primary-header">
+    <div class="container grid navbar">
+      <div class="flex-row align-cen">
+        <a href="../index.html" class="logo">DeepSpace</a>
+      </div>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row" action="../search.html">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-      <div class="right-container-guest">
-        <button onclick="location.href='upload.html'" type="button" class="upload-container">
-          Upload
-        </button>
-        <button onclick="location.href='login.html'" type="button" class="login-container">
-          Log In
-        </button>
-        <i class="fa fa-ellipsis-v"></i>
-      </div>
-      <div class="right-container-logged-in hidden">
-        <a href="myprofile.html">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" class="users-pic">
-        </a>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="../upload.html" class="btn signup">+ Upload</a>
+        <a href="../signin.html" class="btn signin">Sign In</a>
       </div>
     </div>
-  </div>
-
+  </header>
   <div class="main">
 
      <!-- back to top -->
