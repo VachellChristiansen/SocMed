@@ -64,6 +64,7 @@ button:hover {
   background: #555;
 }
 
+
 /* Utilities */
 .grid {
   display: grid;
@@ -345,7 +346,7 @@ button:hover {
 .caption-comment {
   padding: 5rem 0;
   max-height: 100vh;
-  max-width: 50vh;
+  margin-left: 1em;
   gap: 2rem;
   grid-template-rows: auto;
 }
@@ -362,7 +363,7 @@ button:hover {
   max-height: 100%;
   padding: 1rem;
   gap: 2rem;
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 .comment {
   display: hidden;
@@ -487,8 +488,8 @@ button:hover {
 /* Profile On Hover Style */
 .profile-menu {
   position: fixed;
-  right: 5rem;
-  width: 15%;
+  right: 2%;
+  width: 12em;
   height: 50%;
   z-index: 90;
   grid-template-columns: auto;
@@ -502,41 +503,201 @@ button:hover {
   background-color: rgb(49, 49, 49) ;
 }
 
+
+/* new index */
+.main-container {
+  height: 100vh;
+  width: 950px;
+  max-width: 950px;
+  margin-left: 2em;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.main-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-item-container {
+  max-width: 100%;
+  display: flex;
+  scroll-snap-align: start;
+}
+
+.side-container {
+  height: 100vh;
+  min-height: 100%;
+  width: 350px;
+  min-width: 350px;
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  gap: 2em;
+}
+
+.main {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Media Queries */
 
-@media screen and (max-width: 900px) {
-  
-  .caption-comment{
-   margin-left: 7vw;
-   font-size: 1.3vw;
+@media only screen and (max-width: 320px) {
+  .primary-header {
+    top: 0;
   }
-  .recommended-text{
-    font-size: 1.7vw;
- 
+  .main-item-container{
+    justify-content: center;
   }
-  .user-detail,.user-follow{
-    font-size: 1.5vw;
-  }
-
-  .recommended{
-    margin-right: 10vw;
-  }
+  .header-trigger,
+  .search-container,
+  .right-container,
+  .side-container,
+  .caption-comment,
+  .post-comments {
+    display: none;
   }
 
+  .post-details {
+    margin-top: 0;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+  .post-video video {
+    max-height: calc(100vh - 60px);
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .primary-header {
+    top: 0;
+  }
+  .main-item-container{
+    justify-content: center;
+  }
+  .header-trigger,
+  .search-container,
+  .right-container,
+  .side-container,
+  .caption-comment,
+  .post-comments {
+    display: none;
+  }
+
+  .post-details {
+    margin-top: 0;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+  .post-video video {
+    max-height: calc(100vh - 60px);
+  }
+}
+@media only screen and (min-width: 480px) and (max-width:650px){
+  .primary-header {
+    top: 0;
+  }
+  .main-item-container{
+    justify-content: center;
+  }
+  .header-trigger,
+  .search-container,
+  .side-container,
+  .user-detail, .user-follow, .caption-text,.music-bubble
+  {
+    display: none;
+  }
+  
+  .post-details {
+    margin-top: 0;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+  .post-video video {
+    max-height: calc(100vh - 60px);
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .primary-header {
+    top: 0;
+  }
+  .main-item-container{
+    justify-content: center;
+  }
+  .header-trigger,
+  .search-container,
+  .side-container{
+    display: none;
+  }
+  
+  .post-details {
+    margin-top: 0;
+  }
+  .main {
+    margin-top: 60px;
+  }
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+  .post-video video {
+    max-height: calc(100vh - 60px);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .primary-header {
+    top: 0;
+  }
+  .header-trigger,
+  .side-container {
+    display: none;
+  }
   
 
-@media screen and (max-width: 700px) {
-  
-  .user-detail,.user-follow,.caption-text,.count,.music{
-  display: none;
+  .comment-container {
+    max-height: 50vh;
+  } 
+  .post-details {
+    margin-top: 0;
   }
-  .recommended-text{
-  visibility: hidden;
+  .main {
+    margin-top: 60px;
   }
-  .caption-comment{
-    margin-left: 15vw;
+  .main-container {
+    height: calc(100vh - 60px);
   }
-  
+  .post-video video {
+    max-height: calc(100vh - 60px);
   }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
 
-  
+}
+@media only screen and (min-width: 1200px) {
+
+}

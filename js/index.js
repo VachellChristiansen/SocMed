@@ -59,7 +59,7 @@ $('.master,.profile-menu').mouseover(function(event){
     $('.profile-menu').addClass("hidden");
     });
   
-  $('main').mouseover(function(event){
+  $('.main').mouseover(function(event){
     $('.profile-menu').addClass("hidden");
     });
 

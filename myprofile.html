@@ -8,50 +8,45 @@
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/myprofile.css">
+  <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <title>DeepSpace - My Profile</title>
   
 </head>
 <body>
-  <div class="header">
-    <div class="header-wrapper">
-      <a href="index.html" class="deepspace-logo">DeepSpace</a>
-      <div class="search-container">
-        <form action="search.html" class="search-button">
-          <input type="text" autocomplete="off" placeholder="Search.." name="search">
-          <span class="vert-line"></span>
-          <button type="submit"><i class="fa fa-search"></i></button>
+  <header class="primary-header">
+    <div class="container grid navbar">
+      <div class="flex-row align-cen">
+        <a href="../index.html" class="logo">DeepSpace</a>
+      </div>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row" action="../search.html">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-      <div class="right-container-guest">
-        <button onclick="location.href='upload.html'" type="button" class="upload-container">
-          Upload
-        </button>
-        <button onclick="location.href='login.html'" type="button" class="login-container">
-          Log In
-        </button>
-        <i class="fa fa-ellipsis-v"></i>
-      </div>
-      <div class="right-container-logged-in hidden">
-        <a href="myprofile.html">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" class="users-pic">
-        </a>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="../upload.html" class="btn signup">+ Upload</a>
+        <img id="nav-profile-pic" class="nav-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" />
       </div>
     </div>
-  </div>
+  </header>
+
+<main>
 
   <div class="main">
-
-     <!-- back to top -->
+<!-- back to top
      <button id="button-top"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
-    </svg></button>
+    </svg></button> -->
 
     <div class="main-wrapper">
       <div class="side-container">
         <div class="side-item-container">
           <div class="profile-pic-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" class="profile-pic">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" id="profile-pic" class="profile-pic">
             <div onclick="showEditProfile()" class="edit-profile">
               <i class="fa fa-pencil fa-4x"></i>
               <span>Edit Profile</span>
@@ -60,13 +55,13 @@
         </div>
         <div class="side-item-container">
           <div class="name-tag">
-            <span class="username">Astro</span>
-            <span class="usertag">astroboy_1</span>
+            <span class="username" id="name">Astro</span>
+            <span class="usertag" id="username">astroboy_1</span>
           </div>
         </div>
         <div class="side-item-container">
           <div class="bio">
-            <p>The developers are deprecated and need more funds to function, please donate to our non-existent paypal. Thank you for reading this nonsense, please go on with your life and do something better than reading this.</p>
+            <p id="bio">The developers are deprecated and need more funds to function, please donate to our non-existent paypal. Thank you for reading this nonsense, please go on with your life and do something better than reading this.</p>
           </div>
         </div>
         <div class="side-item-container">
@@ -323,32 +318,32 @@
     </div>
   </div>
 
-  <div onclick="hideEditProfile()" class="modal hidden pop-in">
+  <div onclick="hideEditProfile()" class="modal hidden pop-in" id="atg">
     <div onclick="stopPropagate(event)" class="modal-container">
       <div class="change-pic-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" class="change-pic">
-        <button class="change-pic-btn">Change Picture</button>
+        <img id="pp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile" class="change-pic">
+        <input type="file" id="file-input" ><span id="file-input-btn" class="change-pic-btn">Change Picture</span>
       </div>
       <div class="change-details-container">
         <span class="form-title">Edit Profile</span>
         <form action="myprofile.html" id="edit-form">
           <div class="change-name">
             <label for="name">Name</label>
-            <input class="change-input" type="text" placeholder="Name" id="name" autocomplete="off">
+            <input name="name" class="change-input" type="text" placeholder="Name" id="name" autocomplete="off">
             <label class="req" for="name">Name should only contains a-z, A-Z, and 0-9.</label>
           </div>
           <div class="change-username">
             <label for="username">Username</label>
-            <input class="change-input" type="text" placeholder="Username" id="username" autocomplete="off">
+            <input name="username" class="change-input" type="text" placeholder="Username" id="username" autocomplete="off">
             <label class="req" for="username">Username should only contains a-z, A-Z, and 0-9. Underscore can not be used at the start or the end.</label>
           </div>
           <div class="change-email">
             <label for="email">E-mail</label>
-            <input class="change-input" type="email" placeholder="E-mail" id="email" autocomplete="off">
+            <input name="email" class="change-input" type="email" placeholder="E-mail" id="email" autocomplete="off">
           </div>
           <div class="change-bio">
             <label for="bio">Bio</label>
-            <textarea class="change-input" placeholder="Add a bio" id="bio" rows="4" cols="20" maxlength="100"></textarea>
+            <textarea name="bio" class="change-input" placeholder="Add a bio" id="bio" rows="4" cols="20" maxlength="100"></textarea>
           </div>
           <input class="change-input" type="submit" value="Save">
         </form>

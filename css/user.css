@@ -232,14 +232,14 @@ button {
 }
 
 .user-star {
-  font-size: larger;
-  height: 10rem;
+  font-size: medium;
   /* display: grid;
   grid-template-columns: auto 70% auto; */
 }
 
 .user-main-star{
-  display: flex;
+  display: inline-flex;
+
 }
 
 .user-profile-pic-star {
@@ -274,7 +274,7 @@ button {
   text-transform: capitalize;
   color: rgb(0, 162, 255);
   font-weight: 700;
-  font-size: x-large;
+  font-size: medium;
 }
 
 .user-followings-star{
@@ -290,7 +290,6 @@ display: flex;
 .user-description-star{
   padding: 0.5rem 0;
 }
-
 
 .user {
   height: 3rem;
@@ -395,6 +394,10 @@ display: flex;
   .signin,.signup{
     font-size: smaller;
   }
+  .content{
+    display: block;
+  }
+
   
   }
   
@@ -402,5 +405,5 @@ display: flex;
     .signin,.signup{
      font-size: xx-small;
     }
-    
+
     }
