@@ -104,17 +104,19 @@
           <div class="change-name">
             <label for="name">Name</label>
             <input class="change-input" type="text" placeholder="Name" id="name" autocomplete="off">
+            <label class="req" for="name">Name should only contains a-z, A-Z, and 0-9.</label>
           </div>
           <div class="change-username">
-            <label for="name">Username</label>
+            <label for="username">Username</label>
             <input class="change-input" type="text" placeholder="Username" id="username" autocomplete="off">
+            <label class="req" for="username">Username should only contains a-z, A-Z, and 0-9. Underscore can not be used at the start or the end.</label>
           </div>
           <div class="change-email">
-            <label for="name">E-mail</label>
+            <label for="email">E-mail</label>
             <input class="change-input" type="email" placeholder="E-mail" id="email" autocomplete="off">
           </div>
           <div class="change-bio">
-            <label for="name">Bio</label>
+            <label for="bio">Bio</label>
             <textarea class="change-input" placeholder="Add a bio" id="bio" rows="4" cols="20" maxlength="100"></textarea>
           </div>
           <input class="change-input" type="submit" value="Save">

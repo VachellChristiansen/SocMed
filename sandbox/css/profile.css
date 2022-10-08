@@ -30,10 +30,10 @@ button:hover {
 
 ::-webkit-scrollbar {
   width: 1em;
-  background: var(--light-gray);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gray);
+  background: var(--light-gray);
 }
 
 .hidden {
@@ -354,6 +354,10 @@ button:hover {
   padding: 0.5em 1em;
   border: 1px solid black;
   border-radius: 1em;
+}
+
+.req {
+  color:rgb(191 191 191);
 }
 
 .form-title {
