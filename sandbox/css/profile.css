@@ -33,7 +33,7 @@ button:hover {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--light-gray);
+  background: transparent;
 }
 
 .hidden {
@@ -177,6 +177,10 @@ button:hover {
   justify-content: flex-start;
   overflow-y: auto;
   gap: 2em;
+}
+
+.side-container:hover::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray)
 }
 
 .side-item-container {
