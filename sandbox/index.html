@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="css/index.css">
   <title>DeepSpace</title>
 </head>
-<body>
-  <div class="header-trigger"></div>
+<body class="darkmode">
+  <div class="header-trigger left"></div>
+  <div class="header-trigger right"></div>
   <div class="header">
     <div class="header-wrapper">
       <a href="index.html" class="deepspace-logo">DeepSpace</a>
@@ -217,14 +218,12 @@
       </div>
       <div class="main-container">
         <div class="main-item-container">
-          <div>
-            <img src="assets/astro.jpeg" alt="" class="users-pic">
-          </div>
           <div class="post-video">
             <video src="assets/heart.mp4"></video>
           </div>
           <div class="post-details">
-            <div class="post-users">
+            <div class="users">
+              <img src="assets/astro.jpeg" alt="" class="users-pic">
               <div class="users-name">
                 <span class="tag">astris</span>
                 <span class="name">Astroboy_2</span>
@@ -384,14 +383,12 @@
           
         </div>
         <div class="main-item-container">
-          <div>
-            <img src="assets/astro.jpeg" alt="" class="users-pic">
-          </div>
           <div class="post-video">
             <video src="assets/heart.mp4"></video>
           </div>
           <div class="post-details">
-            <div class="post-users">
+            <div class="users">
+              <img src="assets/astro.jpeg" alt="" class="users-pic">
               <div class="users-name">
                 <span class="tag">astris</span>
                 <span class="name">Astroboy_2</span>
@@ -406,7 +403,7 @@
                 <i class="fa fa-heart"></i>
                 <span>1234</span>
               </div>
-              <div onclick="showComments(1)" class="int-item">
+              <div onclick="showComments(0)" class="int-item">
                 <i class="fa fa-comment"></i>
                 <span>1234</span>
               </div>
@@ -422,7 +419,7 @@
                 <i class="fa fa-heart"></i>
                 <span>1234</span>
               </div>
-              <div onclick="showComments(1)" class="int-item">
+              <div onclick="showComments(0)" class="int-item">
                 <i class="fa fa-comment"></i>
                 <span>1234</span>
               </div>
@@ -543,7 +540,7 @@
             </div>
             <div class="add-comment">
               <form>
-                <textarea name="comment" cols="40" rows="3" max-length="120" placeholder="Add Comment..."></textarea>
+                <textarea name="comment" cols="40" rows="3" maxlength="120" placeholder="Add Comment..."></textarea>
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </div>

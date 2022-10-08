@@ -33,7 +33,7 @@ button:hover {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--light-gray);
+  background: transparent;
 }
 
 .hidden {
@@ -44,13 +44,20 @@ button:hover {
   opacity: 0;
 }
 
-.header-trigger {
+.header-trigger.left{
   position: fixed;
-  width: 100%;
+  left: 0;
+  width: calc((100% - 1150px)/2);
   height: 60px;
   z-index: 9999;
 }
-
+.header-trigger.right {
+  position: fixed;
+  right: 0;
+  width: calc((100% - 1150px)/2);
+  height: 60px;
+  z-index: 9999;
+}
 .header {
   position: fixed;
   width: 100%;
@@ -64,7 +71,7 @@ button:hover {
   transition: 0.3s ease;
 }
 
-.header-trigger:hover + .header {
+.header-trigger:hover ~ .header {
   top: 0;
 }
 
@@ -92,7 +99,7 @@ button:hover {
 .deepspace-logo {
   font-size: 2em;
   font-weight: var(--fw-bold);
-  color: var(--primary);
+  color: black;
   text-decoration: none;
 }
 
@@ -185,6 +192,10 @@ button:hover {
   justify-content: flex-start;
   overflow-y: scroll;
   gap: 2em;
+}
+
+.side-container:hover::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
 }
 
 .side-item-container {
@@ -284,7 +295,6 @@ button:hover {
 .post-comments {
   padding: 1em;
   max-width: 100%;
-  margin-top: 60px;
   transition: 0.5s ease;
 }
 
