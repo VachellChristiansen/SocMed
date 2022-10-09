@@ -42,3 +42,19 @@ fileinput.addEventListener("change",() => {
     const url=URL.createObjectURL(file)
     image.src=url
 })
+
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+  
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+  
+  $('.main').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
