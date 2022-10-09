@@ -66,3 +66,21 @@ $('.user-follow').click(function(event) {
       $(this).removeClass("unfollow");
     }
     });
+
+    
+/* PROFILE NAVBAR */
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+  
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+  
+  $('.main').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
