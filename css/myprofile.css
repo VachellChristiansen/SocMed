@@ -480,6 +480,39 @@ textarea {
   animation-fill-mode: forwards;
 }
 
+
+
+/* Profile On Hover Style */
+.profile-menu {
+  position: fixed;
+  right: 2%;
+  width: 12em;
+  height: 50%;
+  z-index: 90;
+  grid-template-columns: auto;
+  background-color: rgb(103, 103, 103);
+}
+.pop-up{
+  text-decoration: none;
+  cursor: pointer;
+}
+.pop-up:hover{
+  background-color: rgb(49, 49, 49) ;
+}
+
+.user-profile-pic {
+  height: 3rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 1em;
+}
+
+.user-profile-pic:hover {
+  cursor: pointer;
+}
+
+
 /* Back to top */
   /* display: none; */
 /* #button-top {
