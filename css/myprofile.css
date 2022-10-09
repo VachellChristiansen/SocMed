@@ -266,7 +266,7 @@ button {
 }
 
 .main {
-  padding-top: 10%;
+  padding-top: 60px;
 }
 
 .main {
@@ -662,20 +662,6 @@ textarea {
 }
 @media only screen and (min-width: 1200px) {
 
-}
-
-::-webkit-scrollbar{
-  width: 10px;
-}
-
-::-webkit-scrollbar-track{
-  border-radius: 5px;
-  box-shadow: rgba(0,0,0,2em);
-}
-
-::-webkit-scrollbar-thumb{
-  border-radius: 5px;
-  background-color: whitesmoke;
 }
 
 .chngpict{
