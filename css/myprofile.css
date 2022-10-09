@@ -171,28 +171,6 @@ button {
 .submit-search i{
   color: rgb(60, 60, 60);
 }
-.sign-button {
-  width: 100%;
-}
-.signup {
-  width: fit-content;
-  padding: 0.3rem 1rem;
-  color: black;
-  margin: 0.2rem;
-  border: 0.1em solid hsl(252, 15%, 65%);
-  text-align: center;
-  max-height: 100%;
-}
-.signin {
-  width: fit-content;
-  padding: 0.3rem 1rem;
-  color: black;
-  margin: 0.2rem;
-  border: 0.1em solid hsl(252, 15%, 65%);
-  text-align: center;
-  max-height: 100%;
-}
-
 
 .hidden {
   display: none !important;
@@ -257,56 +235,7 @@ button {
   font-weight: var(--fw-medium);
 }
 
-/* Header Style */
-.primary-header {
-  position:fixed;
-  width: 100vw;
-  height: 10%;
-  background-color: hsla(252, 30%, 100%,100%);
-  z-index: 100;
-}
 
-
-.navbar {
-  grid-template-columns: auto 40% 30%;
-  height: 100%;
-}
-
-.logo {
-  color:black;
-  text-decoration: none;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-medium);
-}
-
-.search-bar {
-  width: 20vw;
-  border-radius: 2rem;
-  padding: 0.6rem 1rem;
-  background: hsl(252, 30%, 95%);
-  margin: auto;
-}
-.search {
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  border: none;
-  appearance: none;
-  margin-left: 5px;
-  color: black;
-}
-.search:focus {
-  outline: none;
-}
-
-.submit-search {
-  padding: 0;
-  border: none;
-  background-color: inherit;
-}
-.submit-search i{
-  color: rgb(60, 60, 60);
-}
 .sign-button {
   width: 100%;
 }
