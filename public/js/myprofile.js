@@ -2,7 +2,7 @@ const modaloverlay=document.getElementById("atg")
 const fileinput=document.getElementById("file-input")
 const fileinputbtn=document.getElementById("file-input-btn")
 const image=document.getElementById("pp")
-const navProfilePic=document.getElementById('nav-profile-pic')
+const navProfilePic=document.getElementById('user1')
 const profilePic=document.getElementById('profile-pic')
 
 const DEFAULT_PROFILE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU"
