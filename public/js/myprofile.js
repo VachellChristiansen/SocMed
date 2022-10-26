@@ -60,6 +60,7 @@ $('#edit-form').submit(function (e) {
   e.preventDefault()
   const data = $(this).serializeArray()
   data.forEach(({ name, value }) => {
+    if(!value) return 
     $(`#${name}`).text(value)
   })
   hideEditProfile()
