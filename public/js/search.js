@@ -10,7 +10,7 @@ $('.user').click(function(event) {
   var status = $(this).attr('id');
  if(status===""){  
  } else {
- location.href=`profiles/${status}.html`;
+ location.href=`/${status}`;
  }
 });
 
@@ -19,7 +19,7 @@ $('.user-star').click(function(event) {
  if(status===""){
 
  } else {
-  location.href=`profiles/${status}.html`;
+  location.href=`/${status}`;
  }
 });
 
