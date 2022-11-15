@@ -37,22 +37,22 @@ app.get(('/user1'), async (req, res) => {
 })
 
 //setting
-app.get(('/change-pass'), async (req, res) => {
+app.get(('/settings/change-pass'), async (req, res) => {
   res.render('setting/change-pass')
 })
-app.get(('/edit-profile'), async (req, res) => {
+app.get(('/settings/edit-profile'), async (req, res) => {
   res.render('setting/edit-profile')
 })
-app.get(('/help'), async (req, res) => {
+app.get(('/settings/help'), async (req, res) => {
   res.render('setting/help')
 })
-app.get(('/manage-account'), async (req, res) => {
+app.get(('/settings/manage-account'), async (req, res) => {
   res.render('setting/manage-account')
 })
-app.get(('/policy'), async (req, res) => {
-  res.render('setting/policy')
+app.get(('/settings/private'), async (req, res) => {
+  res.render('setting/private')
 })
-app.get(('/privacypolicy'), async (req, res) => {
+app.get(('/settings/privacypolicy'), async (req, res) => {
   res.render('setting/privacypolicy')
 })
 module.exports=router;
