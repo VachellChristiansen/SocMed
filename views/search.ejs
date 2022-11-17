@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon"> 
+  <link rel="stylesheet" href="/css/search.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');</style>
+  <title>Find Something on DeepSpace</title>
+</head>
+<body>
+  <header class="primary-header">
+    <div class="container grid navbar">
+      <div class="flex-row align-cen">
+        <a href="/" class="logo">DeepSpace</a>
+      </div>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row" action="/search">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Searching for something?">
+        </form>
+      </div>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="/upload" class="btn signup">+ Upload</a>
+        <a href="/user/login" class="btn signin">Sign In</a>
+        <div class="profile-button flex justify-end align-cen hidden">
+          <img class="user-profile-pic master h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" id="user1" alt="profile">
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-menu grid hidden">
+      <a class="pop-up align-cen justify-cen flex" href="/setting/editprofile" >
+        Settings
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/setting/help">
+        Help
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/privacypolicy">
+        Privacy Policy
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/user/login" >
+        Logout
+      </a>
+    </div>
+
+  </header>
+  <main>
+    <!-- back to top -->
+    <button onclick="topFunction()" id="button-top"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+    </svg></button>
+
+    <div class="main">
+      <div class="grid slide">
+        <!-- Recommendation Section / Left Part -->
+        <div class="recommended grid">
+          <div class="recommended-container">
+            <div class="recommended-text">
+              <span>Recommended for you</span>
+            </div>
+            <div class="recommended-user flex-col flex-col">
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://images7.alphacoders.com/490/490473.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Leo Caprio</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@leonardoc</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://www.wallpaperflare.com/static/73/308/969/gal-gadot-elle-magazine-2017-4k-wallpaper.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Gal Gadot</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@gal_gadot</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://www.xtrafondos.com/wallpapers/vertical/tom-holland-en-spider-man-sin-camino-a-casa-9247.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Tom Holland</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@tomh2013</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommended-container top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
+            </div>
+            <div class="recommended-user flex-col">
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://i.pinimg.com/originals/c2/81/e8/c281e883fcd89408574e6edddba374fc.png" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Elon Musk</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@elonmusk</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://wallpaperaccess.com/full/241873.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Ariana Grande</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@ariana</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+              <div class="user" id="">
+                <div class="user-profile-pic">
+                  <img class="user-profile-pic" src="https://p4.wallpaperbetter.com/wallpaper/306/534/486/5c1f9f462af7a-wallpaper-preview.jpg" alt="profile">
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span>Ed Sheeran</span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@edsheeran</span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <button>Follow</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Section / Middle Part -->
+  
+        <div class="user-page">
+          <div class="recommended-text">
+            <span>Accounts</span>
+          </div>
+            <div class="user-star" id="user1">
+              <div class="user-main-star">
+                <div class="user-profile-pic-star">
+                  <img class="user-profile-pic-star" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&w=1000&q=80" alt="profile">
+                </div>
+                <div class="user-detail-star flex-col justify-spa">
+                  <div class="user-name-star">
+                    <span>Anne Gloindian</span>
+                  </div>
+                  <div class="user-tag-star">
+                    <span>@anneglo</span>
+                  </div>
+                </div>
+              </div>
+              <div class="user-followings-star">
+                <div class="user-numbers">308</div>
+                Following 
+                <div class="user-numbers">839</div>
+                Followers 
+                <div class="user-numbers">3905</div>
+                Likes 
+              </div>
+              <div class="user-description-star">
+                Hello there! This is my official DeepSpace Account. Please leave a like >.<
+              </div>
+            </div>
+            <hr>
+            <div class="recommended-text">
+              <span>Videos</span>
+            </div>
+          <div class="content">
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-fashion-woman-with-silver-makeup-39875-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-fashion-woman-with-silver-makeup-39875-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">This week's photoshoot</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">In Italy</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-father-and-his-little-daughter-eating-marshmallows-in-nature-39765-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-father-and-his-little-daughter-eating-marshmallows-in-nature-39765-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">My family</div>
+            </div>
+           
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-lights-out-of-focus-through-a-wire-fence-bokeh-34373-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-lights-out-of-focus-through-a-wire-fence-bokeh-34373-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Night's love</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-behind-the-scenes-of-a-speaker-talking-on-camera-34486-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-behind-the-scenes-of-a-speaker-talking-on-camera-34486-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">The studio is full today</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-woman-decorates-christmas-tree-at-home-2721-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-decorates-christmas-tree-at-home-2721-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Can you believe it? that ...</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-man-cooking-is-surprised-by-his-wife-with-a-hug-12165-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-man-cooking-is-surprised-by-his-wife-with-a-hug-12165-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Coming over to my friends'...</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-serving-parmesan-cheese-in-spaghetti-bolognese-close-up-engraving-12171-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-serving-parmesan-cheese-in-spaghetti-bolognese-close-up-engraving-12171-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">End product</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-spaghetti-caramel-13771-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-spaghetti-caramel-13771-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">This week's new product</div>
+            </div>
+           
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-serving-wine-in-a-glass-viewed-in-detail-12170-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-serving-wine-in-a-glass-viewed-in-detail-12170-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Date!</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-girl-approaching-skating-down-the-middle-of-the-street-25571-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-approaching-skating-down-the-middle-of-the-street-25571-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Stephanie's is getting better</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-girl-in-a-photographic-set-modeling-on-a-pink-background-39676-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-in-a-photographic-set-modeling-on-a-pink-background-39676-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Long week ahead</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-two-happily-girls-in-a-retro-restaurant-hanging-out-42325-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-two-happily-girls-in-a-retro-restaurant-hanging-out-42325-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Girls' night</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-vertical-shot-of-a-drummer-playing-42812-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-vertical-shot-of-a-drummer-playing-42812-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">His perf is amazing!</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-couple-dressed-as-charros-walking-through-a-farm-42391-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-couple-dressed-as-charros-walking-through-a-farm-42391-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Look forward to this week's...</div>
+            </div>
+           
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-silhouette-in-front-of-the-sun-of-a-cyclist-outdoors-40901-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-silhouette-in-front-of-the-sun-of-a-cyclist-outdoors-40901-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Biking with husband</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-couple-of-roads-with-cars-41373-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-couple-of-roads-with-cars-41373-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Cityscape</div>
+            </div>
+  
+            <div class="thumbnails">
+              <a href="https://assets.mixkit.co/videos/preview/mixkit-person-is-filmed-exercising-with-a-cell-phone-5052-large.mp4">
+              <video loop muted class="content-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-person-is-filmed-exercising-with-a-cell-phone-5052-large.mp4">
+              </a>
+              </video>
+             <div class="views">
+              <i class="bi bi-play"></i>
+              <span class="count">
+                1234
+              </span>
+             </div>
+              <div class="caption">Check out my new channel</div>
+            </div>
+
+       
+        
+      </div>
+
+    </div> 
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/js/search.js"></script>
+</body>
+</html>

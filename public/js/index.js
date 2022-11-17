@@ -77,5 +77,5 @@ $('.master,.profile-menu').mouseover(function(event){
   // });
 
     $('.master').click(function(event) {
-    location.href=`/myprofile`;
+    location.href=`/user`;
   });

@@ -10,7 +10,7 @@ $('.user').click(function(event) {
   var status = $(this).attr('id');
  if(status===""){  
  } else {
- location.href=`/${status}`;
+ location.href=`/user/otherUser`; // need to be changed to other user username
  }
 });
 
@@ -19,7 +19,7 @@ $('.user-star').click(function(event) {
  if(status===""){
 
  } else {
-  location.href=`/${status}`;
+  location.href=`/user/otherUser`;
  }
 });
 

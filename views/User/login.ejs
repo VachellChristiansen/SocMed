@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon"> 
+  <link rel="stylesheet" href="/css/signin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <title>DeepSpace - Sign In</title>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="gambar">
+
+      <div class="scene">
+        <img src="/assets/astronaut.png" class="astronaut">
+        <img src="/assets/comet.png" class="comet">
+        <img src="/assets/moon.png" class="moon">
+        <img src="/assets/space_ship.png" class="ship">
+        <img src="/assets/stars.png" class="stars">
+
+      </div>  
+ 
+    </aside>
+    <img src="/assets/astronaut-back.png" class="astronaut-back"> 
+    <main class="form-box">
+      <form class="signin-form" action="/">
+        <h1 class="title">DeepSpace</h1>
+        <div class="input-group">
+          <input type="text" name="uname" class="account" placeholder="Username" required>
+        </div>
+
+        <div class="input-group">
+           <input type="password" name="password" id="password" placeholder="Password" />
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </div>
+            <div class="input-group">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">Remember me</label>
+            </div>
+
+        <div class="login">
+          <button type="submit" class="submit-btn">Login</button>
+        </div>
+        <div>
+          <span>Create Account</span> <a href="/user/register" class="signup-btn">Sign up</button>
+        </div>
+      </form>
+
+      <script src="/js/signin.js"></script>
+      <footer>
+
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>
