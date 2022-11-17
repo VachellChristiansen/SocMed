@@ -42,8 +42,13 @@ const createUser = async (req, res, next) => {
   try { // TODO : Check user is already registered?
     const existingUser = await findByEmail(req.body.email);
     if (existingUser) {
-      throw new Error('email is already registered');
+      throw new Error('Email is already registered');
     }
+
+    if(req.body.password != req.body.confirmPassword) {
+      throw new Error('Password and confirmPassword are not the same');
+    }
+    
     // register user (insert to db)
     await create(
       req.body.email,
