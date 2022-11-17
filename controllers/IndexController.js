@@ -2,7 +2,7 @@ const getIndex = async (req, res, next) => {
   return res.render("index")
 }
 const privacyPolicy = async (req, res, next) => {
-  return res.render("privacypolicy")
+  return res.render("privacyPolicy")
 }
 const search = async (req, res, next) => {
   return res.render("search")
