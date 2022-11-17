@@ -44,11 +44,6 @@ const createUser = async (req, res, next) => {
     if (existingUser) {
       throw new Error('Email is already registered');
     }
-
-    if(req.body.password != req.body.confirmPassword) {
-      throw new Error('Password and confirmPassword are not the same');
-    }
-
     // register user (insert to db)
     await create(
       req.body.email,
@@ -57,7 +52,7 @@ const createUser = async (req, res, next) => {
       req.body.password,
     );
 
-    return res.redirect('/');
+    return res.redirect('/user/login');
   } catch (err) {
     return next(err);
   }
