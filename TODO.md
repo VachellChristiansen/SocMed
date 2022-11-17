@@ -6,6 +6,11 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 - [ ] Merge Setting files
 - [ ] Log out functions
+- [ ] Create account functions
+- [ ] Edit Profile functions
+- [ ] Comment for each posts
+- [ ] Post for each user
+- [ ] Dynamic url for each user
 
 ### In Progress
 
