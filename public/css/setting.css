@@ -12,6 +12,10 @@ body{
     align-items: center;
 }
 
+button{
+  cursor: pointer;
+}
+
 .container{
     display: flex;
     height: 80vh;
