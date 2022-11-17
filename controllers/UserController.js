@@ -48,7 +48,7 @@ const createUser = async (req, res, next) => {
     if(req.body.password != req.body.confirmPassword) {
       throw new Error('Password and confirmPassword are not the same');
     }
-    
+
     // register user (insert to db)
     await create(
       req.body.email,
@@ -57,10 +57,7 @@ const createUser = async (req, res, next) => {
       req.body.password,
     );
 
-    return res.json({
-      status: 'OK',
-      email: req.body.email,
-    }).status(200);
+    return res.redirect('/');
   } catch (err) {
     return next(err);
   }
