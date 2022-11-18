@@ -19,8 +19,12 @@ async function findByEmail(email) {
   return Users.findOne({ email }).exec();
 }
 
-async function login(email, password) {
-  const user = await findByEmail(email);
+async function findByUsername(username) {
+  return Users.findOne({ username }).exec();
+}
+
+async function login(username, password) {
+  const user = await findByUsername(username);
   if(!user) {
     return null;
   }
@@ -64,7 +68,7 @@ const getUser = async (req, res) => {
 
 const loginUser = async (req, res, next) => {
   try {
-    const user = await login(req.body.email, req.body.password);
+    const user = await login(req.body.username, req.body.password);
     if (!user) {
       throw new Error('Wrong email or pass');
     }

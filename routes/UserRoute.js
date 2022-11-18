@@ -26,6 +26,6 @@ router.get("/login", loginPage);
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
-router.post("/loginValidation", celebrate(userValidator.login), loginUser)
+router.post("/loginValidation", celebrate(userValidator.login), loginUser);
 
 module.exports = router;
