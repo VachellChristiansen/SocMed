@@ -4,7 +4,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 ### Todo
 
-- [ ] Merge Setting files
+- [x] Merge Setting files @Andrew
 - [ ] Log out functions
 - [ ] Edit Profile functions
 - [ ] Comment for each posts

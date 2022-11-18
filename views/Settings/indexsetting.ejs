@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon"> 
+    <title>DeepSpace - Setting</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/setting.css">
+    <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
+    <script src="/js/edit-profile.js" defer></script>
+</head>
+
+<body>
+  
+    <div class="container">
+      <div class="leftside"> 
+        <ul class="point">
+          <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            <li>
+                <a href="/setting/editprofile" class=<%= type=='editprofile' ? "bold":"" %> >Edit Profile</a>
+            </li>
+            <li>
+                <a href="/setting/changepass" class=<%= type=='changepass' ? "bold":"" %> >Change Password</a>
+            </li>
+            <li>
+                <a href="/setting/manageaccount" class=<%= type=='manageaccount' ? "bold":"" %> >Manage Account</a>
+            </li>
+            <li>
+                <a href="/setting/privacy" class=<%= type=='privacy' ? "bold":"" %> >Privacy </a>
+            </li>
+            <li>
+                <a href="/setting/help" class=<%= type=='help' ? "bold":"" %> >Help</a>
+            </li>
+        </ul>
+      </div>
+
+        <div class="rightbox">
+            <% if(type=="help"){ %>
+                <%- include("help")  %>
+            <% } else if(type=="editprofile"){ %>
+                <%- include("editprofile")  %>
+            <% } else if(type=="manageaccount"){ %>
+                <%- include("manageAccount")  %>
+            <% } else if(type=="privacy"){ %>
+                 <%- include("privacy")  %>
+            <% } else if(type=="changepass"){ %>
+                <%- include("changePass")  %>    
+            <% }  %>
+        </div>
+    </div>
+</body>
+
+</html>

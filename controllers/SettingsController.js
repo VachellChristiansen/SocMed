@@ -1,24 +1,8 @@
 const path = require("path");
 const { Users } = require(path.join(__dirname, "../models/Model"));
 
-const changePass = async (req, res, next) => {
-  res.render("Settings/changePass")
-};
-
-const editProfile = async (req, res, next) => {
-  res.render("Settings/editProfile")
-};
-
-const help = async (req, res, next) => {
-  res.render("Settings/help")
-};
-
-const manageAccount = async (req, res, next) => {
-  res.render("Settings/manageAccount")
-};
-
-const privacy = async (req, res, next) => {
-  res.render("Settings/privacy")
+const indexsetting = async (req, res, next) => {
+  res.render("Settings/indexsetting", {type:req.params.type} )
 };
 
 const updateProfile = async (req, res, next) => {
@@ -49,10 +33,6 @@ const updateProfile = async (req, res, next) => {
 };
 
 module.exports = {
-  changePass,
-  editProfile,
-  help,
-  manageAccount,
-  privacy,
+  indexsetting,
   updateProfile
 }

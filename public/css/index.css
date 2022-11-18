@@ -98,6 +98,10 @@ button:hover {
 .hidden {
   display: none;
 }
+.bold{
+  font-weight: var(--fw-bold);
+}
+
 .btn {
   text-decoration: none;
   border: none;

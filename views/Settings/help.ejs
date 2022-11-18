@@ -1,66 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon"> 
-    <title>DeepSpace - Setting</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/setting.css">
-    <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  
-    <div class="container">
-      <div class="leftside">
-        <ul class="point">
-          <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
-            <li>
-                <a href="/setting/editprofile" class="edt-prof">Edit Profile</a>
-            </li>
-            <li>
-                <a href="/setting/changepass" class="chg-pass">Change Password</a>
-            </li>
-            <li>
-                <a href="/setting/manageaccount" class="mng-acc">Manage Account</a>
-            </li>
-            <li>
-                <a href="/setting/privacy" class="privacy">Privacy </a>
-            </li>
-            <li>
-                <a href="/setting/help" class="help" style="font-weight:bold;">Help</a>
-            </li>
-        </ul>
-      </div>
-
-        <div class="rightbox">
-            <article>
-                <div class="settings">
-                    <div class="help-title">Help</div>
-                        <div class="privacy-item">
-                            <div class="help-form">
-                                <form>
-                                    <div class="subtitle">Report Problem</div>
-                                    <div class="desc-txt">Please provide as much detail as possible so we can better verify the problem
-                                        <br>When(time date) did the problem occur?
-                                        <br>What is the exact error message that you received?
-                                    </div>
-                                    <textarea class="description-text-box" name="reportproblem" cols="40" rows="3" maxlength="120" placeholder="Describe your problem here..." required></textarea>
-                                    <span>Name</span><input type="text" name="namereport" class="" required>
-                                    <span>Email</span><input type="email" name="emmailreport" class="" required>
-                                    <div class="btnupdt">
-                                    <button type="submit" name="Update" class="updtbtn">Submit</button>
-                                    </div>
-                                </form>
+<article>
+    <div class="settings">
+        <div class="help-title">Help</div>
+            <div class="privacy-item">
+                <div class="help-form">
+                    <form>
+                        <div class="subtitle">Report Problem</div>
+                        <div class="desc-txt">Please provide as much detail as possible so we can better verify the problem
+                            <br>When(time date) did the problem occur?
+                            <br>What is the exact error message that you received?
                         </div>
-                    </div>                
-                </div>
-            </article>
-        </div>
+                        <textarea class="description-text-box" name="reportproblem" cols="40" rows="3" maxlength="120" placeholder="Describe your problem here..." required></textarea>
+                        <span>Name</span><input type="text" name="namereport" class="" required>
+                        <span>Email</span><input type="email" name="emmailreport" class="" required>
+                        <div class="btnupdt">
+                        <button type="submit" name="Update" class="updtbtn">Submit</button>
+                        </div>
+                    </form>
+            </div>
+        </div>                
     </div>
-</body>
-<script>;if ("serviceWorker" in navigator) {window.addEventListener("load", function() {navigator.serviceWorker.register("/sw.js").catch(function() {console.log("Service worker registration failed");});});}</script>
-</html>
+</article>
