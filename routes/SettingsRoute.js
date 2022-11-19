@@ -3,11 +3,10 @@ const path = require("path");
 const router = express.Router();
 const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
 
-const { indexsetting, updateProfile } = require(path.join(__dirname, "../controllers/SettingsController"))
+const { updateProfile, indexsetting } = require(path.join(__dirname, "../controllers/SettingsController"))
 
 // route here starts with "localhost/setting/"
 
-router.post('/updateprofile', userAuth, updateProfile);
-router.get('/:type', indexsetting);
+router.get('/', indexsetting);
 
-module.exports = router;
+router.post('/updateprofile', userAuth, updateProfile);
