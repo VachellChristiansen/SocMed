@@ -18,6 +18,10 @@
   --fs-large-up: 36px;
 }
 
+.bold{
+  font-weight:var(--fw-bold);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
