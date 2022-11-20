@@ -121,6 +121,10 @@ form i{
   z-index: 2;
 }
 
+#error-msg {
+  color: red;
+}
+
 aside {
   display: flex;
   margin-left: 8em;

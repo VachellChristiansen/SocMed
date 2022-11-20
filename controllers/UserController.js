@@ -1,5 +1,8 @@
 const jwt = require("jsonwebtoken");
 const path = require("path");
+const express = require("express");
+const bodyParser = require("body-parser");
+const {check,validationResult} = require('express-validator');
 const { Users } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
@@ -45,9 +48,19 @@ async function findById(id) {
 const createUser = async (req, res, next) => {
   try { // TODO : Check user is already registered?
     const existingUser = await findByEmail(req.body.email);
+    const errors = validationResult(req);
     if (existingUser) {
-      throw new Error('Email is already registered');
+      // throw new Error('Email is already registered');
+      const alert = errors.array()
+        console.error(errors);
+        res.render('User/register', 
+  {
+    error: {
+      msg: 'Email is already registered!'
     }
+  })
+
+    } else {
     // register user (insert to db)
     await create(
       req.body.email,
@@ -55,6 +68,8 @@ const createUser = async (req, res, next) => {
       req.body.name,
       req.body.password,
     );
+    }
+
 
     return res.redirect('/user/login');
   } catch (err) {
@@ -90,11 +105,21 @@ const getOtherUser = async (req, res, next) => {
 };
 
 const register = async (req, res, next) => {
-  res.render("User/register")
+  res.render('User/register', 
+  {
+    error: {
+      msg: ' '
+    }
+  })
 };
 
 const loginPage = async (req, res, next) => {
-  res.render("User/login")
+  res.render('User/login', 
+  {
+    error: {
+      msg: ' '
+    }
+  })
 };
 
 module.exports = {

@@ -3,7 +3,7 @@ const path = require("path");
 const Users = require(path.join(__dirname, './UserModel'));
 
 mongoose.connect(
-  'mongodb+srv://mildew:mildewdatabase@sandbox0.m9dl512.mongodb.net/test',
+  'mongodb+srv://valerie36:535210036@cluster1.4kx4cuh.mongodb.net/test',
 );
 
 const db = mongoose.connection;

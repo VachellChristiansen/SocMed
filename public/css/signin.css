@@ -121,6 +121,10 @@ form i{
     cursor: pointer;
     z-index: 2;
   }
+
+  #error-msg {
+    color: red;
+  }
   
 /* animation */
 .scene {
