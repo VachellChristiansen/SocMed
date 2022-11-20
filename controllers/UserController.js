@@ -50,21 +50,20 @@ const createUser = async (req, res, next) => {
     const existingUser = await findByEmail(req.body.email);
     const existingUsername = await findByUsername(req.body.username);
     const errors = validationResult(req);
-    if (existingUser) {
+    let messageError = " ";
+    if(existingUser){
+      messageError+="Email is already registered! "
+    }
+    if(existingUsername){
+      messageError+="Username is already registered! "
+    }
+    if (existingUser||existingUsername) {
         res.render('User/register', 
   {
     error: {
-      msg: 'Email is already registered!'
+      msg: messageError,
     }
   })
-    }
-      else if(existingUsername){
-        res.render('User/register', 
-        {
-          error: {
-            msg: 'Username is already registered!'
-          }
-        })
       }
      else {
     // register user (insert to db)
@@ -95,7 +94,7 @@ const loginUser = async (req, res, next) => {
         res.render('User/login', 
         {
           error: {
-            msg: 'Wrong email or pass'
+            msg: 'Wrong email or password!'
           }
         })
     } else {
