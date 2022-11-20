@@ -1,10 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const path = require("path");
 const Users = require(path.join(__dirname, './UserModel'));
 
-mongoose.connect(
-  'mongodb+srv://valerie36:535210036@cluster1.4kx4cuh.mongodb.net/test',
-);
+mongoose.connect( process.env.MONGO_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 

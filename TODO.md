@@ -5,6 +5,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 ### Todo
 
 - [ ] Log out functions
+- [ ] Log in functions
 - [ ] Edit Profile functions
 - [ ] Comment for each posts
 - [ ] Post for each user
@@ -12,12 +13,11 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 ### In Progress
 
-- [ ] Create account functions @VachellChristiansen
-
 ### Done ✓
 
 - [x] Railway Deploy
 - [x] Pathing for view files to static files locally
+- [x] Do something
 - [x] Change pathing from img to assets, move all files from img to assets.
 - [x] Merge Setting files @Andrew
 - [x] Handle login & register errors, check for unique email and username
