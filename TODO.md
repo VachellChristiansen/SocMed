@@ -9,12 +9,12 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [ ] Comment for each posts
 - [ ] Post for each user
 - [ ] Dynamic url for each user
-- [ ] Handle login wrong username/password, user doesn't exist @Valerie-0036
 - [ ] Check if username has been used for login & register
 
 ### In Progress
 
 - [ ] Create account functions @VachellChristiansen
+- [ ] Handle login wrong username/password, user doesn't exist @Valerie-0036
 
 ### Done ✓
 
