@@ -6,7 +6,7 @@
 
 ### Step 3: Make changes and check through "npm run start" command for local testing
 
-### Step 4: After making sure the changes are not having problem, push the changes to see online on railway "https://deepspace.up.railway.app/"
+### Step 4: After making sure the changes are not having problem, push the changes to see online on railway "https://deepspace-testing.up.railway.app/"
 
 ### Step 5: If there are problems with deepspace, create the fix and push it again
 
