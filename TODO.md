@@ -9,7 +9,6 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [ ] Comment for each posts
 - [ ] Post for each user
 - [ ] Dynamic url for each user
-- [ ] Check if username has been used for login & register
 
 ### In Progress
 
@@ -21,6 +20,5 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Pathing for view files to static files locally
 - [x] Change pathing from img to assets, move all files from img to assets.
 - [x] Merge Setting files @Andrew
-- [x] Handle email has been registered to page
-- [x] Handle login wrong username/password @Valerie-0036
+- [x] Handle login & register errors, check for unique email and username
 

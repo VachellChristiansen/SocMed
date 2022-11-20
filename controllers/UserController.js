@@ -48,19 +48,25 @@ async function findById(id) {
 const createUser = async (req, res, next) => {
   try { // TODO : Check user is already registered?
     const existingUser = await findByEmail(req.body.email);
+    const existingUsername = await findByUsername(req.body.username);
     const errors = validationResult(req);
     if (existingUser) {
-      // throw new Error('Email is already registered');
-      // const alert = errors.array()
-        // console.error(errors);
         res.render('User/register', 
   {
     error: {
       msg: 'Email is already registered!'
     }
   })
-
-    } else {
+    }
+      else if(existingUsername){
+        res.render('User/register', 
+        {
+          error: {
+            msg: 'Username is already registered!'
+          }
+        })
+      }
+     else {
     // register user (insert to db)
     await create(
       req.body.email,
@@ -86,8 +92,6 @@ const loginUser = async (req, res, next) => {
     const user = await login(req.body.username, req.body.password);
     const errors = validationResult(req);
     if (!user) {
-      // const alert = errors.array()
-        // console.error(errors);
         res.render('User/login', 
         {
           error: {
@@ -97,11 +101,6 @@ const loginUser = async (req, res, next) => {
     } else {
       const token = await generateToken(user.id);
       return res.redirect('/');
-    // return res.json({
-    //   email: user.email,
-    //   name: user.name,
-    //   token,
-    // }).status(200);
     }
   } catch (err) {
     return next(err);
