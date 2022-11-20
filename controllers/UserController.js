@@ -120,6 +120,7 @@ const register = async (req, res, next) => {
 };
 
 const loginPage = async (req, res, next) => {
+  res.cookie('user_token', 'valeriemautoken')
   res.render('User/login', 
   {
     error: {
