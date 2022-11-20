@@ -10,11 +10,18 @@ module.exports = {
       confirmPassword: joi.string().min(6).max(32).required()
     },
   },
-
   login: {
     body: {
       username: joi.string().required(),
       password: joi.string().required(),
+    },
+  },
+  edit: {
+    body: {
+      name: joi.string().min(3).max(100).required(),
+      username: joi.string().min(3).max(100).required(),
+      email: joi.string().email().required(),
+      bio: joi.string().alphanum(),
     },
   },
 };

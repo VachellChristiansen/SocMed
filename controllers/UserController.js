@@ -128,6 +128,10 @@ const loginPage = async (req, res, next) => {
   })
 };
 
+const editProfile = async (req, res, next) => {
+  //do something
+};
+
 module.exports = {
   create,
   createUser,

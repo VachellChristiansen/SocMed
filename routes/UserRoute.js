@@ -9,7 +9,8 @@ const { getUser,
   loginUser, 
   getOtherUser,
   register,
-  loginPage, 
+  loginPage,
+  editProfile
 } = require(path.join(__dirname, "../controllers/UserController"));
 
 const router = express.Router();
@@ -23,6 +24,8 @@ router.get("/otheruser", getOtherUser); // will need to be changed to other user
 router.get("/register", register);
 
 router.get("/login", loginPage);
+
+// router.post("/editProfile", celebrate(userValidator.edit), editProfile);
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
