@@ -51,8 +51,8 @@ const createUser = async (req, res, next) => {
     const errors = validationResult(req);
     if (existingUser) {
       // throw new Error('Email is already registered');
-      const alert = errors.array()
-        console.error(errors);
+      // const alert = errors.array()
+        // console.error(errors);
         res.render('User/register', 
   {
     error: {
@@ -68,10 +68,9 @@ const createUser = async (req, res, next) => {
       req.body.name,
       req.body.password,
     );
+    return res.redirect('/user/login');
     }
 
-
-    return res.redirect('/user/login');
   } catch (err) {
     return next(err);
   }
@@ -83,18 +82,27 @@ const getUser = async (req, res) => {
 
 const loginUser = async (req, res, next) => {
   try {
+   
     const user = await login(req.body.username, req.body.password);
+    const errors = validationResult(req);
     if (!user) {
-      throw new Error('Wrong email or pass');
+      // const alert = errors.array()
+        // console.error(errors);
+        res.render('User/login', 
+        {
+          error: {
+            msg: 'Wrong email or pass'
+          }
+        })
+    } else {
+      const token = await generateToken(user.id);
+      return res.redirect('/');
+    // return res.json({
+    //   email: user.email,
+    //   name: user.name,
+    //   token,
+    // }).status(200);
     }
-
-    const token = await generateToken(user.id);
-
-    return res.json({
-      email: user.email,
-      name: user.name,
-      token,
-    }).status(200);
   } catch (err) {
     return next(err);
   }

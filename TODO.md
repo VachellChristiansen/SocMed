@@ -14,7 +14,6 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 ### In Progress
 
 - [ ] Create account functions @VachellChristiansen
-- [ ] Handle login wrong username/password, user doesn't exist @Valerie-0036
 
 ### Done ✓
 
@@ -23,4 +22,5 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Change pathing from img to assets, move all files from img to assets.
 - [x] Merge Setting files @Andrew
 - [x] Handle email has been registered to page
+- [x] Handle login wrong username/password @Valerie-0036
 
