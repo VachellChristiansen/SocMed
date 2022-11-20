@@ -10,3 +10,5 @@ const { updateProfile, indexsetting } = require(path.join(__dirname, "../control
 router.get('/', indexsetting);
 
 router.post('/updateprofile', userAuth, updateProfile);
+
+module.exports = router;
