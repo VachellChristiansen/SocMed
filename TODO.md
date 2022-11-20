@@ -10,6 +10,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [ ] Comment for each posts
 - [ ] Post for each user
 - [ ] Dynamic url for each user
+- [ ] Handle email has been registered to page @Valerie-0036
 
 ### In Progress
 
