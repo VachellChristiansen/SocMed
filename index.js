@@ -13,7 +13,7 @@ app.use(express.json());
 // view related configs
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express);
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use("/", index);
