@@ -94,7 +94,7 @@ const loginUser = async (req, res, next) => {
         res.render('User/login', 
         {
           error: {
-            msg: 'Wrong email or password!'
+            msg: 'Wrong username or password!'
           }
         })
     } else {
