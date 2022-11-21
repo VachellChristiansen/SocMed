@@ -66,15 +66,6 @@ $('.master,.profile-menu').mouseover(function(event){
     $(document).mouseleave(function () {
       $('.profile-menu').addClass("hidden");
   });
-  //will be altered for clicking user's profile pic
-  // $('.master').click(function(event) {
-  //   var status = $(this).attr('id');
-  //  if(status===""){
-  
-  //  } else {
-  //   location.href=`profiles/${status}.html`;
-  //  }
-  // });
 
     $('.master').click(function(event) {
     location.href=`/user`;

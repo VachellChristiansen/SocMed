@@ -1,18 +1,235 @@
 /* IMPORTING FONT POPPINS FROM GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-}
+:root {
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
 
+  --fs-small-down: 12px;
+  --fs-small: 16px;
+  --fs-small-up: 20px;
+  --fs-medium: 24px;
+  --fs-large-down: 28px;
+  --fs-large: 32px;
+  --fs-large-up: 36px;
+}
+*{
+  margin: 0;
+  
+  font-family: 'Poppins', sans-serif;
+}
 body{
     height: 100vh;
     background-color: black;
     display: flex;
-    align-items: center;
+    font-size: smaller;
 }
 
-button{
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.9em;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Utilities */
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-spa {
+  justify-content: space-around;
+}
+.justify-spb {
+  justify-content: space-between;
+}
+.justify-cen{
+  justify-content: center;
+}
+.justify-ite{
+  justify-items: center;
+}
+.align-cen {
+  align-items: center;
+}
+.align-sel{
+  align-self: center;
+}
+.align-con{
+  align-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 10em;
+  background-color: whitesmoke;
+  transition: 0.3s ease;
+  font-weight: var(--fw-medium);
+}
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+.containerNav {
+  width: 100%;
+  padding: 0 5vw;
+  margin: 0 auto;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+/* Header Style */
+.primary-header {
+  position:fixed;
+  width: 100vw;
+  height: 10%;
+  background-color: hsla(252, 30%, 100%,100%);
+  z-index: 100;
+}
+
+
+.navbar {
+  grid-template-columns: auto 40% 30%;
+  height: 100%;
+}
+
+.logo {
+  color:black;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+}
+
+.search-bar {
+  width: 20vw;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  background: hsl(252, 30%, 95%);
+  margin: auto;
+}
+
+.search {
+width: 100%;
+}
+.search:focus {
+  outline: none;
+}
+
+.submit-search {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+.submit-search i{
+  color: rgb(60, 60, 60);
+}
+.sign-button {
+  width: 100%;
+}
+.signup {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  margin: 0.2rem;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+  max-height: 100%;
+}
+.signin {
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  margin: 0.2rem;
+  border: 0.1em solid hsl(252, 15%, 65%);
+  text-align: center;
+  max-height: 100%;
+}
+
+/* Profile On Hover Style */
+.profile-menu {
+  position: fixed;
+  right: 2%;
+  width: 12em;
+  height: 50%;
+  z-index: 90;
+  grid-template-columns: auto;
+  background-color: rgb(103, 103, 103);
+}
+.pop-up{
+  text-decoration: none;
+  cursor: pointer;
+}
+.pop-up:hover{
+  background-color: rgb(49, 49, 49) ;
+}
+
+.user-profile-pic {
+  height: 3rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 1em;
+}
+
+.user-profile-pic:hover {
   cursor: pointer;
 }
 
@@ -66,13 +283,13 @@ article{
     flex-direction: column;
 }
 
-form{
+.application {
     display: flex;
     flex-direction: column;
     padding: 0.2em 1em;
 }
 
-form input {
+ .application input {
     margin-bottom: 1vh;
     border-radius: 2em;
     font-size: 2vh;

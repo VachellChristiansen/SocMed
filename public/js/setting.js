@@ -39,7 +39,7 @@ function seteditprof () {
         </div>
     </div>
     <div class="eprofile">
-        <form>
+        <form class="application">
             <span>Name</span><input type="text" name="Name" class="namee" placeholder="Name">
             <span>Username</span><input type="text" name="UName" class="user-namee" placeholder="Username">
             <span>E-mail</span><input type="email" name="Email" class="emaill" placeholder="E-mail">
@@ -70,7 +70,7 @@ cpass.addEventListener("click", function () {
     index.innerHTML = `
     <article>
     <div class="changepassword">
-        <form>
+        <form class="application">
             <span>Old Password</span><input type="password" name="Oldpassword" class="opass">
             <span>New Password</span><input type="password" name="newpassword" class="npass">
             <span>Confirm New Password</span><input type="password" name="cnewpassword"
@@ -114,7 +114,7 @@ help.addEventListener("click", function () {
         <div class="help-title">Help</div>
             <div class="privacy-item">
                 <div class="help-form">
-                    <form>
+                    <form class="application">
                         <div class="subtitle">Report Problem</div>
                         <div class="desc-txt">Please provide as much detail as possible so we can better verify the problem
                             <br>When(time date) did the problem occur?
@@ -157,3 +157,25 @@ privacy.addEventListener("click", function () {
     </article>
     `
 })
+
+
+/* PROFILE NAVBAR */
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+  
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+  
+  $('.container').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
+
+    $('.master').click(function(event) {
+    location.href=`/user`;
+  });

@@ -7,14 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon"> 
     <title>DeepSpace - Setting</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/privacypolicy.css">
     <link rel="stylesheet" href="/css/setting.css">
     <script src="https://kit.fontawesome.com/9b64058bd2.js" crossorigin="anonymous"></script>
     <script src="/js/setting.js" defer></script>
 </head>
 
 <body>
+  <header class="primary-header">
+    <div class="containerNav grid navbar">
+      <div class="flex-row align-cen">
+        <a href="/" class="logo">DeepSpace</a>
+      </div>
+      <div class="search-bar">
+        <form class="justify-cen align-cen flex-row" action="/search">
+          <button class="submit-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input class="search" type="search" placeholder="Searching for something?">
+        </form>
+      </div>
+      <div class="sign-button flex-row justify-end align-cen hidden">
+        <a href="/upload" class="btn signup">+ Upload</a>
+        <a href="/user/login" class="btn signin">Sign In</a>
+      </div>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="/upload" class="btn signup">+ Upload</a>
+        <div class="profile-button flex justify-end align-cen">
+          <img class="user-profile-pic master h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile">
+        </div>
+      </div>
 
+    </div>
+
+    <div class="profile-menu grid hidden">
+      <a class="pop-up align-cen justify-cen flex" href="/setting/" >
+        Settings
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/setting/">
+        Help
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/privacypolicy">
+        Privacy Policy
+      </a>
+      <a class="pop-up align-cen justify-cen flex" href="/user/login">
+        Logout
+      </a>
+    </div>
+
+  </header>
+  
     <div class="container">
       <div class="leftside"> 
         <ul class="point">
@@ -41,5 +83,11 @@
         </div>
     </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<!-- bootstrap js -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+  crossorigin="anonymous"
+></script>
 </html>
