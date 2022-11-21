@@ -99,6 +99,7 @@ const loginUser = async (req, res, next) => {
         })
     } else {
       const token = await generateToken(user.id);
+      res.cookie('user_token', token);
       return res.redirect('/');
     }
   } catch (err) {
@@ -120,7 +121,6 @@ const register = async (req, res, next) => {
 };
 
 const loginPage = async (req, res, next) => {
-  res.cookie('user_token', 'valeriemautoken')
   res.render('User/login', 
   {
     error: {
