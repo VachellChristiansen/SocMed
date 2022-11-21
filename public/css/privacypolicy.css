@@ -225,6 +225,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 
 }
 
@@ -237,7 +238,7 @@ button:hover {
   z-index: 0;
 }
 .app{
-  padding-top: 7%;
+  padding-top: 6%;
 }
 .left{
   flex:2;
