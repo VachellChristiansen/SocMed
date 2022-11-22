@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const { celebrate } = require("celebrate");
+const passport = require("passport");
 
 const userValidator = require(path.join(__dirname, "../validators/UserValidator"));
 const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
@@ -23,12 +24,12 @@ router.get("/otheruser", getOtherUser); // will need to be changed to other user
 
 router.get("/register", register);
 
-router.get("/login", loginPage);
+router.get("/login", loginPage); 
 
 // router.post("/editProfile", celebrate(userValidator.edit), editProfile);
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
-router.post("/loginValidation", celebrate(userValidator.login), loginUser);
+router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/fail' }), loginUser);
 
 module.exports = router;

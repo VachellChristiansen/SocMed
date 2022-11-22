@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const express = require("express");
-const bodyParser = require("body-parser");
 const {check,validationResult} = require('express-validator');
 const { Users } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
@@ -82,29 +81,44 @@ const createUser = async (req, res, next) => {
 }
 
 const getUser = async (req, res) => {
-  res.render("User/mainUser");
+  console.log(req.user)
+  res.render("User/mainUser", {name: req.user.name, username: req.user.username});
 }
 
 const loginUser = async (req, res, next) => {
-  try {
+  // try {
    
-    const user = await login(req.body.username, req.body.password);
-    const errors = validationResult(req);
-    if (!user) {
-        res.render('User/login', 
-        {
-          error: {
-            msg: 'Wrong username or password!'
-          }
-        })
-    } else {
-      const token = await generateToken(user.id);
-      res.cookie('user_token', token);
-      return res.redirect('/');
-    }
-  } catch (err) {
-    return next(err);
+  //   const user = await login(req.body.username, req.body.password);
+  //   const errors = validationResult(req);
+  //   if (!user) {
+  //       res.render('User/login', 
+  //       {
+  //         error: {
+  //           msg: 'Wrong username or password!'
+  //         }
+  //       })
+  //   } else {
+  //     const token = await generateToken(user.id);
+  //     res.cookie('user_token', token);
+  //     return res.redirect('/');
+  //   }
+  // } catch (err) {
+  //   return next(err);
+  // }
+
+  const user = await Users.findOne({ username: req.body.username }).exec();
+  if (!user) {
+    return res.json({
+      error: 'User not found'
+    })
   }
+  const validPassword = await compare(req.body.password, user.password);
+  if (!validPassword) {
+    return res.json({
+      error: 'Invalid password'
+    })
+  }
+  return res.redirect('/user/')
 }
 
 const getOtherUser = async (req, res, next) => {
