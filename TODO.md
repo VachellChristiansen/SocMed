@@ -10,7 +10,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [ ] Comment for each posts
 - [ ] Post for each user
 - [ ] Dynamic url for each user
-
+- [ ] display joi validator error 
 ### In Progress
 
 ### Done ✓
