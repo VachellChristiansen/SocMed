@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const path = require("path");
 const express = require("express");
 const {check,validationResult} = require('express-validator');
-const { Users } = require(path.join(__dirname, "../models/Model"));
+const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
 
@@ -15,6 +15,16 @@ async function create(email, username, name, password) {
     password: hashedPassword,
   })
   return newUser.save();
+}
+
+async function upload(username, title, music, file) {
+  const newUpload = new Posts({
+    username,
+    title,
+    music,
+    file,
+  })
+  return newUpload.save();
 }
 
 async function findByEmail(email) {
@@ -147,6 +157,34 @@ const editProfile = async (req, res, next) => {
   //do something
 };
 
+const createPost = async (req, res, next) => {
+  try { // TODO : Check user is already registered?
+    console.log(req.body);
+    // register user (insert to db)
+    await upload(
+      req.body.username,
+      req.body.title,
+      req.body.music,
+      req.body.file,
+    );
+    // return res.json({
+    //   username : req.body.username, 
+    //   title : req.body.title,
+    //   music :  req.body.music,
+    //   file : req.body.file
+
+    // })
+
+    return res.render('index');
+  } catch (err) {
+    return next(err);
+  }
+};
+
+const insertComment = async (req, res, next) => {
+
+};
+
 module.exports = {
   create,
   createUser,
@@ -156,6 +194,9 @@ module.exports = {
   login,
   generateToken,
   findById,
+  //posts
+  createPost,
+  insertComment,
   // pages
   getOtherUser,
   register,
