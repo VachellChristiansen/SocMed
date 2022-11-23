@@ -31,11 +31,11 @@ router.get("/login", loginPage);
 
 router.get("/logout", logout)
 
-router.post("/editProfile", passport.authenticate('local', { failureRedirect: '/register' }), editProfile); //celebrate(userValidator.edit),
+router.post("/editProfile", celebrate(userValidator.edit), editProfile);
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
-router.post("/uploadPost",celebrate(userValidator.upload), createPost);
+router.post("/uploadPost", celebrate(userValidator.upload), createPost);
 
 router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/register' }), loginUser);
 
