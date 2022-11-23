@@ -10,4 +10,7 @@ const search = async (req, res, next) => {
 const upload = async (req, res, next) => {
   return res.render("upload")
 }
-module.exports = { getIndex, privacyPolicy, search, upload }
+const error = async (req, res, next) => {
+  return res.render("errorPage")
+}
+module.exports = { getIndex, privacyPolicy, search, upload, error }

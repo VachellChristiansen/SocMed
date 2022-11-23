@@ -244,6 +244,26 @@ width: 100%;
     padding: 3em;
 }
 
+.containerPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  max-width: 800px;
+  background-color: hsl(0, 0%, 20%);
+  margin: auto auto;
+  padding: 3em;
+}
+.containerPage p{
+  font-size: large;
+}
+
+.errorSad {
+  width: 40%;
+}
+
 .leftside{
     width: 80vh;
     height: 100%;
