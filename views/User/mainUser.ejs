@@ -71,7 +71,7 @@
         </div>
         <div class="side-item-container">
           <div class="bio">
-            <p id="bio">Simple but significant.</p>
+            <p id="bio"><%= bio %></p>
           </div>
         </div>
         <div class="side-item-container">
@@ -372,24 +372,24 @@
       </div>
       <div class="change-details-container">
         <span class="form-title">Edit Profile</span>
-        <form action="/editProfile" id="edit-form" method="POST">
+        <form action="/user/editProfile" id="edit-form" method="POST">
           <div class="change-name">
             <label for="name">Name</label>
-            <input name="name" class="change-input" type="text" placeholder="Name" id="name" autocomplete="off">
+            <input name="name" class="change-input" type="text" placeholder="Name" id="name" value="<%= name %>" autocomplete="off">
             <label class="req" for="name">Name should only contains a-z, A-Z, and 0-9.</label>
           </div>
           <div class="change-username">
             <label for="username">Username</label>
-            <input name="username" class="change-input" type="text" placeholder="Username" id="username" autocomplete="off">
+            <input name="username" class="change-input" type="text" placeholder="Username" id="username" value="<%= username %>" autocomplete="off">
             <label class="req" for="username">Username should only contains a-z, A-Z, and 0-9. Underscore can not be used at the start or the end.</label>
           </div>
           <div class="change-email">
             <label for="email">E-mail</label>
-            <input name="email" class="change-input" type="email" placeholder="E-mail" id="email" autocomplete="off">
+            <input name="email" class="change-input" type="email" placeholder="E-mail" id="email" value="<%= email %>" autocomplete="off">
           </div>
           <div class="change-bio">
             <label for="bio">Bio</label>
-            <textarea name="bio" class="change-input" placeholder="Add a bio" id="bio" rows="4" cols="20" maxlength="100"></textarea>
+            <textarea name="bio" class="change-input" placeholder="Add a bio" id="bio" value="<%= bio %>" rows="4" cols="20" maxlength="100"></textarea>
           </div>
           <input class="change-input" type="submit" value="Save">
         </form>
@@ -403,6 +403,6 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"
   ></script>
-  <script src="js/myprofile.js"></script>
+  <script src="/js/myprofile.js"></script>
 </body>
 </html>

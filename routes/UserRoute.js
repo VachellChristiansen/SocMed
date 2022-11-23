@@ -5,7 +5,8 @@ const passport = require("passport");
 
 const userValidator = require(path.join(__dirname, "../validators/UserValidator"));
 const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
-const { getUser, 
+const { 
+  getUser, 
   createUser, 
   loginUser, 
   getOtherUser,
@@ -26,7 +27,7 @@ router.get("/register", register);
 
 router.get("/login", loginPage); 
 
-// router.post("/editProfile", celebrate(userValidator.edit), editProfile);
+router.post("/editProfile", editProfile); //celebrate(userValidator.edit),
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 

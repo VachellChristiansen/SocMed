@@ -25,6 +25,10 @@ async function findByUsername(username) {
   return Users.findOne({ username }).exec();
 }
 
+async function findById(id) {
+  return Users.findById(id);
+}
+
 async function login(username, password) {
   const user = await findByUsername(username);
   if(!user) {
@@ -38,10 +42,6 @@ async function login(username, password) {
 async function generateToken(id) {
   const payload = { id };
   return jwt.sign(payload, config.jwtSecretKey)
-}
-
-async function findById(id) {
-  return Users.findById(id);
 }
 
 const createUser = async (req, res, next) => {
@@ -82,7 +82,7 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res) => {
   console.log(req.user)
-  res.render("User/mainUser", {name: req.user.name, username: req.user.username});
+  res.render("User/mainUser", {name: req.user.name, username: req.user.username, email: req.user.email, bio: req.user.bio || ''});
 }
 
 const loginUser = async (req, res, next) => {
@@ -118,7 +118,7 @@ const loginUser = async (req, res, next) => {
       error: 'Invalid password'
     })
   }
-  return res.redirect('/user/')
+  return res.redirect('/user')
 }
 
 const getOtherUser = async (req, res, next) => {
@@ -144,18 +144,26 @@ const loginPage = async (req, res, next) => {
 };
 
 const editProfile = async (req, res, next) => {
-  //do something
+  const user = await findById(req.user.id)
+  user.name = req.body.name || req.user.name;
+  user.email = req.body.email || req.user.email;
+  user.username = req.body.username || req.user.username;
+  user.bio = req.body.bio || req.user.bio;
+  await user.save();
+  res.redirect('/user')
 };
 
 module.exports = {
   create,
-  createUser,
-  getUser,
-  loginUser,
   findByEmail,
   login,
-  generateToken,
   findById,
+  generateToken,
+  // callback functions for routes
+  getUser,
+  createUser,
+  loginUser,
+  editProfile,
   // pages
   getOtherUser,
   register,
