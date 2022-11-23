@@ -1,10 +1,14 @@
+//import from dependencies
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const express = require("express");
 const {check,validationResult} = require('express-validator');
+
+//import from source files
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
+const { upload } = require(path.join(__dirname, "../src/helpers/Upload"));
 
 async function create(email, username, name, password) {
   const hashedPassword = await hash(password);
@@ -17,7 +21,7 @@ async function create(email, username, name, password) {
   return newUser.save();
 }
 
-async function upload(username, title, music, file) {
+async function uploadPost(username, title, music, file) {
   const newUpload = new Posts({
     username,
     title,
@@ -161,11 +165,13 @@ const loginPage = async (req, res, next) => {
 };
 
 const editProfile = async (req, res, next) => {
-  const user = await findById(req.user.id)
+  const user = await findById(req.user.id);
+  
   user.name = req.body.name || req.user.name;
   user.email = req.body.email || req.user.email;
   user.username = req.body.username || req.user.username;
   user.bio = req.body.bio || req.user.bio;
+
   await user.save();
   res.redirect('/user')
 };
@@ -174,7 +180,7 @@ const createPost = async (req, res, next) => {
   try { // TODO : Check user is already registered?
     console.log(req.body);
     // register user (insert to db)
-    await upload(
+    await uploadPost(
       req.body.username,
       req.body.title,
       req.body.music,
