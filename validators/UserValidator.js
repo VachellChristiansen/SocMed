@@ -21,7 +21,7 @@ module.exports = {
       name: joi.string().min(3).max(100).required(),
       username: joi.string().min(3).max(100).required(),
       email: joi.string().email().required(),
-      bio: joi.string().alphanum(),
+      bio: joi.string(),
     },
   },
   upload: {

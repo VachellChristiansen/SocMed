@@ -31,7 +31,7 @@ router.get("/login", loginPage);
 
 router.get("/logout", logout)
 
-router.post("/editProfile", celebrate(userValidator.edit), editProfile);
+router.post("/editProfile", celebrate(userValidator.edit), editProfile); 
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
