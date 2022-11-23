@@ -12,6 +12,7 @@ const {
   getOtherUser,
   register,
   loginPage,
+  logout,
   editProfile,
   createPost,
 } = require(path.join(__dirname, "../controllers/UserController"));
@@ -28,12 +29,14 @@ router.get("/register", register);
 
 router.get("/login", loginPage); 
 
-router.post("/editProfile", editProfile); //celebrate(userValidator.edit),
+router.get("/logout", logout)
+
+router.post("/editProfile", passport.authenticate('local', { failureRedirect: '/register' }), editProfile); //celebrate(userValidator.edit),
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 
 router.post("/uploadPost",celebrate(userValidator.upload), createPost);
 
-router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/fail' }), loginUser);
+router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/register' }), loginUser);
 
 module.exports = router;

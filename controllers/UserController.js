@@ -131,6 +131,13 @@ const loginUser = async (req, res, next) => {
   return res.redirect('/user')
 }
 
+const logout = async (req, res, next) => {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    return res.redirect('/user/login');
+  });
+}
+
 const getOtherUser = async (req, res, next) => {
   res.render("User/otherUser")
 };
@@ -201,6 +208,7 @@ module.exports = {
   getUser,
   createUser,
   loginUser,
+  logout,
   editProfile,
   //posts
   createPost,
