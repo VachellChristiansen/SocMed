@@ -12,7 +12,8 @@ const {
   getOtherUser,
   register,
   loginPage,
-  editProfile
+  editProfile,
+  createPost,
 } = require(path.join(__dirname, "../controllers/UserController"));
 
 const router = express.Router();
@@ -30,6 +31,8 @@ router.get("/login", loginPage);
 router.post("/editProfile", editProfile); //celebrate(userValidator.edit),
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
+
+router.post("/uploadPost",celebrate(userValidator.upload), createPost);
 
 router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/fail' }), loginUser);
 

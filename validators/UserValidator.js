@@ -24,4 +24,12 @@ module.exports = {
       bio: joi.string().alphanum(),
     },
   },
+  upload: {
+    body: {
+      username: joi.string(),
+      title: joi.string(),
+      music: joi.string(),
+      file: joi.string().required(),
+    },
+  },
 };

@@ -11,6 +11,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [ ] Post for each user
 - [ ] Dynamic url for each user
 - [ ] Display joi validator error 
+- [ ] Delete account
 
 ### In Progress
 
