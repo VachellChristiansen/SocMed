@@ -4,10 +4,12 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 ### Todo
 
-- [ ] Log out functions
-- [ ] Log in functions
+- [ ] Following and Followers
+- [ ] Comment, like, (if possible: share) for each posts
 - [ ] Edit Profile functions
-- [ ] Comment for each posts
+- [ ] Search 
+- [ ] Display user and other user's info and posts
+- [ ] Display following's posts
 - [ ] Post for each user
 - [ ] Dynamic url for each user
 - [ ] Display joi validator error 
@@ -23,4 +25,6 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Change pathing from img to assets, move all files from img to assets.
 - [x] Merge Setting files @Andrew
 - [x] Handle login & register errors, check for unique email and username
+- [x] Log out functions
+- [x] Log in functions
 
