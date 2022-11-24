@@ -7,6 +7,9 @@ const client = new Web3Storage({ token: web3Token });
 
 
 async function upload(req, res, next) {
+  if(!req.files) {
+    return next();
+  }
   const { profileImage } = req.files;
   console.log(profileImage.name);
   const pathToFile = __dirname + '/upload/' + profileImage.name
