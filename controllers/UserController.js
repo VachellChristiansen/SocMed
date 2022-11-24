@@ -8,15 +8,15 @@ const {check,validationResult} = require('express-validator');
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
-const { upload } = require(path.join(__dirname, "../src/helpers/Upload"));
 
-async function create(email, username, name, password) {
+async function create(email, username, name, password, userImage) {
   const hashedPassword = await hash(password);
   const newUser = new Users({
     email,
     username,
-    name,
+    name,   
     password: hashedPassword,
+    image: userImage
   })
   return newUser.save();
 }
@@ -60,6 +60,7 @@ async function generateToken(id) {
 
 const createUser = async (req, res, next) => {
   try { // TODO : Check user is already registered?
+    const defaultUserImage = 'https://w3s.link/ipfs/bafybeid4piao23t6dbqmb2v3vrkmwzhjy6dnict37af6xz5xjfd7542soa/default-user.png'
     const existingUser = await findByEmail(req.body.email);
     const existingUsername = await findByUsername(req.body.username);
     const errors = validationResult(req);
@@ -85,6 +86,7 @@ const createUser = async (req, res, next) => {
       req.body.username,
       req.body.name,
       req.body.password,
+      defaultUserImage
     );
     return res.redirect('/user/login');
     }
@@ -95,8 +97,14 @@ const createUser = async (req, res, next) => {
 }
 
 const getUser = async (req, res) => {
-  console.log(req.user)
-  res.render("User/mainUser", {name: req.user.name, username: req.user.username, email: req.user.email, bio: req.user.bio || ''});
+  // console.log(req.user)
+  res.render("User/mainUser", {
+    name: req.user.name,
+    username: req.user.username,
+    email: req.user.email,
+    bio: req.user.bio || '',
+    image: req.user.image
+  });
 }
 
 const loginUser = async (req, res, next) => {
@@ -167,6 +175,7 @@ const loginPage = async (req, res, next) => {
 const editProfile = async (req, res, next) => {
   const user = await findById(req.user.id);
   
+  user.image = req.imageLink || req.user.image;
   user.name = req.body.name || req.user.name;
   user.email = req.body.email || req.user.email;
   user.username = req.body.username || req.user.username;

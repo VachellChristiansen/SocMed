@@ -16,6 +16,7 @@ const {
   editProfile,
   createPost,
 } = require(path.join(__dirname, "../controllers/UserController"));
+const { upload } = require(path.join(__dirname, "../src/helpers/Upload"))
 
 const router = express.Router();
 

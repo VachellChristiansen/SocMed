@@ -445,13 +445,34 @@ button {
   backdrop-filter: blur(1em);
 }
 
-
 .modal-container {
   width: 70%;
   height: 70%;
   padding: 3em;
   display: flex;
   background-color: white;
+}
+
+#edit-form {
+  display: flex;
+  justify-content: center;
+}
+
+#profile-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#profile-image::before {
+  content: 'Change Picture';
+  color: black;
+  display: flex;
+  justify-content: center;
+  background: none;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
 }
 
 .change-pic-container {
@@ -469,9 +490,6 @@ button {
   cursor: pointer;
 }
 
-#file-input{
-  display: none;
-}
 .change-pic {
   width: 80%;
   border-radius: 50%;
@@ -555,8 +573,6 @@ textarea {
   animation-fill-mode: forwards;
 }
 
-
-
 /* Profile On Hover Style */
 .profile-menu {
   position: fixed;
@@ -588,29 +604,6 @@ textarea {
 }
 
 
-/* Back to top */
-  /* display: none; */
-/* #button-top {
-
-  position: fixed; 
-  bottom: 1em;
-  right: 1em; 
-  z-index: 99; 
-  border: none;
-  outline: none;
-  background-color: rgb(0, 162, 255);
-  color: white;
-  cursor: pointer;
-  border-radius: 100em;
-  height: 4em;
-  width: 4em;
-  transition: 0.3s ease;
-}
-
-#button-top:hover {
-  transition: 0.3s ease;
-  background-color: rgb(29, 29, 208); ;
-} */
 
 @keyframes popIn {
   from {
