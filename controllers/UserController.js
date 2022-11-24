@@ -175,7 +175,7 @@ const loginPage = async (req, res, next) => {
 const editProfile = async (req, res, next) => {
   const user = await findById(req.user.id);
   
-  user.image = req.imageLink || req.user.image;
+  user.image = req.body.image || req.user.image;
   user.name = req.body.name || req.user.name;
   user.email = req.body.email || req.user.email;
   user.username = req.body.username || req.user.username;

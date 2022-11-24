@@ -7,14 +7,14 @@ const client = new Web3Storage({ token: web3Token });
 
 
 async function upload(req, res, next) {
-  console.log(req.files)
-  const { image } = req.files;
-  console.log(image.name)
-  await image.mv(__dirname + '/public/' + image.name);
-  const file = await getFilesFromPath(`./public/${image.name}`)
+  const { profileImage } = req.files;
+  console.log(profileImage.name);
+  const pathToFile = __dirname + '/upload/' + profileImage.name
+
+  await profileImage.mv(pathToFile);
+  const file = await getFilesFromPath(pathToFile)
   const cid = await client.put(file)
-  console.log('https://' + cid + '.ipfs.w3s.link/' + image.name);
-  const pathToFile = `./public/${image.name}`
+  console.log('https://' + cid + '.ipfs.w3s.link/' + profileImage.name);
   await fs.unlink(pathToFile, (err) => {
     if (err) {
       throw err;
@@ -22,7 +22,7 @@ async function upload(req, res, next) {
       console.log('file successfully uploaded and removed from server directory')
     }
   })
-  req.imageLink = 'https://' + cid + '.ipfs.w3s.link/' + image.name
+  req.body.image = 'https://' + cid + '.ipfs.w3s.link/' + profileImage.name
   next();
 }
 

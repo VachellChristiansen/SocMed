@@ -8,7 +8,7 @@ const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
 const { 
   getUser, 
   createUser, 
-  loginUser, 
+  loginUser,
   getOtherUser,
   register,
   loginPage,
@@ -32,7 +32,7 @@ router.get("/login", loginPage);
 
 router.get("/logout", logout)
 
-router.post("/editProfile", celebrate(userValidator.edit), editProfile); 
+router.post("/editProfile", upload, celebrate(userValidator.edit), editProfile); 
 
 router.post("/createUser", celebrate(userValidator.register), createUser);
 

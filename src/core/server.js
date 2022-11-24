@@ -6,6 +6,8 @@ const cors = require("cors");
 
 const passport = require("passport");
 
+const fileupload = require('express-fileupload')
+
 const { errors } = require("celebrate");
 
 const { sessionData } = require(path.join(__dirname, '../helpers/Session'));
@@ -15,6 +17,8 @@ const app = express();
 app.enable("trust proxy");
 
 app.use(cors());
+
+app.use(fileupload());
 
 app.use(sessionData);
 

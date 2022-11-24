@@ -22,6 +22,7 @@ module.exports = {
       username: joi.string().min(3).max(100).required(),
       email: joi.string().email().required(),
       bio: joi.string(),
+      image: joi.string()
     },
   },
   upload: {
