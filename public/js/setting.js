@@ -29,28 +29,25 @@ function seteditprof () {
     // privacy.classList.remove("bold")
     index.innerHTML = `
     <article>
+    <div class="eprofile">
+    <form class="application">
     <div class="pht-and-usr">
         <div class="chng-pp">
             <img class="chng-photo" id="pp" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Mj62cjXkXmauiMnayyCutlWEXBVEiYeaZQ&usqp=CAU"> 
         </div>
         <div class="username-and-pp">
             <h1 class="name-user" title="">user1</h1>
-            <input type="file" id="file-input" class="chngpict"><label id="file-input-btn">Change Picture</label>
+            <input type="file" id="file-input" class="chngpict" name="myFile"><label id="file-input-btn" for="myFile">Change Picture</label>
         </div>
     </div>
-    <div class="eprofile">
-        <form class="application">
-            <label>Name</label><input type="text" name="Name" class="namee" placeholder="Name">
-            <label>Username</label><input type="text" name="UName" class="user-namee" placeholder="Username">
-            <label>E-mail</label><input type="email" name="Email" class="emaill" placeholder="E-mail">
-            <label>Phone Number</label><input type="tel" name="Pnumber" class="pnumberr" placeholder="Phone Number">
-            <label>Gender</label>
-                <div class="malee">
-                    <input type="radio" name="gender"><label>Laki-Laki</label>
-                    <input type="radio" name="gender"><label>Perempuan</label>
-                </div>
-             <div class="btnsumit">   
-            <button type="submit" name="Submit" class="sumit">Submit</button>
+
+            <label for="name">Name</label><input type="text" name="name" class="namee" placeholder="Name">
+            <label for="username">Username</label><input type="text" name="username" class="user-namee" placeholder="Username">
+            <label for="email">E-mail</label><input type="email" name="email" class="email" placeholder="E-mail">
+            <label for="bio">Bio</label>
+            <textarea name="bio" class="change-input" placeholder="Add a bio" id="bio" rows="3" cols="20" maxlength="100"></textarea> 
+            <div class="btnsumit">   
+            <button type="submit" name="Submit" class="submit">Submit</button>
             </div>
         </form>
     </div>
