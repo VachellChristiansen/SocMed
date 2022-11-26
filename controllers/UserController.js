@@ -216,12 +216,6 @@ const unfollow = async (req, res, next) => {
   const unfollow = req.query.unfollow;
   const followUser = await Users.findOne({ username: unfollow }).exec();
   const mainUser = await Users.findOne({ username: req.user.username }).exec();
-  //checking
-  // const followerExists = await followUser.followers.find((acc) => { return acc.username == req.user.username })
-  // if (followerExists) {
-  //   console.log('it stops here');
-  //   return res.redirect('accounts')
-  // }
   //saving
   await followUser.followers.pull({ username: req.user.username });
   await mainUser.following.pull({ username: unfollow })
