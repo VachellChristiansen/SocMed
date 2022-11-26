@@ -10,6 +10,7 @@ const LikeSchema = mongoose.Schema({
 })
 
 const PostSchema = mongoose.Schema({
+  userId: String,
   title: String,
   music: String,
   like: Number,
