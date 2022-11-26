@@ -124,18 +124,17 @@ const logout = async (req, res, next) => {
 }
 
 const getOtherUser = async (req, res, next) => {
-  console.log(req.params.user)
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
-  const data = {
-    name: otherUser.name,
-    username: otherUser.username,
-    image: otherUser.image,
+  console.log(otherUser)
+
+  const current = req.user.username
+  res.render("User/otherUser", { 
+    data: otherUser, 
+    current: current,
     followersCount: followersCount,
-    followingCount: followingCount
-  }
-  res.render("User/otherUser", data)
+    followingCount: followingCount })
 };
 
 const register = async (req, res, next) => {
@@ -196,6 +195,41 @@ const insertComment = async (req, res, next) => {
 
 };
 
+const follow = async (req, res, next) => {
+  const follow = req.query.follow;
+  const followUser = await Users.findOne({ username: follow }).exec();
+  const mainUser = await Users.findOne({ username: req.user.username }).exec();
+  //checking
+  const followerExists = await followUser.followers.find((acc) => { return acc.username == req.user.username })
+  if (followerExists) {
+    return res.redirect('accounts')
+  }
+  //saving
+  await followUser.followers.push({ username: req.user.username });
+  await mainUser.following.push({ username: follow })
+  await followUser.save();
+  await mainUser.save();
+  res.redirect('/user/other/' + follow);
+};
+
+const unfollow = async (req, res, next) => {
+  const unfollow = req.query.unfollow;
+  const followUser = await Users.findOne({ username: unfollow }).exec();
+  const mainUser = await Users.findOne({ username: req.user.username }).exec();
+  //checking
+  // const followerExists = await followUser.followers.find((acc) => { return acc.username == req.user.username })
+  // if (followerExists) {
+  //   console.log('it stops here');
+  //   return res.redirect('accounts')
+  // }
+  //saving
+  await followUser.followers.pull({ username: req.user.username });
+  await mainUser.following.pull({ username: unfollow })
+  await followUser.save();
+  await mainUser.save();
+  res.redirect('/user/other/' + unfollow);
+};
+
 module.exports = {
   create,
   findByEmail,
@@ -209,6 +243,8 @@ module.exports = {
   loginFailed,
   logout,
   editProfile,
+  follow,
+  unfollow,
   //posts
   uploadPost,
   insertComment,

@@ -12,6 +12,8 @@ const { errors } = require("celebrate");
 
 const { sessionData } = require(path.join(__dirname, '../helpers/Session'));
 
+const { isFollowed } = require(path.join(__dirname, '../helpers/Local'));
+
 const app = express();
 
 app.enable("trust proxy");
@@ -31,6 +33,9 @@ app.use(require('method-override')());
 app.use(express.json());
 
 app.use(express.urlencoded({ extended:false }));
+
+//local functions
+app.locals.isFollowed = isFollowed;
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
