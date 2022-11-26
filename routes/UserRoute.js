@@ -14,6 +14,8 @@ const {
   loginPage,
   loginFailed,
   logout,
+  follow,
+  unfollow,
   editProfile,
   uploadPost,
 } = require(path.join(__dirname, "../controllers/UserController"));
@@ -34,6 +36,10 @@ router.get("/login", loginPage);
 router.get("/loginFailed", loginFailed);
 
 router.get("/logout", logout)
+
+router.get('/follow', follow)
+
+router.get('/unfollow', unfollow)
 
 router.post("/editProfile", celebrate(userValidator.edit), upload, editProfile); 
 
