@@ -108,26 +108,6 @@ const getUser = async (req, res) => {
 }
 
 const loginUser = async (req, res, next) => {
-  // try {
-   
-  //   const user = await login(req.body.username, req.body.password);
-  //   const errors = validationResult(req);
-  //   if (!user) {
-  //       res.render('User/login', 
-  //       {
-  //         error: {
-  //           msg: 'Wrong username or password!'
-  //         }
-  //       })
-  //   } else {
-  //     const token = await generateToken(user.id);
-  //     res.cookie('user_token', token);
-  //     return res.redirect('/');
-  //   }
-  // } catch (err) {
-  //   return next(err);
-  // }
-
   const user = await Users.findOne({ username: req.body.username }).exec();
   const validPassword = await compare(req.body.password, user.password);
   if (!validPassword) {
@@ -144,7 +124,17 @@ const logout = async (req, res, next) => {
 }
 
 const getOtherUser = async (req, res, next) => {
-  res.render("User/otherUser")
+  const otherUser = await Users.findOne({ username: req.params.otheruser }).exec();
+  const followersCount = otherUser.followers.length;
+  const followingCount = otherUser.following.length;
+  const data = {
+    name: otherUser.name,
+    username: otherUser.username,
+    image: otherUser.image,
+    followersCount: followersCount,
+    followingCount: followingCount
+  }
+  res.render("User/otherUser", data)
 };
 
 const register = async (req, res, next) => {
@@ -186,9 +176,8 @@ const editProfile = async (req, res, next) => {
 };
 
 const createPost = async (req, res, next) => {
-  try { // TODO : Check user is already registered?
+  try {
     console.log(req.body);
-    // register user (insert to db)
     await uploadPost(
       req.body.username,
       req.body.title,

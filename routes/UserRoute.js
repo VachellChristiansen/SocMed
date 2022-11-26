@@ -25,7 +25,7 @@ const router = express.Router();
 
 router.get("/", getUser); // add userAuth when session data is available
 
-router.get("/otheruser", getOtherUser); // will need to be changed to other user username
+router.get("/:otheruser", getOtherUser); // will need to be changed to other user username
 
 router.get("/register", register);
 

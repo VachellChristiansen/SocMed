@@ -179,15 +179,15 @@
               <div class="user-star" id="">
                 <div class="user-main-star">
                   <div class="user-profile-pic-star">
-                    <img class="user-profile-pic-star" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&w=1000&q=80" alt="profile">
+                    <img class="user-profile-pic-star" src="<%= image %>" alt="profile">
                   </div>
 
                   <div class="user-detail-star flex-col justify-spa">
                     <div class="user-name-star">
-                      <span>Anne Gloindian</span>
+                      <span><%= name %></span>
                     </div>
                     <div class="user-tag-star">
-                      <span>@anneglo</span>
+                      <span>@ <%= username %></span>
                     </div>
                   </div>
 
@@ -195,19 +195,19 @@
                     <button>Follow</button>
                   </div>
                 </div>
-              <div class="user-followings-star">
-                <div class="user-numbers">308</div>
-                Following 
-                <div class="user-numbers">839</div>
-                Followers 
-                <div class="user-numbers">3905</div>
-                Likes 
+                <div class="user-followings-star">
+                  <div class="user-numbers"><%= followingCount %></div>
+                  Following 
+                  <div class="user-numbers"><%= followersCount %></div>
+                  Followers 
+                  <div class="user-numbers">3905</div>
+                  Likes 
+                </div>
+                <div class="user-description-star">
+                  Hello there! This is my official DeepSpace Account. Please leave a like &gt;.&lt;
+                </div>
               </div>
-              <div class="user-description-star">
-                Hello there! This is my official DeepSpace Account. Please leave a like >.<
-              </div>
-              </div>
-       
+
             <div class="content">
               
               <div class="thumbnails">
