@@ -124,7 +124,8 @@ const logout = async (req, res, next) => {
 }
 
 const getOtherUser = async (req, res, next) => {
-  const otherUser = await Users.findOne({ username: req.params.otheruser }).exec();
+  console.log(req.params.user)
+  const otherUser = await Users.findOne({ username: req.params.user }).exec();
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
   const data = {
