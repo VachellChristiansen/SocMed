@@ -129,16 +129,9 @@ const loginUser = async (req, res, next) => {
   // }
 
   const user = await Users.findOne({ username: req.body.username }).exec();
-  if (!user) {
-    return res.json({
-      error: 'User not found'
-    })
-  }
   const validPassword = await compare(req.body.password, user.password);
   if (!validPassword) {
-    return res.json({
-      error: 'Invalid password'
-    })
+    return res.render('User/login', {error: {msg: 'Invalid password'}})
   }
   return res.redirect('/user')
 }
@@ -172,6 +165,13 @@ const loginPage = async (req, res, next) => {
   })
 };
 
+const loginFailed = async (req, res, next) => {
+  res.render('User/login', 
+  {
+    error: {msg: 'User does not Exist'}
+  })
+}
+
 const editProfile = async (req, res, next) => {
   const user = await findById(req.user.id);
   
@@ -195,13 +195,6 @@ const createPost = async (req, res, next) => {
       req.body.music,
       req.body.file,
     );
-    // return res.json({
-    //   username : req.body.username, 
-    //   title : req.body.title,
-    //   music :  req.body.music,
-    //   file : req.body.file
-
-    // })
 
     return res.render('index');
   } catch (err) {
@@ -223,10 +216,11 @@ module.exports = {
   getUser,
   createUser,
   loginUser,
+  loginFailed,
   logout,
   editProfile,
   //posts
-  createPost,
+  uploadPost,
   insertComment,
   // pages
   getOtherUser,

@@ -187,6 +187,7 @@ button:hover {
 .sign-button {
   width: 100%;
 }
+
 .signup {
   width: fit-content;
   padding: 0.3rem 1rem;
@@ -272,9 +273,21 @@ button:hover {
 .drop-zone--over {
   border-style: solid;
 }
-
-.drop-zone__input {
-  display: none;
+.drop-zone__input::-webkit-file-upload-button {
+  visibility: hidden;;
+}
+.drop-zone__input::before {
+  content: 'Upload Video Content';
+  color: black;
+  display: flex;
+  justify-content: center;
+  background: none;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
 }
 
 .drop-zone__thumb {
@@ -300,7 +313,7 @@ button:hover {
   text-align: center;
 }
 
-.drop-zone__prompt{
+.drop-zone__prompt {
   color: rgb(19, 26, 82);
 }
 

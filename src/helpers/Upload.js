@@ -10,14 +10,14 @@ async function upload(req, res, next) {
   if(!req.files) {
     return next();
   }
-  const { profileImage } = req.files;
-  console.log(profileImage.name);
-  const pathToFile = __dirname + '/upload/' + profileImage.name
+  const { myFile } = req.files;
+  console.log(myFile.name);
+  const pathToFile = __dirname + '/upload/' + myFile.name
 
-  await profileImage.mv(pathToFile);
+  await myFile.mv(pathToFile);
   const file = await getFilesFromPath(pathToFile)
   const cid = await client.put(file)
-  console.log('https://' + cid + '.ipfs.w3s.link/' + profileImage.name);
+  console.log('https://' + cid + '.ipfs.w3s.link/' + myFile.name);
   await fs.unlink(pathToFile, (err) => {
     if (err) {
       throw err;
@@ -25,7 +25,7 @@ async function upload(req, res, next) {
       console.log('file successfully uploaded and removed from server directory')
     }
   })
-  req.body.image = 'https://' + cid + '.ipfs.w3s.link/' + profileImage.name
+  req.body.image = 'https://' + cid + '.ipfs.w3s.link/' + myFile.name
   next();
 }
 

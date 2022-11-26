@@ -1,16 +1,21 @@
 const mongoose = require("mongoose");
 
-const schema = mongoose.Schema({
-  username: String,
-  title: String,
-  music: String,
-  // like: Number,
-  file: String,
-  // comments: [{
-  //   name : String,
-  //   caption: String,
-  //    }
-  //   ]
+const CommentSchema = mongoose.Schema({
+  userId: String,
+  comment: String
 })
 
-module.exports = mongoose.model("Posts", schema);
+const LikeSchema = mongoose.Schema({
+  userId: String,
+})
+
+const PostSchema = mongoose.Schema({
+  title: String,
+  music: String,
+  like: Number,
+  file: String,
+  like: [ LikeSchema ],
+  comments: [ CommentSchema ]
+})
+
+module.exports = mongoose.model("Posts", PostSchema);

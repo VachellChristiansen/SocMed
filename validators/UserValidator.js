@@ -29,8 +29,8 @@ module.exports = {
     body: {
       username: joi.string(),
       title: joi.string(),
-      music: joi.string(),
-      file: joi.string().required(),
+      music: joi.string().allow(""),
+      file: joi.string(),
     },
   },
 };

@@ -40,26 +40,24 @@
   </div> 
 
 <div class="conts flex justify-cen align-cen">
-  <form class="form-container flex-col align-cen" action="/">
+  <form class="form-container flex-col align-cen" action="/user/uploadPost" method="POST" enctype="multipart/form-data">
     <div class="text-title-big">Upload Video</div>
     <div class="text-title">Post a video to your account</div>
    <div class="flex-row justify-cen align-cen">
       <div class="drop">
         <div class="drop-zone">
-          <span class="drop-zone__prompt">Drop file here or click to upload</span>
-          <input type="file" name="myFile" class="drop-zone__input"> 
+          <input type="file" name="myFile" class="drop-zone__input" accept="video/mp4,video/x-m4v,video/*">
         </div>
       </div>
       <div class="right grid justify-ite">
         <div class="text-title">Caption</div>
         <div class="comment-add justify-cen align-cen flex-row">
           <textarea name="title" class="comment-text-box" placeholder="Put your caption here..." rows="4" cols="40" maxlength="150"></textarea>
-      </div>
+        </div>
         <div class="text-title">Music Used</div>
         <div class="comment-add justify-cen align-cen flex-row">
           <textarea name="music" class="comment-text-box" placeholder="[Artist] - [Music]" rows="2" cols="40" maxlength="50"></textarea>
-      </div>
-      
+        </div>
       </div>
    </div>
 
