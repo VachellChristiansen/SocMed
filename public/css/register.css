@@ -121,7 +121,7 @@ form i{
   z-index: 2;
 }
 
-#error-msg {
+.error-msg {
   color: red;
 }
 

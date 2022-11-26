@@ -2,7 +2,7 @@
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const express = require("express");
-const {check,validationResult} = require('express-validator');
+const { check, validationResult} = require('express-validator');
 
 //import from source files
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
@@ -63,22 +63,59 @@ const createUser = async (req, res, next) => {
     const defaultUserImage = 'https://w3s.link/ipfs/bafybeid4piao23t6dbqmb2v3vrkmwzhjy6dnict37af6xz5xjfd7542soa/default-user.png'
     const existingUser = await findByEmail(req.body.email);
     const existingUsername = await findByUsername(req.body.username);
-    const errors = validationResult(req);
+    const emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let errorExists = false;
     let messageError = " ";
+    let userError = "Username" ;
+    let nameError = "Name";
+    let pwError = "Password";
+    let confPwError = "Confirm Password";
+    let emailError = "Email";
+   
+    if(req.body.username.length < 3) {
+      userError = "Username must be at least 3 characters";
+      errorExists = true;
+    }
+    if(req.body.name.length < 3) {
+    nameError = "Name must be at least 3 characters";   
+    errorExists = true; 
+    }
+    if(req.body.password.length < 6) {
+    pwError = "Password must be at least 6 characters"; 
+    errorExists = true;  
+    }
+    if(req.body.confirmPassword.length < 6) {
+    confPwError = "Password must be at least 6 characters";
+    errorExists = true; 
+    }
+    if(req.body.email.length < 1 || !emailReg.test(req.body.email)) {
+    emailError = "Proper email is required";
+    errorExists = true; 
+    }
+
     if(existingUser){
       messageError+="Email is already registered! "
+      errorExists = true; 
     }
     if(existingUsername){
       messageError+="Username is already registered! "
+      errorExists = true; 
     }
-    if (existingUser||existingUsername) {
+    if (errorExists) {
         res.render('User/register', 
   {
     error: {
       msg: messageError,
-    }
+    },
+    username: userError,
+    name: nameError,
+    password: pwError,
+    confirmPassword: confPwError,
+    email: emailError,
+
   })
-      }
+}
+
      else {
     // register user (insert to db)
     await create(
@@ -92,7 +129,19 @@ const createUser = async (req, res, next) => {
     }
 
   } catch (err) {
-    return next(err);
+
+    return res.render('User/register', 
+    {
+      error: {msg: 'Invalid registration'},
+      username: 'Username must be at least 3 characters',
+      name: 'Name must be at least 3 characters',
+      password: 'Password must be at least 6 characters',
+      confirmPassword: 'Password must be at least 6 characters',
+      email: 'Email is required',
+  
+    });
+    
+    // return next(err);
   }
 }
 
@@ -142,7 +191,12 @@ const register = async (req, res, next) => {
   {
     error: {
       msg: ' '
-    }
+    },
+    username: 'Username',
+    name: 'Name',
+    password: 'Password',
+    confirmPassword: 'Confirm Password',
+    email: 'Email',
   })
 };
 
@@ -159,6 +213,18 @@ const loginFailed = async (req, res, next) => {
   res.render('User/login', 
   {
     error: {msg: 'User does not Exist'}
+  })
+}
+
+const registerFailed = async (req, res, next) => {
+  res.render('user/register', 
+  {
+    error: {msg: 'Invalid registration'},
+    username: 'Username must be at least 3 characters',
+    name: 'Name must be at least 3 characters',
+    password: 'Password must be at least 6 characters',
+    confirmPassword: 'Password must be at least 6 characters',
+    email: 'Email is required',
   })
 }
 
@@ -239,6 +305,7 @@ module.exports = {
   editProfile,
   follow,
   unfollow,
+  registerFailed,
   //posts
   uploadPost,
   insertComment,

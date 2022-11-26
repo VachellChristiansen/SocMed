@@ -3,11 +3,11 @@ const joi = require('joi'); // buat library validasi
 module.exports = {
   register: {
     body: {
-      email: joi.string().email().required(),
-      username: joi.string().min(3).max(100).required(),
-      name: joi.string().min(3).max(100).required(),
-      password: joi.string().min(6).max(32).required(),
-      confirmPassword: joi.string().min(6).max(32).required()
+      email: joi.string().required(),
+      username: joi.string().required(),
+      name: joi.string().required(),
+      password: joi.string().required(),
+      confirmPassword: joi.string().required(),
     },
   },
   login: {
