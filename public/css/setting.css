@@ -158,6 +158,13 @@ button:hover {
   font-size: var(--fs-medium);
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.chosen{
+cursor: pointer;
+}
 .search-bar {
   width: 20vw;
   border-radius: 2rem;

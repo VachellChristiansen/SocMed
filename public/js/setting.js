@@ -18,7 +18,7 @@ const eprof = document.getElementById("EP")
 const cpass = document.getElementById("cp")
 const maccount = document.getElementById("ma")
 const help = document.getElementById("help")
-const privacy = document.getElementById("privacy")
+// const privacy = document.getElementById("privacy")
 const index = document.getElementById("rb")
 
 function seteditprof () {
@@ -26,7 +26,7 @@ function seteditprof () {
     cpass.classList.remove("bold")
     maccount.classList.remove("bold")
     help.classList.remove("bold")
-    privacy.classList.remove("bold")
+    // privacy.classList.remove("bold")
     index.innerHTML = `
     <article>
     <div class="pht-and-usr">
@@ -35,16 +35,16 @@ function seteditprof () {
         </div>
         <div class="username-and-pp">
             <h1 class="name-user" title="">user1</h1>
-            <input type="file" id="file-input" class="chngpict"><span id="file-input-btn">Change Picture</span>
+            <input type="file" id="file-input" class="chngpict"><label id="file-input-btn">Change Picture</label>
         </div>
     </div>
     <div class="eprofile">
         <form class="application">
-            <span>Name</span><input type="text" name="Name" class="namee" placeholder="Name">
-            <span>Username</span><input type="text" name="UName" class="user-namee" placeholder="Username">
-            <span>E-mail</span><input type="email" name="Email" class="emaill" placeholder="E-mail">
-            <span>Phone Number</span><input type="tel" name="Pnumber" class="pnumberr" placeholder="Phone Number">
-            <span>Gender</span>
+            <label>Name</label><input type="text" name="Name" class="namee" placeholder="Name">
+            <label>Username</label><input type="text" name="UName" class="user-namee" placeholder="Username">
+            <label>E-mail</label><input type="email" name="Email" class="emaill" placeholder="E-mail">
+            <label>Phone Number</label><input type="tel" name="Pnumber" class="pnumberr" placeholder="Phone Number">
+            <label>Gender</label>
                 <div class="malee">
                     <input type="radio" name="gender"><label>Laki-Laki</label>
                     <input type="radio" name="gender"><label>Perempuan</label>
@@ -66,14 +66,13 @@ cpass.addEventListener("click", function () {
     cpass.classList.add("bold")
     maccount.classList.remove("bold")
     help.classList.remove("bold")
-    privacy.classList.remove("bold")
+    // privacy.classList.remove("bold")
     index.innerHTML = `
     <article>
     <div class="changepassword">
         <form class="application">
-            <span>Old Password</span><input type="password" name="Oldpassword" class="opass">
-            <span>New Password</span><input type="password" name="newpassword" class="npass">
-            <span>Confirm New Password</span><input type="password" name="cnewpassword"
+            <label for="newpassword">New Password</label><input type="password" name="newpassword" class="npass">
+            <label for="cnewpassword">Confirm New Password</label><input type="password" name="cnewpassword"
                 class="cnpass">
             <div class="btnupdt">
             <button type="submit" name="Update" class="updtbtn">Update</button>
@@ -88,7 +87,7 @@ maccount.addEventListener("click", function () {
     cpass.classList.remove("bold")
     maccount.classList.add("bold")
     help.classList.remove("bold")
-    privacy.classList.remove("bold")
+    // privacy.classList.remove("bold")
     index.innerHTML = `
     <article>
     <div class="privacysettings">
@@ -107,7 +106,7 @@ help.addEventListener("click", function () {
     cpass.classList.remove("bold")
     maccount.classList.remove("bold")
     help.classList.add("bold")
-    privacy.classList.remove("bold")
+    // privacy.classList.remove("bold")
     index.innerHTML = `
     <article>
     <div class="settings">
@@ -121,8 +120,8 @@ help.addEventListener("click", function () {
                             <br>What is the exact error message that you received?
                         </div>
                         <textarea class="description-text-box" name="reportproblem" cols="40" rows="3" maxlength="120" placeholder="Describe your problem here..." required></textarea>
-                        <span>Name</span><input type="text" name="namereport" class="" required>
-                        <span>Email</span><input type="email" name="emmailreport" class="" required>
+                        <label for="namereport">Name</label><input type="text" name="namereport" class="" required>
+                        <label for="emailreport">Email</label><input type="email" name="emailreport" class="" required>
                         <div class="btnupdt">
                         <button type="submit" name="Update" class="updtbtn">Submit</button>
                         </div>
@@ -133,31 +132,6 @@ help.addEventListener("click", function () {
 </article>
     `
 })
-
-privacy.addEventListener("click", function () {
-    eprof.classList.remove("bold")
-    cpass.classList.remove("bold")
-    maccount.classList.remove("bold")
-    help.classList.remove("bold")
-    privacy.classList.add("bold")
-    index.innerHTML = `
-    <article>
-    <div class="privacysettings">
-        <div class="privacy-title">Privacy</div>
-        <div class="privacy-item">
-        <div class="subtitle">Discoverability</div>
-        <div class="private-account">Private Account</div>
-        <div class="desc-txt">With a private account, only users you approve can follow you and watch your videos. Your existing followers won't be affected.</div>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-    </div>
-    </article>
-    `
-})
-
 
 /* PROFILE NAVBAR */
 $('.master,.profile-menu').mouseover(function(event){
