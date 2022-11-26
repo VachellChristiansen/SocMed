@@ -4,15 +4,11 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 ### Todo
 
-- [ ] Following and Followers
 - [ ] Comment, like, (if possible: share) for each posts
-- [ ] Edit Profile functions
 - [ ] Search 
 - [ ] Display user and other user's info and posts
-- [ ] Display following's posts
+- [ ] Display following's posts on index page
 - [ ] Post for each user
-- [ ] Dynamic url for each user
-- [ ] Display joi validator error 
 - [ ] Delete account
 
 ### In Progress
@@ -27,4 +23,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Handle login & register errors, check for unique email and username
 - [x] Log out functions
 - [x] Log in functions
-
+- [x] Display joi validator error 
+- [x] Following and Followers
+- [x] Edit Profile functions
+- [x] Dynamic url for each user
