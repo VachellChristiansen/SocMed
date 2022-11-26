@@ -90,10 +90,11 @@
       </div>
       <div class="main-container">
         <div class="contents">
+          <% videos.forEach((video, index) => { %>
           <div class="thumbnails">
-            <a href="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-fashion-woman-with-silver-makeup-39875-large.mp4">
+            <a href="<%= video.file %>">
             <video loop muted class="content-video">
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-fashion-woman-with-silver-makeup-39875-large.mp4">
+              <source src="<%= video.file %>">
             </a>
             </video>
            <div class="views">
@@ -102,8 +103,9 @@
               1234
             </span>
            </div>
-            <div class="caption">This week's photoshoot</div>
+            <div class="caption"><%= video.title %></div>
           </div>
+          <% }) %>
 
           <!-- <div class="thumbnails">
             <a href="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4">

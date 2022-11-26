@@ -45,7 +45,7 @@ router.post("/editProfile", celebrate(userValidator.edit), upload, editProfile);
 
 router.post("/createUser", celebrate(userValidator.register), upload, createUser);
 
-router.post("/uploadPost", celebrate(userValidator.upload), uploadPost);
+router.post("/uploadPost", celebrate(userValidator.upload), upload, uploadPost);
 
 router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/user/loginFailed' }), loginUser);
 

@@ -25,10 +25,10 @@ async function upload(req, res, next) {
       console.log('file successfully uploaded and removed from server directory')
     }
   })
-  req.body.image = 'https://' + cid + '.ipfs.w3s.link/' + myFile.name
+  req.body.upload = 'https://' + cid + '.ipfs.w3s.link/' + myFile.name
   next();
 }
 
 module.exports = {
-  upload,
+  upload
 }

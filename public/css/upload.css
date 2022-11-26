@@ -263,7 +263,7 @@ button:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 20px;
-  cursor: pointer;
+  /* cursor: pointer; */
   color: #cccccc;
   border: 0.1em dashed #888;
   border-radius: 10px;
@@ -274,7 +274,7 @@ button:hover {
   border-style: solid;
 }
 .drop-zone__input::-webkit-file-upload-button {
-  visibility: hidden;;
+  visibility: hidden;
 }
 .drop-zone__input::before {
   content: 'Upload Video Content';
@@ -283,34 +283,9 @@ button:hover {
   justify-content: center;
   background: none;
   border: none;
-  -webkit-user-select: none;
-  user-select: none;
   cursor: pointer;
   font-weight: 700;
   font-size: 10pt;
-}
-
-.drop-zone__thumb {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #cccccc;
-  background-size: cover;
-  position: relative;
-}
-
-.drop-zone__thumb::after {
-  content: attr(data-label);
-  /* position: absolute; */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 0;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.75);
-  font-size: 14px;
-  text-align: center;
 }
 
 .drop-zone__prompt {

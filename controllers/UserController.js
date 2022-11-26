@@ -21,13 +21,17 @@ async function create(email, username, name, password, userImage) {
   return newUser.save();
 }
 
-async function uploadPost(username, title, music, file) {
+async function createPost(userId, title, music, file) {
   const newUpload = new Posts({
-    username,
+    userId,
     title,
     music,
     file,
   })
+  const user = await Users.findById(userId).exec();
+  //saving
+  await user.postId.push({ postId: newUpload.id });
+  await user.save();
   return newUpload.save();
 }
 
@@ -147,12 +151,15 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res) => {
   // console.log(req.user)
+  const videos = await Posts.find({ userId: req.user.id })
+  console.log(videos)
   res.render("User/mainUser", {
     name: req.user.name,
     username: req.user.username,
     email: req.user.email,
     bio: req.user.bio || '',
-    image: req.user.image
+    image: req.user.image,
+    videos: videos
   });
 }
 
@@ -231,7 +238,7 @@ const registerFailed = async (req, res, next) => {
 const editProfile = async (req, res, next) => {
   const user = await findById(req.user.id);
   
-  user.image = req.body.image || req.user.image;
+  user.image = req.body.upload || req.user.image;
   user.name = req.body.name || req.user.name;
   user.email = req.body.email || req.user.email;
   user.username = req.body.username || req.user.username;
@@ -241,17 +248,16 @@ const editProfile = async (req, res, next) => {
   res.redirect('/user')
 };
 
-const createPost = async (req, res, next) => {
+const uploadPost = async (req, res, next) => {
   try {
-    console.log(req.body);
-    await uploadPost(
-      req.body.username,
+    await createPost(
+      req.user.id,
       req.body.title,
       req.body.music,
-      req.body.file,
+      req.body.upload,
     );
 
-    return res.render('index');
+    return res.redirect('/user');
   } catch (err) {
     return next(err);
   }
