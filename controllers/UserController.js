@@ -183,14 +183,17 @@ const getOtherUser = async (req, res, next) => {
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
-  console.log(otherUser)
+  const videos = await Posts.find({ userId: otherUser.id })
+  console.log(videos)
 
   const current = req.user.username
   res.render("User/otherUser", { 
     data: otherUser, 
     current: current,
     followersCount: followersCount,
-    followingCount: followingCount })
+    followingCount: followingCount,
+    videos: videos
+  })
 };
 
 const register = async (req, res, next) => {
