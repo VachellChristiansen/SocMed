@@ -324,18 +324,14 @@ article{
     color: black;
 }
 
-.malee{
-    display: flex;
-    align-items: center;
+.application textarea {
+  margin-bottom: 1vh;
+  border-radius: 2em;
+  font-size: 2vh;
+  padding: 0.4em 1em;
+  color: black;
 }
 
-.malee input{
-    margin: 0;
-}
-
-.malee label{
-    margin-right: 1em;
-}
 
 .btnsumit{
     display: flex;
@@ -346,7 +342,7 @@ article{
     padding: 0.5em 1.5em;
 }
 
-.sumit{
+.submit{
     color: black;
     cursor: pointer;
 }
