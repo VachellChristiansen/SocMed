@@ -331,7 +331,6 @@ a {
 }
 
 .buttons-below{
-  color: black;
   transition: 0.3s ease;
 }
 .buttons-below:hover{
@@ -339,6 +338,7 @@ a {
   transition: 0.3s ease;
 }
 .upload-button{
+  color:rgb(46, 73, 224);
   border: 0.1em solid rgb(46, 73, 224);
   transition: 0.3s ease;
 }
@@ -347,6 +347,7 @@ a {
   transition: 0.3s ease;
 }
 .cancel-button{
+  color: black;
   border: 0.1em solid black;
 }
 .cancel-button:hover{
