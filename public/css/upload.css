@@ -271,7 +271,7 @@ button:hover {
   width: 90%;
   border-radius: 1rem;
   padding: 0.6rem 1rem;
-  background: hsl(252, 30%, 95%);
+  background: hsl(0, 0%, 100%);
   margin: auto;
 }
 .comment-text-box {
@@ -302,9 +302,9 @@ button:hover {
   color: rgb(54, 54, 54);
   transform: translateY(1rem);
   background-color: white;
-  border: 0.1em solid hsl(252, 15%, 65%);
+  /* border: 0.1em solid hsl(252, 15%, 65%); */
   border-radius: 1em;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0.5rem;
 }
 .text-title-big{
   font-size:xx-large;
