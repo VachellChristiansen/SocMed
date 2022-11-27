@@ -8,6 +8,7 @@ const config = require(path.join(__dirname, "./src/core/config"));
 const user = require(path.join(__dirname, "./routes/UserRoute"));
 const index = require(path.join(__dirname, "./routes/IndexRoute"));
 const setting = require(path.join(__dirname, "./routes/SettingsRoute"));
+const post = require(path.join(__dirname, "./routes/PostRoute"));
 
 // Middlewares
 app.use(express.json());
@@ -18,8 +19,9 @@ app.engine('ejs', require('ejs').__express);
 app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use("/", index);
-app.use("/user", user); // will need to be changed to the main user's username
+app.use("/user", user);
 app.use("/setting", setting);
+app.use("/post", post);
 // connection for local server
 
 app.get("*",(req,res)=>{

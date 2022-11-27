@@ -206,7 +206,11 @@
                   </div>
                 </div>
                 <div class="user-follow follow flex-col justify-cen">
-                  <a>Follow</a>
+                  <% if (isFollowed(user[index], current)) { %>
+                    <a href="/unfollow?unfollow=<%= user[index].id %>">Unfollow</a>
+                  <% } else { %>
+                    <a href="/follow?follow=<%= user[index].id %>">Follow</a>
+                  <% } %>
                 </div>
               </div>
     
@@ -265,6 +269,7 @@
           </div>
 
           <div class="comment-container flex-col hidden">
+            <% video.comments.forEach((comment, index) => { %>
             <div class="comment">
               <div class="comment-user">
                 <div class="user-profile-pic">
@@ -272,16 +277,17 @@
                 </div>
                 <div class="user-detail flex-col justify-spa">
                   <div class="user-name">
-                    <span>Hugo First</span>
+                    <span><%= checkUser(comment.userId).username %></span>
                   </div>
                 </div>
               </div>
               <div class="comment-text">
                 <p>
-                Ah, great idea!
+                <%= comment.comment %>
                 </p>
               </div>
             </div>
+            <% }) %>
             <div class="comment">
               <div class="comment-user">
                 <div class="user-profile-pic">
@@ -336,8 +342,8 @@
           </div>
 
           <div class="comment-add hidden">
-            <form class="justify-cen align-cen flex-row" action="/post">
-              <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
+            <form class="justify-cen align-cen flex-row" action="/post/postComment?postId=<%= video.id %>" method="POST">
+              <textarea class="comment-text-box" name="comment" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
               <input class="submit-comment" type="submit" value="Post" >
             </form>
           </div>

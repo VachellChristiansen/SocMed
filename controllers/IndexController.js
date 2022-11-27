@@ -1,5 +1,6 @@
 const path = require('path');
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
+const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
 
 const getIndex = async (req, res, next) => {
   const videos = await Posts.find({}).exec();
@@ -9,8 +10,23 @@ const getIndex = async (req, res, next) => {
   await videos.forEach((video, index) => {
     user.push(users.find(user => user.id === video.userId))
   })
-  return res.render("index", { videos, user })
+  return res.render("index", { videos, user, current: req.user.username || '' })
 }
+
+const followFromIndex = async (req, res, next) => {
+
+  await follow(req.user.id, req.query.follow);
+
+  res.redirect('/');
+};
+
+const unfollowFromIndex = async (req, res, next) => {
+
+  await unfollow(req.user.id, req.query.unfollow);
+
+  res.redirect('/');
+};
+
 const privacyPolicy = async (req, res, next) => {
   return res.render("privacyPolicy")
 }
@@ -23,4 +39,4 @@ const upload = async (req, res, next) => {
 const error = async (req, res, next) => {
   return res.render("errorPage")
 }
-module.exports = { getIndex, privacyPolicy, search, upload, error }
+module.exports = { getIndex, followFromIndex, unfollowFromIndex, privacyPolicy, search, upload, error }

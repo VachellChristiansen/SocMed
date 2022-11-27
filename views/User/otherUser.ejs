@@ -191,9 +191,9 @@
 
               <div class="user-follow star flex-col justify-cen follow">
                 <% if (isFollowed(data, current)) { %>
-                  <a href="/user/unfollow?unfollow=<%= data.username %>">Unfollow</a>
+                  <a href="/user/unfollow?unfollow=<%= data.id %>">Unfollow</a>
                 <% } else { %>
-                  <a href="/user/follow?follow=<%= data.username %>">Follow</a>
+                  <a href="/user/follow?follow=<%= data.id %>">Follow</a>
                 <% } %>
               </div>
             </div>

@@ -8,6 +8,7 @@ const { check, validationResult} = require('express-validator');
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
+const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
 
 async function create(email, username, name, password, userImage) {
   const hashedPassword = await hash(password);
@@ -152,7 +153,7 @@ const createUser = async (req, res, next) => {
 const getUser = async (req, res) => {
   // console.log(req.user)
   const videos = await Posts.find({ userId: req.user.id })
-  console.log(videos)
+  // console.log(videos)
   res.render("User/mainUser", {
     name: req.user.name,
     username: req.user.username,
@@ -181,15 +182,15 @@ const logout = async (req, res, next) => {
 
 const getOtherUser = async (req, res, next) => {
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
+  console.log(otherUser);
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
   const videos = await Posts.find({ userId: otherUser.id })
-  console.log(videos)
+  // console.log(videos)
 
-  const current = req.user.username
   res.render("User/otherUser", { 
     data: otherUser, 
-    current: current,
+    current: req.user.username,
     followersCount: followersCount,
     followingCount: followingCount,
     videos: videos
@@ -270,33 +271,20 @@ const insertComment = async (req, res, next) => {
 
 };
 
-const follow = async (req, res, next) => {
-  const follow = req.query.follow;
-  const followUser = await Users.findOne({ username: follow }).exec();
-  const mainUser = await Users.findOne({ username: req.user.username }).exec();
-  //checking
-  const followerExists = await followUser.followers.find((acc) => { return acc.username == req.user.username })
-  if (followerExists) {
-    return res.redirect('accounts')
-  }
-  //saving
-  await followUser.followers.push({ username: req.user.username });
-  await mainUser.following.push({ username: follow })
-  await followUser.save();
-  await mainUser.save();
-  res.redirect('/user/other/' + follow);
+const followFromOtherUser = async (req, res, next) => {
+
+  await follow(req.user.id, req.query.follow);
+  const user = await Users.findById(req.query.follow).exec();
+
+  res.redirect('/user/other/' + user.username);
 };
 
-const unfollow = async (req, res, next) => {
-  const unfollow = req.query.unfollow;
-  const followUser = await Users.findOne({ username: unfollow }).exec();
-  const mainUser = await Users.findOne({ username: req.user.username }).exec();
-  //saving
-  await followUser.followers.pull({ username: req.user.username });
-  await mainUser.following.pull({ username: unfollow })
-  await followUser.save();
-  await mainUser.save();
-  res.redirect('/user/other/' + unfollow);
+const unfollowFromOtherUser = async (req, res, next) => {
+
+  await unfollow(req.user.id, req.query.unfollow);
+  const user = await Users.findById(req.query.unfollow).exec();
+
+  res.redirect('/user/other/' + user.username);
 };
 
 module.exports = {
@@ -312,8 +300,8 @@ module.exports = {
   loginFailed,
   logout,
   editProfile,
-  follow,
-  unfollow,
+  followFromOtherUser,
+  unfollowFromOtherUser,
   registerFailed,
   //posts
   uploadPost,
