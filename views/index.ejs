@@ -65,6 +65,7 @@
   </header>
   <div class="main">
     <div class="main-wrapper">
+
       <div class="side-container">
         <div class="recommended-container">
           <div class="recommended-text">
@@ -179,11 +180,12 @@
       </div>
 
       <div class="main-container">
+        <% videos.forEach((video, index) => { %>
         <div class="main-item-container">
           <!-- Content Section / Middle Part -->
           <div class="content">
             <video autoplay loop muted class="content-video" controls>
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-approaching-skating-down-the-middle-of-the-street-25571-large.mp4">
+              <source src="<%= video.file %>">
             </video>
           </div>
 
@@ -193,14 +195,14 @@
             <div class="user-caption flex-col" id="user-caption">
               <div class="user">
                 <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECz8m12ftzGDrEb-UYkUHes4wVbTComS5_M-FU9G4oOAvxYoib0CkAVBzKfjcqi0ghQQ&usqp=CAU" alt="profile">
+                  <img class="user-profile-pic" src="<%= user[index].image %>" alt="profile">
                 </div>
                 <div class="user-detail flex-col justify-spa">
                   <div class="user-name">
-                    <span>Merry Charlotte</span>
+                    <span><%= user[index].name %></span>
                   </div>
                   <div class="user-tag">
-                    <span>@merrycl</span>
+                    <span><%= user[index].username %></span>
                   </div>
                 </div>
                 <div class="user-follow follow flex-col justify-cen">
@@ -209,14 +211,13 @@
               </div>
     
               <div class="caption-text">
-                <p> Can you believe it? that Christmas is coming so soon. Let's be prepared guys!!!
-                  <br>i have my own Christmas tree so that i can open my own Christmas gifts XD</p>
+                <p> <%= video.title %> </p>
               </div>
             </div>
               
             <div class="music-bubble flex-col">
               <div class="music" id="music">
-                We Wish You a Merry Christmas - Love to Sing
+                <%= video.music %>
               </div>
     
               <div class="interactive-bubble grid" id="interactive-bubble">
@@ -335,502 +336,17 @@
           </div>
 
           <div class="comment-add hidden">
-            <form class="justify-cen align-cen flex-row" action="">
+            <form class="justify-cen align-cen flex-row" action="/post">
               <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
               <input class="submit-comment" type="submit" value="Post" >
             </form>
           </div>
         </div>
         </div>
-
-
-        <div class="main-item-container">
-               <!-- Content Section / Middle Part -->
-               <div class="content">
-                <video autoplay loop muted class="content-video" controls>
-                  <source src="https://assets.mixkit.co/videos/preview/mixkit-girl-approaching-skating-down-the-middle-of-the-street-25571-large.mp4">
-                </video>
-              </div>
-      
-              <!-- Caption Section / Right Part -->
-              <div class="caption-comment grid">
-                <div class="caption-container grid">
-                  <div class="user-caption flex-col" id="user-caption">
-                    <div class="user">
-                      <div class="user-profile-pic">
-                        <img class="user-profile-pic" src="https://c4.wallpaperflare.com/wallpaper/423/684/858/most-popular-celebs-alexandra-daddario-actress-wallpaper-preview.jpg" alt="profile">
-                      </div>
-                      <div class="user-detail flex-col justify-spa">
-                        <div class="user-name">
-                          <span>Stephanie Summer</span>
-                        </div>
-                        <div class="user-tag">
-                          <span>@step_summer</span>
-                        </div>
-                      </div>
-                      <div class="user-follow follow flex-col justify-cen">
-                        <a>Follow</a>
-                      </div>
-                    </div>
-          
-                    <div class="caption-text">
-                      <p>Be cool and be happy.🔥🔥</p>
-                    </div>
-                  </div>
-                    
-                  <div class="music-bubble flex-col">
-                    <div class="music" id="music">
-                      Original Sound - Stephanie Summer
-                    </div>
-          
-                    <div class="interactive-bubble grid" id="interactive-bubble">
-                      <div class="interactive-parts">
-                        <button class="btn bubble like">
-                          <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="count">
-                          1234
-                        </span>
-                      </div>
-                      <div class="interactive-parts">
-                        <button onclick="comment(1)" class="btn bubble">
-                          <i class="fa-solid fa-comment"></i>
-                        </button>
-                        <span class="count">
-                          4
-                        </span>
-                      </div>
-                      <div class="interactive-parts">
-                        <button class="btn bubble" onclick="share(1)">
-                          <i class="fa-solid fa-share"></i>
-                        </button>
-                        <span class="count">
-                          1234
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-                <div class="share-container flex-row hidden">
-                  <button class="share-button facebook-app">
-                    <i class="fa-brands fa-facebook"></i>
-                  </button>
-                  <button class="share-button whatsapp-app">
-                    <i class="fa-brands fa-whatsapp"></i>
-                  </button>
-                  <button class="share-button twitter-app">
-                    <i class="fa-brands fa-twitter"></i>
-                  </button>
-                  <button class="share-button line-app">
-                    <i class="fa-brands fa-line"></i>
-                  </button>          
-                </div>
-      
-                <div class="comment-container flex-col hidden">
-                  <div class="comment">
-                    <div class="comment-user">
-                      <div class="user-profile-pic">
-                        <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfejhzBJihhZeKnjX5Jcw7oPeqlFdFuOlVQ&usqp=CAU" alt="profile">
-                      </div>
-                      <div class="user-detail flex-col justify-spa">
-                        <div class="user-name">
-                          <span>Paige Turner</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="comment-text">
-                      <p>
-                        Don't forget to share happiness with people around you haha
-                      </p>
-                    </div>
-                  </div>
-                  <div class="comment">
-                    <div class="comment-user">
-                      <div class="user-profile-pic">
-                        <img class="user-profile-pic" src="https://wallpaperaccess.com/full/6790964.jpg" alt="profile">
-                      </div>
-                      <div class="user-detail flex-col justify-spa">
-                        <div class="user-name">
-                          <span>Chris Anthemum</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="comment-text">
-                      <p>
-                        You make it look so easy!
-                      </p>
-                    </div>
-                  </div>
-                  <div class="comment">
-                    <div class="comment-user">
-                      <div class="user-profile-pic">
-                        <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxVu5Q8f6xrJZQ3gwh2Fvs6hR8Xr6Zsg2fbzSkf-vMWk3DPI-96OJ_ZEyxkfVjg0OwKxc&usqp=CAU" alt="profile">
-                      </div>
-                      <div class="user-detail flex-col justify-spa">
-                        <div class="user-name">
-                          <span>Harriet Fays</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="comment-text">
-                      <p>
-                        I knew you could do it! Keep it burning babe 🔥🔥
-                      </p>
-                    </div>
-                  </div>
-                  <div class="comment">
-                    <div class="comment-user">
-                      <div class="user-profile-pic">
-                        <img class="user-profile-pic" src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-733872.jpg&fm=jpg" alt="profile">
-                      </div>
-                      <div class="user-detail flex-col justify-spa">
-                        <div class="user-name">
-                          <span>Lynn Lee</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="comment-text">
-                      <p>
-                        Where have you been hiding all this talent??
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="comment-add hidden">
-                  <form class="justify-cen align-cen flex-row" action="">
-                    <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
-                    <input class="submit-comment" type="submit" value="Post">
-                  </form>
-                </div>
-              </div>
-       </div>
-        <div class="main-item-container">
-        <!-- Content Section / Middle Part -->
-        <div class="content">
-          <video autoplay loop muted class="content-video" controls>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-front-portrait-of-a-day-of-the-dead-catrin-with-34441-large.mp4">
-          </video>
-        </div>
-
-        <!-- Caption Section / Right Part -->
-        <div class="caption-comment grid">
-          <div class="caption-container grid">
-            <div class="user-caption flex-col" id="user-caption">
-              <div class="user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://mixkit.imgix.net/videos/preview/mixkit-front-portrait-of-a-day-of-the-dead-catrin-with-34441-0.jpg?q=80&auto=format%2Ccompress&w=460" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>Patrick Parker</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@parkerpat</span>
-                  </div>
-                </div>
-                <div class="user-follow follow flex-col justify-cen">
-                  <a>Follow</a>
-                </div>
-              </div>
-    
-              <div class="caption-text">
-                <p>“I would like, if I may, to take you on a strange journey.” <br> —Rocky Horror Picture Show <br><br>Happy Howl-oween.</p>
-              </div>
-            </div>
-              
-            <div class="music-bubble flex-col">
-              <div class="music" id="music">
-                Original Sound - Patrick Parker
-              </div>
-    
-              <div class="interactive-bubble grid" id="interactive-bubble">
-                <div class="interactive-parts">
-                  <button class="btn bubble like">
-                    <i class="fa-regular fa-heart"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button onclick="comment(2)" class="btn bubble">
-                    <i class="fa-solid fa-comment"></i>
-                  </button>
-                  <span class="count">
-                    4
-                  </span>
-                </div>
-                <div class="interactive-parts">
-                  <button class="btn bubble" onclick="share(2)">
-                    <i class="fa-solid fa-share"></i>
-                  </button>
-                  <span class="count">
-                    1234
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="share-container flex-row hidden">
-            <button class="share-button facebook-app">
-              <i class="fa-brands fa-facebook"></i>
-            </button>
-            <button class="share-button whatsapp-app">
-              <i class="fa-brands fa-whatsapp"></i>
-            </button>
-            <button class="share-button twitter-app">
-              <i class="fa-brands fa-twitter"></i>
-            </button>
-            <button class="share-button line-app">
-              <i class="fa-brands fa-line"></i>
-            </button>          
-          </div>
-
-          <div class="comment-container flex-col hidden">
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://media.istockphoto.com/photos/beautiful-brunette-woman-picture-id599922670?k=20&m=599922670&s=612x612&w=0&h=wUBOvIhnLt7XuX6Bkpp4uogqzG-1ZSHqFFAtj5PLg3Y=" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>Bea Mine</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  A better costume than me? That's just witch-ful thinking.
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSjFc28tv6UjjmadFDJfRCxF9_-QntQDrqEOgJY4DoNM6ykP3htO0x_eUevkVEOWuGzCM&usqp=CAU" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>Eileen Dover</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Brrr … it’s cold in here. There must be some spirits in the atmosphere!
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz4raDs32w2-JAWAaTLYWRNrEWnJqH0S0Tew&usqp=CAU" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>Willie Makit</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  Have a fa-boo-lous Halloween!
-                </p>
-              </div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8yM9am8E5JhniD_2G5PauzAmwx_DJsHfXGA&usqp=CAU" alt="profile">
-                </div>
-                <div class="user-detail flex-col justify-spa">
-                  <div class="user-name">
-                    <span>Reeve Ewer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-text">
-                <p>
-                  You look better with the mask on. XD
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="comment-add hidden">
-            <form class="justify-cen align-cen flex-row" action="">
-              <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
-              <input class="submit-comment" type="submit" value="Post">
-            </form>
-          </div>
-        </div>
+        <% }) %>
       </div>
-
-        <div class="main-item-container">
-          <!-- Content Section / Middle Part -->
-          <div class="content">
-            <video autoplay loop muted class="content-video" controls>
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-youtuber-filming-with-a-camera-on-a-tripod-41291-large.mp4">
-            </video>
-          </div>
-
-    <!-- Caption Section / Right Part -->
-          <div class="caption-comment grid">
-        <div class="caption-container grid">
-        <div class="user-caption flex-col" id="user-caption">
-          <div class="user">
-            <div class="user-profile-pic">
-              <img class="user-profile-pic" src="https://i.pinimg.com/736x/92/bc/57/92bc5785532102412df54f1623bf0c02.jpg" alt="profile">
-            </div>
-            <div class="user-detail flex-col justify-spa">
-              <div class="user-name">
-                <span>Johny Walles</span>
-              </div>
-              <div class="user-tag">
-                <span>@j_walles</span>
-              </div>
-            </div>
-            <div class="user-follow follow flex-col justify-cen">
-              <a>Follow</a>
-            </div>
-          </div>
-
-          <div class="caption-text">
-            <p>Hi Guys! i just launched my new song. I wrote it by my self, inspired by my own journey. Hope you like it <br>Please follow, share and leave a comment</p>
-          </div>
-        </div>
-          
-        <div class="music-bubble flex-col">
-          <div class="music" id="music">
-            Original Sound - Johny Walles
-          </div>
-
-          <div class="interactive-bubble grid" id="interactive-bubble">
-            <div class="interactive-parts">
-              <button class="btn bubble like">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <span class="count">
-                1234
-              </span>
-            </div>
-            <div class="interactive-parts">
-              <button onclick="comment(3)" class="btn bubble">
-                <i class="fa-solid fa-comment"></i>
-              </button>
-              <span class="count">
-                4
-              </span>
-            </div>
-            <div class="interactive-parts">
-              <button class="btn bubble" onclick="share(3)">
-                <i class="fa-solid fa-share"></i>
-              </button>
-              <span class="count">
-                1234
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="share-container flex-row hidden">
-        <button class="share-button facebook-app">
-          <i class="fa-brands fa-facebook"></i>
-        </button>
-        <button class="share-button whatsapp-app">
-          <i class="fa-brands fa-whatsapp"></i>
-        </button>
-        <button class="share-button twitter-app">
-          <i class="fa-brands fa-twitter"></i>
-        </button>
-        <button class="share-button line-app">
-          <i class="fa-brands fa-line"></i>
-        </button>          
-      </div>
-
-      <div class="comment-container flex-col hidden">
-        <div class="comment">
-          <div class="comment-user">
-            <div class="user-profile-pic">
-              <img class="user-profile-pic" src="https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBlcnNvbnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="profile">
-            </div>
-            <div class="user-detail flex-col justify-spa">
-              <div class="user-name">
-                <span>Stan Dupp</span>
-              </div>
-            </div>
-          </div>
-          <div class="comment-text">
-            <p>
-              I really love the new song. I enjoyed your voice! It has an interesting blend of maturity and coquette that makes my ears perk up.
-            </p>
-          </div>
-        </div>
-        <div class="comment">
-          <div class="comment-user">
-            <div class="user-profile-pic">
-              <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghYX0Eb-Cspnkt1LgTkUj8RvTKEx0cLjg9A&usqp=CAU" alt="profile">
-            </div>
-            <div class="user-detail flex-col justify-spa">
-              <div class="user-name">
-                <span>Neil Zynah</span>
-              </div>
-            </div>
-          </div>
-          <div class="comment-text">
-            <p>
-              You show great musicianship, you play with confidence, and vocally you constantly show that you have a good tone. 
-            </p>
-          </div>
-        </div>
-        <div class="comment">
-          <div class="comment-user">
-            <div class="user-profile-pic">
-              <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ11My9SWwJvcPHiCa9OSEjYkX3Drvu4ThXPg&usqp=CAU" alt="profile">
-            </div>
-            <div class="user-detail flex-col justify-spa">
-              <div class="user-name">
-                <span>Emma Grate</span>
-              </div>
-            </div>
-          </div>
-          <div class="comment-text">
-            <p>O MY GOD..... Your performance made me speechless. So impressed.
-            </p>
-          </div>
-        </div>
-        <div class="comment">
-          <div class="comment-user">
-            <div class="user-profile-pic">
-              <img class="user-profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMRAhfLsITgp7MxLh6WaKoYoOQ0PP-wsoDfsEotP3Jzu-zzNxtaTKZvSXhabW8h2hmRoU&usqp=CAU" alt="profile">
-            </div>
-            <div class="user-detail flex-col justify-spa">
-              <div class="user-name">
-                <span>Lois Percy</span>
-              </div>
-            </div>
-          </div>
-          <div class="comment-text">
-            <p>
-              I absolutely love your delivery and the way your voice flows melodiously. Your voice moved me. I've never felt so many emotions listening to music before. You have a natural talent. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="comment-add hidden">
-        <form class="justify-cen align-cen flex-row" action="">
-          <textarea class="comment-text-box" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
-          <input class="submit-comment" type="submit" value="Post">
-        </form>
-      </div>
-    </div>
-    
-    </div>
-  </div>
   
-      </div> 
+    </div> 
   </div>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <!-- bootstrap js -->

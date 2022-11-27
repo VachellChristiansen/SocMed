@@ -1,5 +1,15 @@
+const path = require('path');
+const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
+
 const getIndex = async (req, res, next) => {
-  return res.render("index")
+  const videos = await Posts.find({}).exec();
+  const users = await Users.find({}).exec();
+  const user = [];
+  // helper code to find whose video are posted, this will be based on the video being called
+  await videos.forEach((video, index) => {
+    user.push(users.find(user => user.id === video.userId))
+  })
+  return res.render("index", { videos, user })
 }
 const privacyPolicy = async (req, res, next) => {
   return res.render("privacyPolicy")
