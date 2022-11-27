@@ -37,7 +37,7 @@ function seteditprof () {
         </div>
         <div class="username-and-pp">
             <h1 class="name-user" title="">user1</h1>
-            <input type="file" id="file-input" class="chngpict" name="myFile"><label id="file-input-btn" for="myFile">Change Picture</label>
+            <input type="file" id="file-input" class="chngpict" name="myFile" accept="image/png, image/gif, image/jpeg"><label id="file-input-btn" for="myFile">Change Picture</label>
         </div>
     </div>
 

@@ -42,34 +42,29 @@
 <div class="conts flex justify-cen align-cen">
   <form class="form-container flex-col align-cen" action="/user/uploadPost" method="POST" enctype="multipart/form-data">
     <div class="text-title-big">Upload Video</div>
-    <div class="text-title">Post a video to your account</div>
-    <div class="flex-row justify-cen align-cen">
-      <div class="drop">
-        <div class="drop-zone">
-          <input type="file" name="myFile" class="drop-zone__input" accept="video/*">
-        </div>
-      </div>
-      <div class="right grid justify-ite">
-        <div class="text-title">Caption</div>
+    <!-- <div class="text-title">Post a video to your account</div> -->
+   <div class="flex-row justify-cen align-cen">
+      <div class="grid justify-ite">
+        <label for="title" class="text-title">Caption</label>
         <div class="comment-add justify-cen align-cen flex-row">
-          <textarea name="title" class="comment-text-box" placeholder="Put your caption here..." rows="4" cols="40" maxlength="150"></textarea>
+          <textarea name="title" class="comment-text-box" placeholder="Put your caption here..." rows="4" cols="40" maxlength="150" required></textarea>
         </div>
-        <div class="text-title">Music Used</div>
+        <label for="music" class="text-title">Music Used</label>
         <div class="comment-add justify-cen align-cen flex-row">
-          <textarea name="music" class="comment-text-box" placeholder="[Artist] - [Music]" rows="2" cols="40" maxlength="50"></textarea>
+          <textarea name="music" class="comment-text-box" placeholder="[Artist] - [Music]" rows="2" cols="40" maxlength="50" required></textarea>
+        </div>
+        <label for="myFile" class="text-title">Upload Video Content</label>
+        <div class="comment-add justify-cen align-cen flex-row">
+        <input type="file" name="myFile" id="myFile" accept="video/mp4,video/x-m4v,video/*" required >
         </div>
       </div>
     </div>
 
-
-
     <div class="buttons-form flex">
-      <div class="upload-button buttons-below">
-        <button type="submit">Upload</button>
-      </div>
-      <div class="cancel-button buttons-below">
-        <button>Cancel</button>
-      </div>
+      
+        <button class="upload-button buttons-below" type="submit">Upload</button>
+        <a class="cancel-button buttons-below" href="/" >Cancel</a>
+
     </div>
   </form>
 </div>
