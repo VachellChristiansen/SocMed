@@ -27,3 +27,4 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Following and Followers
 - [x] Edit Profile functions
 - [x] Dynamic url for each user
+- [x] Upload form update
