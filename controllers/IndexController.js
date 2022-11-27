@@ -10,6 +10,7 @@ const getIndex = async (req, res, next) => {
   await videos.forEach((video, index) => {
     user.push(users.find(user => user.id === video.userId))
   })
+  // console.log(req.user);
   return res.render("index", { videos, user, current: req.user.username || '' })
 }
 

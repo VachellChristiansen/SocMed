@@ -9,9 +9,8 @@ const isFollowed = (account, current) => {
   if (exists) { return true } else { return false }
 }
 
-const checkUser = async (id) => {
-  const user = await Users.findById(id).exec();
-  return user
+const checkUser = (id) => {
+  Users.findById(id, (err, user) => { return user })
 }
 
 module.exports = {

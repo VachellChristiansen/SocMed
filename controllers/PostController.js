@@ -7,7 +7,7 @@ const postComment = async (req, res, next) => {
     return res.redirect('/user/login');
   }
   const post = await Posts.findById(req.query.postId).exec();
-  post.comments.push({userId: req.user.id, comment: req.body.comment })
+  post.comments.push({userId: req.user.id, image: req.user.image, username: req.user.username, comment: req.body.comment })
   post.save();
   return res.redirect('/')
 }
