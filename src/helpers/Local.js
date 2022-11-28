@@ -11,7 +11,7 @@ const isFollowed = (account, current) => {
 
 const checkUser = (userid, users) => {
   const user = users.find((user) => { return user.id === userid});
-  return user.username;
+  return user;
 }
 
 
