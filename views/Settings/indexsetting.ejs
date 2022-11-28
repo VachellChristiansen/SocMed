@@ -27,14 +27,10 @@
           <input class="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-      <div class="sign-button flex-row justify-end align-cen hidden">
-        <a href="/upload" class="btn signup">+ Upload</a>
-        <a href="/user/login" class="btn signin">Sign In</a>
-      </div>
       <div class="sign-button flex-row justify-end align-cen">
         <a href="/upload" class="btn signup">+ Upload</a>
         <div class="profile-button flex justify-end align-cen">
-          <img class="user-profile-pic master h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" alt="profile">
+          <img class="user-profile-pic master h-100" src="<%= current.image %>" alt="profile">
         </div>
       </div>
 
@@ -44,9 +40,6 @@
       <a class="pop-up align-cen justify-cen flex" href="/setting/" >
         Settings
       </a>
-      <!-- <a class="pop-up align-cen justify-cen flex" href="/setting/">
-        Help
-      </a> -->
       <a class="pop-up align-cen justify-cen flex" href="/privacypolicy">
         Privacy Policy
       </a>
@@ -62,22 +55,85 @@
         <ul class="point">
           <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
             <li>
-                <p id="EP" class="chosen">Edit Profile</p>
+                <p id="edit-profile-trigger" class="chosen bold">Edit Profile</p>
             </li>
             <li>
-                <p id="cp" class="chosen">Change Password</p>
+                <p id="change-password-trigger" class="chosen">Change Password</p>
             </li>
             <li>
-                <p id="ma" class="chosen">Manage Account</p>
+                <p id="manage-account-trigger" class="chosen">Manage Account</p>
             </li>
             <li>
-                <p id="help" class="chosen">Help</p>
+                <p id="help-trigger" class="chosen">Help</p>
             </li>
         </ul>
       </div>
 
-        <div class="rightbox" id="rb">
+      <div class="rightbox" id="rb">
+        <div id="edit-profile">
+          <form class="application" action="/user/editProfile" method="POST" enctype="multipart/form-data">
+            <div class="pht-and-usr">
+              <div class="chng-pp">
+                <img class="chng-photo" id="pp" src="<%= current.image %>">
+              </div>
+              <div class="username-and-pp">
+                <h1 class="name-user" title=""><%= current.username %></h1>
+                <input type="file" id="profile-image" class="chngpict" name="myFile" accept="image/png, image/gif, image/jpeg">
+              </div>
+              </div>
+              <label for="name">Name</label>
+              <input type="text" name="name" class="namee" placeholder="Name" value="<%= current.name %>">
+              <label for="username">Username</label>
+              <input type="text" name="username" class="user-namee" placeholder="Username" value="<%= current.username %>">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" class="email" placeholder="E-mail" value="<%= current.email %>">
+              <label for="bio">Bio</label>
+              <textarea name="bio" class="change-input" placeholder="Add a bio" id="bio" rows="3" cols="20" maxlength="100"><%= current.bio %></textarea> 
+              <div class="btnsumit">   
+              <button type="submit" class="submit">Submit</button>
+              </div>
+          </form>
         </div>
+        <div class="hidden" id="change-password">
+          <form class="application" action="/user/changePassword" method="POST">
+            <label for="newpassword">New Password</label>
+            <input type="password" name="newpassword" class="npass">
+            <label for="cnewpassword">Confirm New Password</label>
+            <input type="password" name="cnewpassword" class="cnpass">
+            <div class="btnupdt">
+            <button type="submit" name="Update" class="updtbtn">Update</button>
+            </div>
+          </form>
+        </div>
+        <div class="hidden" id="manage-account">
+          <div class="manage-account">Manage Account</div>
+          <div class="manage-item">
+          <div class="acc-cntrl">Account Control</div>
+          <div class="acc-cntrl-option">Delete Account</div>
+              <a href="/user/remove?userId=<%= current.id %>" class="delete-btn">Delete</a>
+          </div>
+        </div>
+        <div class="hidden" id="help">
+          <div class="help-title">Help</div>
+            <div class="privacy-item">
+              <div class="help-form">
+                <form class="application">
+                  <div class="subtitle">Report Problem</div>
+                  <div class="desc-txt">Please provide as much detail as possible so we can better verify the problem
+                    <br>When(time date) did the problem occur?
+                    <br>What is the exact error message that you received?
+                  </div>
+                  <textarea class="description-text-box" name="reportproblem" cols="40" rows="3" maxlength="120" placeholder="Describe your problem here..." required></textarea>
+                  <label for="namereport">Name</label><input type="text" name="namereport" class="" required>
+                  <label for="emailreport">Email</label><input type="email" name="emailreport" class="" required>
+                  <div class="btnupdt">
+                  <button type="submit" name="Update" class="updtbtn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

@@ -287,6 +287,12 @@ const unfollowFromOtherUser = async (req, res, next) => {
   res.redirect('/user/other/' + user.username);
 };
 
+const removeAccount = async (req, res, next) => {
+  const user = await Users.findByIdAndRemove(req.query.userId).exec();
+  console.log(user.username + ' has been removed')
+  res.redirect('/user/logout')
+}
+
 module.exports = {
   create,
   findByEmail,
@@ -303,6 +309,7 @@ module.exports = {
   followFromOtherUser,
   unfollowFromOtherUser,
   registerFailed,
+  removeAccount,
   //posts
   uploadPost,
   insertComment,

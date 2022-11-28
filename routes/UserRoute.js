@@ -17,6 +17,7 @@ const {
   followFromOtherUser,
   unfollowFromOtherUser,
   editProfile,
+  removeAccount,
   uploadPost,
 } = require(path.join(__dirname, "../controllers/UserController"));
 const { upload } = require(path.join(__dirname, "../src/helpers/Upload"))
@@ -37,9 +38,11 @@ router.get("/loginFailed", loginFailed);
 
 router.get("/logout", logout);
 
-router.get('/follow', followFromOtherUser);
+router.get("/follow", followFromOtherUser);
 
-router.get('/unfollow', unfollowFromOtherUser);
+router.get("/unfollow", unfollowFromOtherUser);
+
+router.get("/remove", removeAccount)
 
 router.post("/editProfile", celebrate(userValidator.edit), upload, editProfile); 
 

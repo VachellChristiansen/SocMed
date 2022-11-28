@@ -2,7 +2,7 @@ const path = require("path");
 const { Users } = require(path.join(__dirname, "../models/Model"));
 
 const indexsetting = async (req, res, next) => {
-  res.render("Settings/indexsetting", {type:req.params.type} )
+  res.render("Settings/indexsetting", { current: req.user } )
 };
 
 const updateProfile = async (req, res, next) => {
