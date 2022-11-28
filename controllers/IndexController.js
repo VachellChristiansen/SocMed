@@ -11,7 +11,7 @@ const getIndex = async (req, res, next) => {
     user.push(users.find(user => user.id === video.userId))
   })
   // console.log(req.user);
-  return res.render("index", { videos, user, current: req.user.username || '' })
+  return res.render("index", { videos, users, user, current: req.user.username || ''})
 }
 
 const followFromIndex = async (req, res, next) => {

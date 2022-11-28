@@ -269,6 +269,7 @@
           </div>
 
           <div class="comment-container flex-col hidden">
+            <% let commentUser = '' %>
             <% video.comments.forEach((comment, index) => { %>
             <div class="comment">
               <div class="comment-user">
@@ -277,7 +278,7 @@
                 </div>
                 <div class="user-detail flex-col justify-spa">
                   <div class="user-name">
-                    <span><%= comment.username %></span>
+                    <span><%= checkUser(comment.userId, users) %></span>
                   </div>
                 </div>
               </div>

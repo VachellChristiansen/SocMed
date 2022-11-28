@@ -9,7 +9,13 @@ const isFollowed = (account, current) => {
   if (exists) { return true } else { return false }
 }
 
+const checkUser = (userid, users) => {
+  const user = users.find((user) => { return user.id === userid});
+  return user.username;
+}
+
 
 module.exports = {
-  isFollowed
+  isFollowed,
+  checkUser
 }
