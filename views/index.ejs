@@ -76,7 +76,7 @@
             <% recommended.forEach((acc, index) => {%>
               <div class="user">
                 <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="<%= acc.image %>" alt="profile">
+                  <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
                 </div>
                 <div class="user-detail">
                   <div class="user-name">
@@ -105,7 +105,7 @@
             <% top.forEach((acc, index) => {%>
             <div class="user">
               <div class="user-profile-pic">
-                <img class="user-profile-pic" src="<%= acc.image %>" alt="profile">
+                <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
               </div>
               <div class="user-detail">
                 <div class="user-name">
@@ -143,7 +143,7 @@
           <div class="caption-container grid">
             <div class="user-caption flex-col" id="user-caption">
               <div class="user">
-                <img class="user-profile-pic" src="<%= user[index].image %>" alt="profile">
+                <a href="/user/other/<%= user[index].username %>"><img class="user-profile-pic" src="<%= user[index].image %>" alt="profile"></a>
                 <div class="user-detail flex-col justify-spa">
                   <div class="user-name">
                     <span><%= user[index].name %></span>

@@ -7,7 +7,6 @@ const getIndex = async (req, res, next) => {
   const users = await Users.find({}).exec();
   const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
   const recommended = await Users.find({ 'followers.username': { $ne: req.user.username } }).limit(3).exec();
-  console.log(recommended);
   const user = [];
   // helper code to find whose video are posted, this will be based on the video being called
   await videos.forEach((video, index) => {
