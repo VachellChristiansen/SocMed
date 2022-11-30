@@ -14,7 +14,7 @@ const follow = async (userId, followId) => {
   follow.followers.push({username: user.username})
   user.save();
   follow.save();
-  return true;
+  return;
 }
 
 const unfollow = async(userId, followId) => {

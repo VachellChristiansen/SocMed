@@ -18,4 +18,5 @@ const UserSchema = mongoose.Schema({
   following: [ FollowingSchema ]
 })
 
+
 module.exports = mongoose.model("Users", UserSchema);
