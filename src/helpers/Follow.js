@@ -7,14 +7,14 @@ const follow = async (userId, followId) => {
 
   const followerExists = await follow.followers.find((acc) => { return acc.username == user.username })
   if (followerExists) {
-    return null;
+    return false;
   }
 
   user.following.push({username: follow.username})
   follow.followers.push({username: user.username})
   user.save();
   follow.save();
-  return;
+  return true;
 }
 
 const unfollow = async(userId, followId) => {
@@ -25,7 +25,7 @@ const unfollow = async(userId, followId) => {
   follow.followers.pull({username: user.username})
   user.save();
   follow.save();
-  return;
+  return true;
 }
 
 module.exports = {

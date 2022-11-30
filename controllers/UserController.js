@@ -183,12 +183,17 @@ const logout = async (req, res, next) => {
 }
 
 const getOtherUser = async (req, res, next) => {
+  const current = req.user || ''
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
+  if(!otherUser) { return next() }
   if (otherUser.status == '00') {
     console.log('dead account')
     return res.redirect('/user/deleted')
   }
-  console.log(otherUser);
+  const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
+  const recommended = await Users.find({ 'followers.username': { $ne: current.username || '' } }).limit(3).exec();
+
+
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
   const videos = await Posts.find({ userId: otherUser.id })
@@ -196,10 +201,13 @@ const getOtherUser = async (req, res, next) => {
 
   res.render("User/otherUser", { 
     data: otherUser, 
-    current: req.user.username,
-    followersCount: followersCount,
-    followingCount: followingCount,
-    videos: videos
+    current: current.username,
+    followersCount,
+    followingCount,
+    videos,
+    top,
+    recommended,
+    current
   })
 };
 
@@ -278,7 +286,7 @@ const followFromOtherUser = async (req, res, next) => {
   await follow(req.user.id, req.query.follow);
   const user = await Users.findById(req.query.follow).exec();
 
-  res.redirect('/user/other/' + user.username);
+  res.redirect('/user/other/' + req.query.from);
 };
 
 const unfollowFromOtherUser = async (req, res, next) => {
@@ -286,7 +294,7 @@ const unfollowFromOtherUser = async (req, res, next) => {
   await unfollow(req.user.id, req.query.unfollow);
   const user = await Users.findById(req.query.unfollow).exec();
 
-  res.redirect('/user/other/' + user.username);
+  res.redirect('/user/other/' + req.query.from);
 };
 
 const removeAccount = async (req, res, next) => {
