@@ -65,54 +65,28 @@
               <span>Recommended for you</span>
             </div>
             <div class="recommended-user flex-col flex-col">
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://images7.alphacoders.com/490/490473.jpg" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Leo Caprio</span>
+              <% recommended.forEach((acc, index) => {%>
+                <div class="user">
+                  <div class="user-profile-pic">
+                    <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
                   </div>
-                  <div class="user-tag">
-                    <span>@leonardoc</span>
+                  <div class="user-detail">
+                    <div class="user-name">
+                      <span><%= acc.name %></span>
+                    </div>
+                    <div class="user-tag">
+                      <span>@<%= acc.username %></span>
+                    </div>
                   </div>
-                </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://www.wallpaperflare.com/static/73/308/969/gal-gadot-elle-magazine-2017-4k-wallpaper.jpg" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Gal Gadot</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@gal_gadot</span>
+                  <div class="user-follow follow">
+                    <% if (isFollowed(acc, current)) { %>
+                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
+                    <% } else { %>
+                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
+                    <% } %>
                   </div>
                 </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://www.xtrafondos.com/wallpapers/vertical/tom-holland-en-spider-man-sin-camino-a-casa-9247.jpg" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Tom Holland</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@tomh2013</span>
-                  </div>
-                </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
+                <% }) %>
             </div>
           </div>
           <div class="recommended-container top-accounts">
@@ -120,54 +94,28 @@
               <span>Top Accounts</span>
             </div>
             <div class="recommended-user flex-col">
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://i.pinimg.com/originals/c2/81/e8/c281e883fcd89408574e6edddba374fc.png" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Elon Musk</span>
+              <% top.forEach((acc, index) => {%>
+                <div class="user">
+                  <div class="user-profile-pic">
+                    <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
                   </div>
-                  <div class="user-tag">
-                    <span>@elonmusk</span>
+                  <div class="user-detail">
+                    <div class="user-name">
+                      <span><%= acc.name %></span>
+                    </div>
+                    <div class="user-tag">
+                      <span>@<%= acc.username %></span>
+                    </div>
                   </div>
-                </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://wallpaperaccess.com/full/241873.jpg" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Ariana Grande</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@ariana</span>
+                  <div class="user-follow follow">
+                    <% if (isFollowed(acc, current)) { %>
+                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
+                    <% } else { %>
+                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
+                    <% } %>
                   </div>
                 </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
-              <div class="user" id="">
-                <div class="user-profile-pic">
-                  <img class="user-profile-pic" src="https://p4.wallpaperbetter.com/wallpaper/306/534/486/5c1f9f462af7a-wallpaper-preview.jpg" alt="profile">
-                </div>
-                <div class="user-detail">
-                  <div class="user-name">
-                    <span>Ed Sheeran</span>
-                  </div>
-                  <div class="user-tag">
-                    <span>@edsheeran</span>
-                  </div>
-                </div>
-                <div class="user-follow follow">
-                  <button>Follow</button>
-                </div>
-              </div>
+                <% }) %>
             </div>
           </div>
         </div>
@@ -185,15 +133,15 @@
                   <span><%= data.name %></span>
                 </div>
                 <div class="user-tag-star">
-                  <span>@ <%= data.username %></span>
+                  <span>@<%= data.username %></span>
                 </div>
               </div>
 
               <div class="user-follow star flex-col justify-cen follow">
                 <% if (isFollowed(data, current)) { %>
-                  <a href="/user/unfollow?unfollow=<%= data.id %>">Unfollow</a>
+                  <a href="/user/unfollow?unfollow=<%= data.id %>&from=<%= data.username %>">Unfollow</a>
                 <% } else { %>
-                  <a href="/user/follow?follow=<%= data.id %>">Follow</a>
+                  <a href="/user/follow?follow=<%= data.id %>&from=<%= data.username %>">Follow</a>
                 <% } %>
               </div>
             </div>

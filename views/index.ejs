@@ -96,34 +96,34 @@
               </div>
               <% }) %>
           </div>
-        </div>
-        <div class="recommended-container top-accounts">
-          <div class="recommended-text">
-            <span>Top Accounts</span>
-          </div>
-          <div class="recommended-user flex-col">
-            <% top.forEach((acc, index) => {%>
-            <div class="user">
-              <div class="user-profile-pic">
-                <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
-              </div>
-              <div class="user-detail">
-                <div class="user-name">
-                  <span><%= acc.name %></span>
-                </div>
-                <div class="user-tag">
-                  <span>@<%= acc.username %></span>
-                </div>
-              </div>
-              <div class="user-follow follow">
-                <% if (isFollowed(acc, current.username)) { %>
-                  <a href="/unfollow?unfollow=<%= acc.id %>">Unfollow</a>
-                <% } else { %>
-                  <a href="/follow?follow=<%= acc.id %>">Follow</a>
-                <% } %>
-              </div>
+          <div class="top-accounts">
+            <div class="recommended-text">
+              <span>Top Accounts</span>
             </div>
-            <% }) %>
+            <div class="recommended-user flex-col">
+              <% top.forEach((acc, index) => {%>
+              <div class="user">
+                <div class="user-profile-pic">
+                  <a href="/user/other/<%= acc.username %>"><img class="user-profile-pic" src="<%= acc.image %>" alt="profile"></a>
+                </div>
+                <div class="user-detail">
+                  <div class="user-name">
+                    <span><%= acc.name %></span>
+                  </div>
+                  <div class="user-tag">
+                    <span>@<%= acc.username %></span>
+                  </div>
+                </div>
+                <div class="user-follow follow">
+                  <% if (isFollowed(acc, current.username)) { %>
+                    <a href="/unfollow?unfollow=<%= acc.id %>">Unfollow</a>
+                  <% } else { %>
+                    <a href="/follow?follow=<%= acc.id %>">Follow</a>
+                  <% } %>
+                </div>
+              </div>
+              <% }) %>
+            </div>
           </div>
         </div>
       </div>
