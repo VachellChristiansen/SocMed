@@ -325,8 +325,9 @@ button:hover {
   border: none;
   background-color: transparent;
   text-transform: capitalize;
-  color: rgb(0, 162, 255);
+  /* color: rgb(0, 162, 255); */
   font-weight: 700;
+  text-decoration: none;
 }
 .user-follow a:hover{
   cursor: pointer;

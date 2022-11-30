@@ -361,6 +361,7 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .user-follow button{
@@ -369,8 +370,11 @@ display: flex;
   text-transform: capitalize;
   color: rgb(0, 162, 255);
   font-weight: 700;
+ 
 }
-
+.user-follow a {
+  text-decoration: none;
+}
 /* Content Section */
 .user-page {
   margin-top: 7%;

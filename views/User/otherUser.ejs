@@ -91,11 +91,11 @@
                       <span>@<%= acc.username %></span>
                     </div>
                   </div>
-                  <div class="user-follow follow">
+                  <div class="user-follow">
                     <% if (isFollowed(acc, current.username)) { %>
-                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
+                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>" class="unfollow">Unfollow</a>
                     <% } else { %>
-                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
+                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>" class="follow">Follow</a>
                     <% } %>
                   </div>
                 </div>
@@ -120,11 +120,11 @@
                       <span>@<%= acc.username %></span>
                     </div>
                   </div>
-                  <div class="user-follow follow">
+                  <div class="user-follow">
                     <% if (isFollowed(acc, current.username)) { %>
-                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
+                      <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>" class="unfollow">Unfollow</a>
                     <% } else { %>
-                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
+                      <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>" class="follow">Follow</a>
                     <% } %>
                   </div>
                 </div>
@@ -150,11 +150,11 @@
                 </div>
               </div>
 
-              <div class="user-follow star flex-col justify-cen follow">
+              <div class="user-follow star flex-col justify-cen">
                 <% if (isFollowed(data, current.username)) { %>
-                  <a href="/user/unfollow?unfollow=<%= data.id %>&from=<%= data.username %>">Unfollow</a>
+                  <a href="/user/unfollow?unfollow=<%= data.id %>&from=<%= data.username %>" class="unfollow">Unfollow</a>
                 <% } else { %>
-                  <a href="/user/follow?follow=<%= data.id %>&from=<%= data.username %>">Follow</a>
+                  <a href="/user/follow?follow=<%= data.id %>&from=<%= data.username %>" class="follow">Follow</a>
                 <% } %>
               </div>
             </div>

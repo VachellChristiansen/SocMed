@@ -83,11 +83,11 @@
                     <span>@<%= user[index].username %></span>
                   </div>
                 </div>
-                <div class="user-follow follow flex-col justify-cen">
+                <div class="user-follow flex-col justify-cen">
                   <% if (isFollowed(user[index], current.username)) { %>
-                    <a href="/unfollow?unfollow=<%= user[index].id %>">Unfollow</a>
+                    <a href="/unfollow?unfollow=<%= user[index].id %>" class="unfollow">Unfollow</a>
                   <% } else { %>
-                    <a href="/follow?follow=<%= user[index].id %>">Follow</a>
+                    <a href="/follow?follow=<%= user[index].id %>" class="follow">Follow</a>
                   <% } %>
                 </div>
               </div>
