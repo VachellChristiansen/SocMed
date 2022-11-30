@@ -27,5 +27,5 @@ app.use("/post", post);
 app.get("*",(req,res)=>{
   res.render("\errorPage.ejs",{title:"404 Not Found"});
 })
-const port = process.env.PORT || 9001;
+const port = process.env.PORT || 9011;
 app.listen(port, () => console.log(`Listening to port ${port} + ${ path.join(__dirname) }`));
