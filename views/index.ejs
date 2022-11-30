@@ -235,7 +235,7 @@
                   </span>
                 </div>
                 <div class="interactive-parts">
-                  <button onclick="comment(0)" class="btn bubble">
+                  <button onclick="comment(<%= index %>)" class="btn bubble">
                     <i class="fa-solid fa-comment"></i>
                   </button>
                   <span class="count">
@@ -243,7 +243,7 @@
                   </span>
                 </div>
                 <div class="interactive-parts">
-                  <button class="btn bubble" onclick="share(0)">
+                  <button class="btn bubble" onclick="share(<%= index %>)">
                     <i class="fa-solid fa-share"></i>
                   </button>
                   <span class="count">
@@ -294,7 +294,7 @@
           <div class="comment-add hidden">
             <form class="justify-cen align-cen flex-row" action="/post/postComment?postId=<%= video.id %>" method="POST">
               <textarea class="comment-text-box" name="comment" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
-              <input class="submit-comment" type="submit" value="Post" >
+              <input class="submit-comment" type="submit" value="Post">
             </form>
           </div>
         </div>

@@ -12,6 +12,7 @@ const UserSchema = mongoose.Schema({
   bio: String,
   image: String,
   phone: Number,
+  status: String,
   postId: [ PostSchema ],
   followers: [ FollowerSchema ],
   following: [ FollowingSchema ]

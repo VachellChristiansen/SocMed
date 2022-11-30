@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const path = require("path");
 const express = require("express");
 const { check, validationResult} = require('express-validator');
+const { log } = require("console");
 
 //import from source files
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
@@ -17,7 +18,8 @@ async function create(email, username, name, password, userImage) {
     username,
     name,   
     password: hashedPassword,
-    image: userImage
+    image: userImage,
+    status: '99'
   })
   return newUser.save();
 }
@@ -128,7 +130,7 @@ const createUser = async (req, res, next) => {
       req.body.username,
       req.body.name,
       req.body.password,
-      defaultUserImage
+      defaultUserImage,
     );
     return res.redirect('/user/login');
     }
@@ -182,6 +184,10 @@ const logout = async (req, res, next) => {
 
 const getOtherUser = async (req, res, next) => {
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
+  if (otherUser.status == '00') {
+    console.log('dead account')
+    return res.redirect('/user/deleted')
+  }
   console.log(otherUser);
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
@@ -207,7 +213,7 @@ const register = async (req, res, next) => {
     name: 'Name',
     password: 'Password',
     confirmPassword: 'Confirm Password',
-    email: 'Email',
+    email: 'Email'
   })
 };
 
@@ -267,10 +273,6 @@ const uploadPost = async (req, res, next) => {
   }
 };
 
-const insertComment = async (req, res, next) => {
-
-};
-
 const followFromOtherUser = async (req, res, next) => {
 
   await follow(req.user.id, req.query.follow);
@@ -288,9 +290,17 @@ const unfollowFromOtherUser = async (req, res, next) => {
 };
 
 const removeAccount = async (req, res, next) => {
-  const user = await Users.findByIdAndRemove(req.query.userId).exec();
-  console.log(user.username + ' has been removed')
+  const user = await Users.findById(req.query.userId).exec();
+  const posts = await Posts.deleteMany({ userId: user.id});
+  user.status = '00';
+  await user.save();
+  console.log(user.username + ' has been deactivated')
+  console.log(posts + ' posts deleted')
   res.redirect('/user/logout')
+}
+
+const deletedUser = async (req, res, next) => {
+  res.render('User/deleted')
 }
 
 module.exports = {
@@ -312,9 +322,9 @@ module.exports = {
   removeAccount,
   //posts
   uploadPost,
-  insertComment,
   // pages
   getOtherUser,
   register,
   loginPage,
+  deletedUser
 };

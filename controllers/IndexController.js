@@ -35,7 +35,7 @@ const search = async (req, res, next) => {
   return res.render("search")
 }
 const upload = async (req, res, next) => {
-  return res.render("upload")
+  return res.render("upload", { user: req.user.username })
 }
 const error = async (req, res, next) => {
   return res.render("errorPage")

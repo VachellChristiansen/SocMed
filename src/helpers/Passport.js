@@ -14,8 +14,9 @@ const verifyCallback = (username, password, callback) => {
   .then((user) => {
     if (!user) { return callback(null, false)}
     const isValid = compare(password, user.password);
-    
-    if (isValid) {
+    const isActive = user.status == '99';
+    console.log(isActive, isValid)
+    if (isValid && isActive) {
       return callback(null, user)
     } else {
       return callback(null, false);
