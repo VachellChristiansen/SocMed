@@ -36,7 +36,8 @@ const privacyPolicy = async (req, res, next) => {
   return res.render("privacyPolicy")
 }
 const search = async (req, res, next) => {
-  return res.render("search")
+  const search = req.query.search;
+  return res.redirect('/user/other/' + search)
 }
 const upload = async (req, res, next) => {
   return res.render("upload", { user: req.user.username })
