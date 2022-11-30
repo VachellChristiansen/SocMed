@@ -21,6 +21,7 @@ const {
   uploadPost,
   deletedUser
 } = require(path.join(__dirname, "../controllers/UserController"));
+const { check } = require(path.join(__dirname, "../middlewares/AccountCheck"));
 const { upload } = require(path.join(__dirname, "../src/helpers/Upload"))
 
 const router = express.Router();
@@ -29,9 +30,9 @@ const router = express.Router();
 
 router.get("/", getUser);
 
-router.get("/follow", followFromOtherUser);
+router.get("/follow", check, followFromOtherUser);
 
-router.get("/unfollow", unfollowFromOtherUser);
+router.get("/unfollow", check, unfollowFromOtherUser);
 
 router.get("/register", register);
 

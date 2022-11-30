@@ -183,6 +183,7 @@ const logout = async (req, res, next) => {
 }
 
 const getOtherUser = async (req, res, next) => {
+  const current = req.user || ''
   const otherUser = await Users.findOne({ username: req.params.user }).exec();
   if(!otherUser) { return next() }
   if (otherUser.status == '00') {
@@ -190,7 +191,7 @@ const getOtherUser = async (req, res, next) => {
     return res.redirect('/user/deleted')
   }
   const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
-  const recommended = await Users.find({ 'followers.username': { $ne: req.user.username } }).limit(3).exec();
+  const recommended = await Users.find({ 'followers.username': { $ne: current.username || '' } }).limit(3).exec();
 
 
   const followersCount = otherUser.followers.length;
@@ -200,12 +201,13 @@ const getOtherUser = async (req, res, next) => {
 
   res.render("User/otherUser", { 
     data: otherUser, 
-    current: req.user.username,
+    current: current.username,
     followersCount,
     followingCount,
     videos,
     top,
-    recommended
+    recommended,
+    current
   })
 };
 

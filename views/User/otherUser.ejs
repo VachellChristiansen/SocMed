@@ -25,13 +25,26 @@
           <input class="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-      <div class="sign-button flex-row justify-end align-cen">
+      <!-- <div class="sign-button flex-row justify-end align-cen">
         <a href="/upload" class="btn signup">+ Upload</a>
         <a href="/user/login" class="btn signin">Sign In</a>
         <div class="profile-button flex justify-end align-cen hidden">
           <img class="user-profile-pic master h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" id="user1" alt="profile">
         </div>
-      </div>
+      </div> -->
+      <% if (current == '') { %>
+        <div class="sign-button flex-row justify-end align-cen">
+          <a href="/user/register" class="btn signup">Sign Up</a>
+          <a href="/user/login" class="btn signin">Sign In</a>
+        </div>
+        <% } else { %>
+        <div class="sign-button flex-row justify-end align-cen">
+          <a href="/upload" class="btn signup">+ Upload</a>
+          <div class="profile-button flex justify-end align-cen">
+            <img class="user-profile-pic master h-100" src="<%= current.image %>" alt="profile">
+          </div>
+        </div>
+        <% } %>
     </div>
 
     <div class="profile-menu grid hidden">
@@ -79,7 +92,7 @@
                     </div>
                   </div>
                   <div class="user-follow follow">
-                    <% if (isFollowed(acc, current)) { %>
+                    <% if (isFollowed(acc, current.username)) { %>
                       <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
                     <% } else { %>
                       <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
@@ -108,7 +121,7 @@
                     </div>
                   </div>
                   <div class="user-follow follow">
-                    <% if (isFollowed(acc, current)) { %>
+                    <% if (isFollowed(acc, current.username)) { %>
                       <a href="/user/unfollow?unfollow=<%= acc.id %>&from=<%= data.username %>">Unfollow</a>
                     <% } else { %>
                       <a href="/user/follow?follow=<%= acc.id %>&from=<%= data.username %>">Follow</a>
@@ -138,7 +151,7 @@
               </div>
 
               <div class="user-follow star flex-col justify-cen follow">
-                <% if (isFollowed(data, current)) { %>
+                <% if (isFollowed(data, current.username)) { %>
                   <a href="/user/unfollow?unfollow=<%= data.id %>&from=<%= data.username %>">Unfollow</a>
                 <% } else { %>
                   <a href="/user/follow?follow=<%= data.id %>&from=<%= data.username %>">Follow</a>

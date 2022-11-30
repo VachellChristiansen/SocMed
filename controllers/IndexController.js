@@ -17,7 +17,7 @@ const getIndex = async (req, res, next) => {
 }
 
 const followFromIndex = async (req, res, next) => {
-
+  
   await follow(req.user.id, req.query.follow);
   console.log(req.user.username+ " follows " + req.query.follow)
 
