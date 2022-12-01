@@ -164,13 +164,11 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res) => {
   const videos = await Posts.find({ userId: req.user.id })
+  const likes = await getLike(req.user)
   res.render("User/mainUser", {
-    name: req.user.name,
-    username: req.user.username,
-    email: req.user.email,
-    bio: req.user.bio || '',
-    image: req.user.image,
-    videos: videos
+    user: req.user,
+    likes,
+    videos
   });
 }
 
