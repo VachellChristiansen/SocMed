@@ -14,7 +14,7 @@ router.get("/like", check, likeFromIndex);
 router.get("/unlike", check, unlikeFromIndex);
 router.get("/privacypolicy", privacyPolicy);
 router.get("/search", search);
-router.get("/upload", upload);
+router.get("/upload", check, upload);
 router.get("/error", error);
 router.get("/post/:postId", post);
 
