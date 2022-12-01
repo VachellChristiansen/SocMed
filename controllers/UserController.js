@@ -1,4 +1,5 @@
 //import from dependencies
+const { errors } = require("celebrate");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 
@@ -9,7 +10,7 @@ const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
 const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
 const { mail } = require(path.join(__dirname, "../src/helpers/Mailer"));
 
-async function create(email, username, name, password, userImage) {
+async function create(email, username, name, password, userImage, status, code) {
   const hashedPassword = await hash(password);
   const newUser = new Users({
     email,
@@ -17,7 +18,8 @@ async function create(email, username, name, password, userImage) {
     name,   
     password: hashedPassword,
     image: userImage,
-    status: '99'
+    status: status,
+    code: code
   })
   return newUser.save();
 }
@@ -73,7 +75,9 @@ async function getLike(user) {
 }
 
 async function generateHash() {
-  
+  const rand = Math.floor(Math.random() * 100000000)
+  const hashed = await hash(rand.toString());
+  return hashed;
 }
 
 const createUser = async (req, res, next) => {
@@ -89,7 +93,7 @@ const createUser = async (req, res, next) => {
     let pwError = "Password";
     let confPwError = "Confirm Password";
     let emailError = "Email";
-   
+
     if(req.body.username.length < 3) {
       userError = "Username must be at least 3 characters";
       errorExists = true;
@@ -121,42 +125,44 @@ const createUser = async (req, res, next) => {
     }
     if (errorExists) {
         res.render('User/register', 
-  {
-    error: {
-      msg: messageError,
-    },
-    username: userError,
-    name: nameError,
-    password: pwError,
-    confirmPassword: confPwError,
-    email: emailError,
+      {
+        error: {
+          msg: messageError,
+        },
+        username: userError,
+        name: nameError,
+        password: pwError,
+        confirmPassword: confPwError,
+        email: emailError,
 
-  })
-}
-
+      })
+    }
      else {
     // register user (insert to db)
+    const code = await generateHash()
     await create(
       req.body.email,
       req.body.username,
       req.body.name,
       req.body.password,
       defaultUserImage,
+      '88',
+      code
     );
     return res.redirect('/user/login');
     }
 
   } catch (err) {
-
+    console.error(err);
     return res.render('User/register', 
     {
-      error: {msg: 'Invalid registration'},
+      error: err,
       username: 'Username must be at least 3 characters',
       name: 'Name must be at least 3 characters',
       password: 'Password must be at least 6 characters',
       confirmPassword: 'Password must be at least 6 characters',
       email: 'Email is required',
-  
+      
     });
     
     // return next(err);
@@ -325,7 +331,17 @@ const changePassword = async (req, res, next) => {
 }
 
 const verifyEmail = async (req, res, next) => {
+  // expecting an url like verifyEmail?id=user.id&code=user.code
+  const user = await Users.findById(req.query.id).exec();
+  const code = req.query.code;
 
+  if(user.code == code) {
+    user.status = '99';
+    await user.save();
+    return res.redirect('/user/login')
+  } else {
+    return res.redirect('/')
+  }
 }
 
 module.exports = {
@@ -346,6 +362,7 @@ module.exports = {
   registerFailed,
   removeAccount,
   changePassword,
+  verifyEmail,
   //posts
   uploadPost,
   // pages
