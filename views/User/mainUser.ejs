@@ -92,7 +92,7 @@
         <div class="contents">
           <% videos.forEach((video, index) => { %>
           <div class="thumbnails">
-            <a href="<%= video.file %>">
+            <a href="/post/<%= video.id %>">
             <video loop muted class="content-video">
               <source src="<%= video.file %>">
             </a>

@@ -45,7 +45,7 @@ const upload = async (req, res, next) => {
 const error = async (req, res, next) => {
   return res.render("errorPage")
 }
-const shared = async (req, res, next) => {
+const post = async (req, res, next) => {
   const video = await Posts.findById(req.params.postId)
   console.log(video)
   const current = req.user || '';
@@ -53,8 +53,8 @@ const shared = async (req, res, next) => {
   const users = await Users.find({});
   const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
   const recommended = await Users.find({ 'followers.username': { $ne: current.username || '' } }).limit(3).exec();
-  return res.render("shared", { video, users, user, top, recommended, current: current})
+  return res.render("post", { video, users, user, top, recommended, current: current})
 }
 
 
-module.exports = { getIndex, followFromIndex, unfollowFromIndex, privacyPolicy, search, upload, error, shared }
+module.exports = { getIndex, followFromIndex, unfollowFromIndex, privacyPolicy, search, upload, error, post }
