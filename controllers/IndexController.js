@@ -35,11 +35,17 @@ const unfollowFromIndex = async (req, res, next) => {
 
 const likeFromIndex = async (req, res, next) => {
   await like(req.user.id, req.query.postId)
+  if (req.query.from == 'post') {
+    return res.redirect('/post/' + req.query.postId)
+  }
   res.redirect('/');
 }
 
 const unlikeFromIndex = async (req, res, next) => {
   await unlike(req.user.id, req.query.postId)
+  if (req.query.from == 'post') {
+    return res.redirect('/post/' + req.query.postId)
+  }
   res.redirect('/');
 }
 
