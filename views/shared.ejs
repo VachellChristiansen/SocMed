@@ -65,7 +65,6 @@
 
   </header>
   <div class="main">
-    <% videos.forEach((video, index) => { %>
     <div class="main-wrapper">
  
       <div class="side-container">
@@ -74,20 +73,20 @@
           <div class="caption-container grid">
             <div class="user-caption flex-col" id="user-caption">
               <div class="user">
-                <a href="/user/other/<%= user[index].username %>"><img class="user-profile-pic" src="<%= user[index].image %>" alt="profile"></a>
+                <a href="/user/other/<%= user.username %>"><img class="user-profile-pic" src="<%= user.image %>" alt="profile"></a>
                 <div class="user-detail flex-col justify-spa">
                   <div class="user-name">
-                    <span><%= user[index].name %></span>
+                    <span><%= user.name %></span>
                   </div>
                   <div class="user-tag">
-                    <span>@<%= user[index].username %></span>
+                    <span>@<%= user.username %></span>
                   </div>
                 </div>
                 <div class="user-follow flex-col justify-cen">
-                  <% if (isFollowed(user[index], current.username)) { %>
-                    <a href="/unfollow?unfollow=<%= user[index].id %>" class="unfollow">Unfollow</a>
+                  <% if (isFollowed(user, current.username)) { %>
+                    <a href="/unfollow?unfollow=<%= user.id %>" class="unfollow">Unfollow</a>
                   <% } else { %>
-                    <a href="/follow?follow=<%= user[index].id %>" class="follow">Follow</a>
+                    <a href="/follow?follow=<%= user.id %>" class="follow">Follow</a>
                   <% } %>
                 </div>
               </div>
@@ -151,10 +150,6 @@
 
         <!-- Caption Section / Right Part -->
         <div class="caption-comment grid">
-
-
-
-
           <div class="comment-container flex-col">
             <% video.comments.forEach((comment, index) => { %>
             <div class="comment">
@@ -185,7 +180,6 @@
           </div>
         </div>
         </div>
-        <% }) %>
       </div>
   
     </div> 

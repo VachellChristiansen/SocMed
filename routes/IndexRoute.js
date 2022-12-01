@@ -14,6 +14,6 @@ router.get("/privacypolicy", privacyPolicy);
 router.get("/search", search);
 router.get("/upload", upload);
 router.get("/error", error);
-router.get("/shared", shared);
+router.get("/shared/:postId", shared);
 
 module.exports = router;

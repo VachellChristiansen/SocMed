@@ -46,17 +46,14 @@ const error = async (req, res, next) => {
   return res.render("errorPage")
 }
 const shared = async (req, res, next) => {
+  const video = await Posts.findById(req.params.postId)
+  console.log(video)
   const current = req.user || '';
-  const videos = await Posts.find({}).exec();
-  const users = await Users.find({}).exec();
+  const user = await Users.findById(video.userId);
+  const users = await Users.find({});
   const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
   const recommended = await Users.find({ 'followers.username': { $ne: current.username || '' } }).limit(3).exec();
-  const user = [];
-  // helper code to find whose video are posted, this will be based on the video being called
-  await videos.forEach((video, index) => {
-    user.push(users.find(user => user.id === video.userId))
-  })
-  return res.render("shared", { videos, users, user, top, recommended, current: current})
+  return res.render("shared", { video, users, user, top, recommended, current: current})
 }
 
 
