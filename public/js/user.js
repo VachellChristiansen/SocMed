@@ -84,3 +84,6 @@ $('.master,.profile-menu').mouseover(function(event){
     $(document).mouseleave(function () {
       $('.profile-menu').addClass("hidden");
   });
+  $('.master').click(function(event) {
+    location.href=`/user`;
+  });
