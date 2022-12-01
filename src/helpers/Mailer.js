@@ -9,7 +9,7 @@ const mail = async (id, name, email, code) => {
       'sender' : {'email':'deepspace.office@gmail.com', 'name':'Sendinblue'},
       'replyTo' : {'email':'deepspace.office@gmail.com', 'name':'Sendinblue'},
       'to' : [{'name': name, 'email': email}],
-      'htmlContent' : '<html><body><h1>Click the button below to verify your email.</h1><br/><a href="deepspace-testing.up.railway.app/user/verifyEmail?code={{code}}&id={{id}}></a></body></html>',
+      'htmlContent' : '<html><body><h1>Click the button below to verify your email.</h1><br/><a href="deepspace-testing.up.railway.app/user/verifyEmail?code={code}&id={id}></a></body></html>',
       'params' : {'code': code , 'id': id}
     }
   ).then(function(data) {
