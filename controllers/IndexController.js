@@ -1,6 +1,7 @@
 const path = require('path');
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
+const { like, unlike } = require(path.join(__dirname, "../src/helpers/Like"));
 
 const getIndex = async (req, res, next) => {
   const current = req.user || '';
@@ -32,6 +33,16 @@ const unfollowFromIndex = async (req, res, next) => {
   res.redirect('/');
 };
 
+const likeFromIndex = async (req, res, next) => {
+  await like(req.user.id, req.query.postId)
+  res.redirect('/');
+}
+
+const unlikeFromIndex = async (req, res, next) => {
+  await unlike(req.user.id, req.query.postId)
+  res.redirect('/');
+}
+
 const privacyPolicy = async (req, res, next) => {
   return res.render("privacyPolicy")
 }
@@ -57,4 +68,4 @@ const post = async (req, res, next) => {
 }
 
 
-module.exports = { getIndex, followFromIndex, unfollowFromIndex, privacyPolicy, search, upload, error, post }
+module.exports = { getIndex, followFromIndex, unfollowFromIndex, likeFromIndex, unlikeFromIndex, privacyPolicy, search, upload, error, post }
