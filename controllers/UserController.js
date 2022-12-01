@@ -149,7 +149,7 @@ const createUser = async (req, res, next) => {
       '88',
       code
     );
-    const user = await Users.find({ username: req.body.username })
+    const user = await Users.findOne({ username: req.body.username })
     await mail(user.id, user.name, user.email, code)
     return res.redirect('/user/login');
     }
