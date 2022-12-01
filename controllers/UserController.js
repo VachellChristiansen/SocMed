@@ -315,6 +315,13 @@ const deletedUser = async (req, res, next) => {
   res.render('User/deleted')
 }
 
+const changePassword = async (req, res, next) => {
+  const user = await Users.findById(req.user.id);
+  user.password = await hash(req.body.newpassword);
+  await user.save();
+  return res.redirect('/setting')
+}
+
 module.exports = {
   create,
   findByEmail,
@@ -332,6 +339,7 @@ module.exports = {
   unfollowFromOtherUser,
   registerFailed,
   removeAccount,
+  changePassword,
   //posts
   uploadPost,
   // pages

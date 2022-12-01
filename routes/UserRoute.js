@@ -19,7 +19,8 @@ const {
   editProfile,
   removeAccount,
   uploadPost,
-  deletedUser
+  deletedUser,
+  changePassword
 } = require(path.join(__dirname, "../controllers/UserController"));
 const { check } = require(path.join(__dirname, "../middlewares/AccountCheck"));
 const { upload } = require(path.join(__dirname, "../src/helpers/Upload"))
@@ -53,6 +54,8 @@ router.post("/editProfile", celebrate(userValidator.edit), upload, editProfile);
 router.post("/createUser", celebrate(userValidator.register), upload, createUser);
 
 router.post("/uploadPost", celebrate(userValidator.upload), upload, uploadPost);
+
+router.post("/changePassword", celebrate(userValidator.changePassword), changePassword);
 
 router.post("/loginValidation", celebrate(userValidator.login), passport.authenticate('local', { failureRedirect: '/user/loginFailed' }), loginUser);
 

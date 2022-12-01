@@ -33,4 +33,10 @@ module.exports = {
       file: joi.string(),
     },
   },
+  changePassword: {
+    body: {
+      newpassword: joi.string().required(),
+      cnewpassword: joi.string().required(),
+    }
+  }
 };
