@@ -20,7 +20,6 @@ const getIndex = async (req, res, next) => {
 const followFromIndex = async (req, res, next) => {
   
   await follow(req.user.id, req.query.follow);
-  console.log(req.user.username+ " follows " + req.query.follow)
 
   res.redirect('/');
 };
@@ -28,7 +27,6 @@ const followFromIndex = async (req, res, next) => {
 const unfollowFromIndex = async (req, res, next) => {
 
   await unfollow(req.user.id, req.query.unfollow);
-  console.log(req.user.username+ " unfollows " + req.query.unfollow)
 
   res.redirect('/');
 };
@@ -64,7 +62,6 @@ const error = async (req, res, next) => {
 }
 const post = async (req, res, next) => {
   const video = await Posts.findById(req.params.postId)
-  console.log(video)
   const current = req.user || '';
   const user = await Users.findById(video.userId);
   const users = await Users.find({});
