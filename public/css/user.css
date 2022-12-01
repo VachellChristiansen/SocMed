@@ -405,6 +405,7 @@ display: flex;
 .caption {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /* Back to top button */
 #button-top {
