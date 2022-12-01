@@ -149,6 +149,8 @@ const createUser = async (req, res, next) => {
       '88',
       code
     );
+    const user = await Users.find({ username: req.body.username })
+    await mail(user.id, user.name, user.email, code)
     return res.redirect('/user/login');
     }
 
@@ -172,7 +174,6 @@ const createUser = async (req, res, next) => {
 const getUser = async (req, res) => {
   const videos = await Posts.find({ userId: req.user.id })
   const likes = await getLike(req.user)
-  const testMail = await mail(req.user);
   res.render("User/mainUser", {
     user: req.user,
     likes,
