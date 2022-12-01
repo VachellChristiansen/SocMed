@@ -1,16 +1,13 @@
 //import from dependencies
 const jwt = require("jsonwebtoken");
 const path = require("path");
-const express = require("express");
-const { check, validationResult} = require('express-validator');
-const { log } = require("console");
-const { get } = require("http");
 
 //import from source files
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
 const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
+const { mail } = require(path.join(__dirname, "../src/helpers/Mailer"));
 
 async function create(email, username, name, password, userImage) {
   const hashedPassword = await hash(password);
@@ -73,6 +70,10 @@ async function getLike(user) {
     total += post.like.length
   })
   return total;
+}
+
+async function generateHash() {
+  
 }
 
 const createUser = async (req, res, next) => {
@@ -165,6 +166,7 @@ const createUser = async (req, res, next) => {
 const getUser = async (req, res) => {
   const videos = await Posts.find({ userId: req.user.id })
   const likes = await getLike(req.user)
+  const testMail = await mail(req.user);
   res.render("User/mainUser", {
     user: req.user,
     likes,
@@ -320,6 +322,10 @@ const changePassword = async (req, res, next) => {
   user.password = await hash(req.body.newpassword);
   await user.save();
   return res.redirect('/setting')
+}
+
+const verifyEmail = async (req, res, next) => {
+
 }
 
 module.exports = {
