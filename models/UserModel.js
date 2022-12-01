@@ -13,7 +13,6 @@ const UserSchema = mongoose.Schema({
   image: String,
   phone: Number,
   status: String,
-  code: String,
   postId: [ PostSchema ],
   followers: [ FollowerSchema ],
   following: [ FollowingSchema ]

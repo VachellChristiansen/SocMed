@@ -21,7 +21,7 @@ const {
   uploadPost,
   deletedUser,
   changePassword,
-  verifyEmail
+  // verifyEmail
 } = require(path.join(__dirname, "../controllers/UserController"));
 const { check } = require(path.join(__dirname, "../middlewares/AccountCheck"));
 const { upload } = require(path.join(__dirname, "../src/helpers/Upload"))
@@ -38,7 +38,7 @@ router.get("/unfollow", check, unfollowFromOtherUser);
 
 router.get("/register", register);
 
-router.get("/verifyEmail", verifyEmail);
+// router.get("/verifyEmail", verifyEmail);
 
 router.get("/login", loginPage); 
 

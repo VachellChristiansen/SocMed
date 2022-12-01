@@ -8,9 +8,9 @@ const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
 const config = require(path.join(__dirname, "../src/core/config"));
 const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
 const { follow, unfollow } = require(path.join(__dirname, "../src/helpers/Follow"));
-const { mail } = require(path.join(__dirname, "../src/helpers/Mailer"));
+// const { sendMail } = require(path.join(__dirname, "../src/helpers/Mailer"));
 
-async function create(email, username, name, password, userImage, status, code) {
+async function create(email, username, name, password, userImage, status) {
   const hashedPassword = await hash(password);
   const newUser = new Users({
     email,
@@ -18,8 +18,7 @@ async function create(email, username, name, password, userImage, status, code) 
     name,   
     password: hashedPassword,
     image: userImage,
-    status: status,
-    code: code
+    status: status
   })
   return newUser.save();
 }
@@ -139,18 +138,17 @@ const createUser = async (req, res, next) => {
     }
      else {
     // register user (insert to db)
-    const code = await generateHash()
+    // const code = await generateHash()
     await create(
       req.body.email,
       req.body.username,
       req.body.name,
       req.body.password,
       defaultUserImage,
-      '88',
-      code
+      '99'
     );
-    const user = await Users.findOne({ username: req.body.username })
-    await mail(user.id, user.name, user.email, code)
+    // const user = await Users.findOne({ username: req.body.username })
+    // await sendMail(user.name, user.email, code, user.id)
     return res.redirect('/user/login');
     }
 
@@ -331,19 +329,19 @@ const changePassword = async (req, res, next) => {
   return res.redirect('/setting')
 }
 
-const verifyEmail = async (req, res, next) => {
+// const verifyEmail = async (req, res, next) => {
   // expecting an url like verifyEmail?id=user.id&code=user.code
-  const user = await Users.findById(req.query.id).exec();
-  const code = req.query.code;
+//   const user = await Users.findById(req.query.id).exec();
+//   const code = req.query.code;
 
-  if(user.code == code) {
-    user.status = '99';
-    await user.save();
-    return res.redirect('/user/login')
-  } else {
-    return res.redirect('/')
-  }
-}
+//   if(user.code == code) {
+//     user.status = '99';
+//     await user.save();
+//     return res.redirect('/user/login')
+//   } else {
+//     return res.redirect('/')
+//   }
+// }
 
 module.exports = {
   create,
@@ -363,7 +361,7 @@ module.exports = {
   registerFailed,
   removeAccount,
   changePassword,
-  verifyEmail,
+  // verifyEmail,
   //posts
   uploadPost,
   // pages
