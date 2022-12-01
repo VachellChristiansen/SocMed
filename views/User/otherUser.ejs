@@ -44,9 +44,6 @@
       <a class="pop-up align-cen justify-cen flex" href="/setting/" >
         Settings
       </a>
-      <a class="pop-up align-cen justify-cen flex" href="/setting/">
-        Help
-      </a>
       <a class="pop-up align-cen justify-cen flex" href="/privacypolicy">
         Privacy Policy
       </a>
@@ -164,17 +161,19 @@
             </div>
           </div>
 
-          <div class="content">
-            <% videos.forEach((video, index) => { %>
-            <div class="thumbnails">
-              <a href="/post/<%= video.id %>">
-              <video loop muted class="content-video">
-                <source src="<%= video.file %>">
-              </a>
-              </video>
-              <div class="caption"><%= video.title %></div>
+          <div class="main-container">
+            <div class="contents">
+              <% videos.forEach((video, index) => { %>
+              <div class="thumbnails">
+                <a href="/post/<%= video.id %>">
+                <video loop muted class="content-video">
+                  <source src="<%= video.file %>">
+                </a>
+                </video>
+                <div class="caption"><%= video.title %></div>
+              </div>
+              <% }) %>
             </div>
-            <% }) %>
           </div>
         </div>
       </div>

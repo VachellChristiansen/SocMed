@@ -415,10 +415,6 @@ button {
 }
 
 .content-video {
-  width: 20%;
-}
-
-.content-video {
   width: 100%;
   filter: grayscale(1);
   transition: 0.3s ease;

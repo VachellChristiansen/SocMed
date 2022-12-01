@@ -386,6 +386,32 @@ display: flex;
   justify-items: center;
 }
 
+
+.main-container {
+  padding-left: 1em;
+  margin-top: 1em;
+  height: calc(100vh - 60px - 2em);
+  width: 950px;
+  max-width: 950px;
+  overflow-y: auto;
+}
+
+.main-item-container {
+  max-width: 100%;
+  display: flex;
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+}
+
+.contents > * {
+  flex-basis: 23%;
+}
+
 .content-video {
   width: 100%;
   filter: grayscale(1);
