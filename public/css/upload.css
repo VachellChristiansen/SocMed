@@ -207,6 +207,17 @@ button:hover {
   max-height: 100%;
 }
 
+.user-profile-pic {
+  height: 3rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-profile-pic:hover {
+  cursor: pointer;
+}
+
 .fullscreen-bg {
   position: fixed;
   top: 0;

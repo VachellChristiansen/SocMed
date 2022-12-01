@@ -55,7 +55,7 @@ const search = async (req, res, next) => {
   return res.redirect('/user/other/' + search)
 }
 const upload = async (req, res, next) => {
-  return res.render("upload", { user: req.user.username })
+  return res.render("upload", { user: req.user.username, current: req.user })
 }
 const error = async (req, res, next) => {
   return res.render("errorPage")
