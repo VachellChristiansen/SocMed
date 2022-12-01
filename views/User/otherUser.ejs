@@ -25,13 +25,6 @@
           <input class="search" name="search" type="search" placeholder="Searching for something?">
         </form>
       </div>
-      <!-- <div class="sign-button flex-row justify-end align-cen">
-        <a href="/upload" class="btn signup">+ Upload</a>
-        <a href="/user/login" class="btn signin">Sign In</a>
-        <div class="profile-button flex justify-end align-cen hidden">
-          <img class="user-profile-pic master h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOLFh-kJkRhlV9JbswP1tLoOrfiTgicVmblx-txQD6-FLgqxuZnC5DLfHvk9nGOqXw1Q&usqp=CAU" id="user1" alt="profile">
-        </div>
-      </div> -->
       <% if (current == '') { %>
         <div class="sign-button flex-row justify-end align-cen">
           <a href="/user/register" class="btn signup">Sign Up</a>
@@ -163,7 +156,7 @@
               Following 
               <div class="user-numbers"><%= followersCount %></div>
               Followers 
-              <div class="user-numbers">3905</div>
+              <div class="user-numbers"><%= likes %></div>
               Likes 
             </div>
             <div class="user-description-star">
@@ -179,12 +172,6 @@
                 <source src="<%= video.file %>">
               </a>
               </video>
-              <div class="views">
-              <i class="bi bi-play"></i>
-              <span class="count">
-                1234
-              </span>
-              </div>
               <div class="caption"><%= video.title %></div>
             </div>
             <% }) %>

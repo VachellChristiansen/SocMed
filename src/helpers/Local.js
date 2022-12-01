@@ -9,6 +9,13 @@ const isFollowed = (account, current) => {
   if (exists) { return true } else { return false }
 }
 
+const isLiked = (post, current) => {
+  if (current == '') {
+    return null;
+  }
+  const exists = post.like.find((item) => { return item.userId == current })
+  if (exists) { return true } else { return false }
+}
 const checkUser = (userid, users) => {
   const user = users.find((user) => { return user.id === userid});
   return user;
@@ -17,5 +24,6 @@ const checkUser = (userid, users) => {
 
 module.exports = {
   isFollowed,
+  isLiked,
   checkUser
 }

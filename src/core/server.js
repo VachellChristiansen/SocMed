@@ -12,7 +12,7 @@ const { errors } = require("celebrate");
 
 const { sessionData } = require(path.join(__dirname, '../helpers/Session'));
 
-const { isFollowed, checkUser } = require(path.join(__dirname, '../helpers/Local'));
+const { isFollowed, isLiked, checkUser } = require(path.join(__dirname, '../helpers/Local'));
 
 const app = express();
 
@@ -36,6 +36,7 @@ app.use(express.urlencoded({ extended:false }));
 
 //local functions
 app.locals.isFollowed = isFollowed;
+app.locals.isLiked = isLiked;
 app.locals.checkUser = checkUser;
 
 app.use((err, req, res, next) => {

@@ -103,20 +103,23 @@
     
               <div class="interactive-bubble grid" id="interactive-bubble">
                 <div class="interactive-parts">
-                  <button class="btn bubble like">
+                  <% if (isLiked(video, current.id)) { %>
+                    <button onclick="location.href='/unlike?postId=<%= video.id %>&from=post'" class="btn bubble like">
+                    <i class="fa-regular fa-heart fa-solid"></i>
+                    </button>
+                  <% } else { %>
+                    <button onclick="location.href='/like?postId=<%= video.id %>&from=post'" class="btn bubble like">
                     <i class="fa-regular fa-heart"></i>
-                  </button>
+                    </button>
+                  <% } %>
                   <span class="count">
-                    1234
+                    <%= video.like.length %>
                   </span>
                 </div>
                 <div class="interactive-parts">
                   <button class="btn bubble" onclick="share(0)">
                     <i class="fa-solid fa-share"></i>
                   </button>
-                  <span class="count">
-                    1234
-                  </span>
                 </div>
                 <div class="share-container flex-row hidden">
                   <button class="share-button facebook-app">
@@ -173,7 +176,7 @@
           </div>
 
           <div class="comment-add">
-            <form class="justify-cen align-cen flex-row" action="/post/postComment?postId=<%= video.id %>" method="POST">
+            <form class="justify-cen align-cen flex-row" action="/post/postComment?postId=<%= video.id %>&from=post" method="POST">
               <textarea class="comment-text-box" name="comment" placeholder="Add your comments..." rows="4" cols="50" maxlength="150"></textarea>
               <input class="submit-comment" type="submit" value="Post">
             </form>

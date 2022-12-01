@@ -21,9 +21,9 @@ function share(count){
 share.classList.toggle("hidden");
 };
 
-$('.like').click(function(event){
-  $(this).find('i').toggleClass("fa-solid");
-});
+// $('.like').click(function(event){
+//   $(this).find('i').toggleClass("fa-solid");
+// });
 
 // $('.user-follow').click(function(event) {
 //   if($(this).hasClass("follow")){
