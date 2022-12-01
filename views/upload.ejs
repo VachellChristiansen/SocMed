@@ -13,26 +13,40 @@
 
 <body>
 
-  <header class="primary-header">
+  <header class="primary-header"> 
     <div class="container grid navbar">
       <div class="flex-row align-cen">
         <a href="/" class="logo">DeepSpace</a>
       </div>
       <div class="search-bar">
-        <form action="/search" class="justify-cen align-cen flex-row">
+        <form class="justify-cen align-cen flex-row" action="/search">
           <button class="submit-search" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-          <input class="search" type="search" placeholder="Searching for something?">
+          <input class="search" type="search" name="search" placeholder="Searching for something?">
         </form>
       </div>
+      <% if (current == '') { %>
+      <div class="sign-button flex-row justify-end align-cen">
+        <a href="/upload" class="btn upload">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-upload" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+          </svg>
+        </a>
+        <a href="/user/register" class="btn signup">Sign Up</a>
+        <a href="/user/login" class="btn signin">Sign In</a>
+      </div>
+      <% } else { %>
       <div class="sign-button flex-row justify-end align-cen">
         <a href="/upload" class="btn signup">+ Upload</a>
         <div class="profile-button flex justify-end align-cen">
           <img class="user-profile-pic master h-100" src="<%= current.image %>" alt="profile">
         </div>
       </div>
+      <% } %>
     </div>
+
   </header>
 
   <div class="fullscreen-bg">
