@@ -4,6 +4,7 @@ const path = require("path");
 const express = require("express");
 const { check, validationResult} = require('express-validator');
 const { log } = require("console");
+const { get } = require("http");
 
 //import from source files
 const { Users, Posts } = require(path.join(__dirname, "../models/Model"));
@@ -63,6 +64,15 @@ async function login(username, password) {
 async function generateToken(id) {
   const payload = { id };
   return jwt.sign(payload, config.jwtSecretKey)
+}
+
+async function getLike(user) {
+  const posts = await Posts.find({ userId: user.id })
+  let total = 0;
+  posts.forEach((post) => {
+    total += post.like.length
+  })
+  return total;
 }
 
 const createUser = async (req, res, next) => {
@@ -193,7 +203,7 @@ const getOtherUser = async (req, res, next) => {
   const top = await Users.find({}).sort({ followers: -1 }).limit(3).exec();
   const recommended = await Users.find({ 'followers.username': { $ne: current.username || '' } }).limit(3).exec();
 
-
+  const likes = await getLike(otherUser)
   const followersCount = otherUser.followers.length;
   const followingCount = otherUser.following.length;
   const videos = await Posts.find({ userId: otherUser.id })
@@ -207,6 +217,7 @@ const getOtherUser = async (req, res, next) => {
     videos,
     top,
     recommended,
+    likes,
     current
   })
 };
