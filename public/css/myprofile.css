@@ -402,6 +402,7 @@ button {
   display: flex;
 }
 
+
 .contents {
   width: 100%;
   display: flex;
@@ -428,10 +429,15 @@ button {
   filter: grayscale(0);
 }
 .thumbnails{
+  max-width: fit-content;
+  overflow: hidden;
   padding: 1em;
 }
 
-
+.caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .modal {
   font-size: smaller;
   width: 100%;

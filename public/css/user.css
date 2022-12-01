@@ -397,9 +397,15 @@ display: flex;
   filter: grayscale(0);
 }
 .thumbnails{
+  max-width: fit-content;
+  overflow: hidden;
   padding: 1em;
 }
 
+.caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /* Back to top button */
 #button-top {
   display: none;
