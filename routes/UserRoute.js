@@ -30,7 +30,7 @@ const router = express.Router();
 
 // route here starts with "localhost/user/"
 
-router.get("/", getUser);
+router.get("/", check, getUser);
 
 router.get("/follow", check, followFromOtherUser);
 
