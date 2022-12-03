@@ -354,6 +354,7 @@ button:hover {
 }
 .content-video {
   height: 100vh;
+  max-width: 450px;
 }
 
 
