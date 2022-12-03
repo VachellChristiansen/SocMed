@@ -4,13 +4,6 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 
 ### Todo
 
-- [ ] Comment, like, (if possible: share) for each posts
-- [ ] Search 
-- [ ] Display user and other user's info and posts
-- [ ] Display following's posts on index page
-- [ ] Post for each user
-- [ ] Delete account
-
 ### In Progress
 
 ### Done ✓
@@ -28,3 +21,9 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 - [x] Edit Profile functions
 - [x] Dynamic url for each user
 - [x] Upload form update
+- [x] Comment, like, (if possible: share) for each posts
+- [x] Search 
+- [x] Display user and other user's info and posts
+- [x] Display following's posts on index page
+- [x] Post for each user
+- [x] Delete account
