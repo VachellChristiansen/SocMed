@@ -279,6 +279,18 @@ const editProfile = async (req, res, next) => {
 
 const uploadPost = async (req, res, next) => {
   try {
+      const array_of_allowed_files = ['mp4', 'mov', 'wmv', 'm4v', 'avi'];
+
+      // Get the extension of the uploaded file
+      const file_extension = req.body.upload.slice(
+      ((req.body.upload.lastIndexOf('.') - 1) >>> 0) + 2
+      );
+
+      // Check if the uploaded file is allowed
+      if (!array_of_allowed_files.includes(file_extension)) {
+      throw Error('Invalid file');
+      }
+
     await createPost(
       req.user.id,
       req.body.title,

@@ -97,11 +97,12 @@
         <div class="hidden" id="change-password">
           <form class="application" action="/user/changePassword" method="POST">
             <label for="newpassword">New Password</label>
-            <input type="password" name="newpassword" class="npass">
+            <input type="password" name="newpassword" class="npass" id="passInput">
             <label for="cnewpassword">Confirm New Password</label>
-            <input type="password" name="cnewpassword" class="cnpass">
+            <input type="password" name="cnewpassword" class="cnpass" id="confInput">
+            <p id="checkMatch"></p>
             <div class="btnupdt">
-            <button type="submit" class="updtbtn">Update</button>
+            <button type="submit" class="updtbtn submit">Update</button>
             </div>
           </form>
         </div>
