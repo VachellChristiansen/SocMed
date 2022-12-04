@@ -288,7 +288,7 @@ const uploadPost = async (req, res, next) => {
 
       // Check if the uploaded file is allowed
       if (!array_of_allowed_files.includes(file_extension)) {
-      throw Error('Invalid file');
+        throw Error('Invalid file');
       }
 
     await createPost(
@@ -300,7 +300,7 @@ const uploadPost = async (req, res, next) => {
 
     return res.redirect('/user');
   } catch (err) {
-    return next(err);
+    return res.render("upload", { user: req.user.username, current: req.user, error:'Invalid file extension!' });
   }
 };
 
