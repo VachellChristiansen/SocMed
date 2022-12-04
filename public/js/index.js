@@ -54,3 +54,20 @@ share.classList.toggle("hidden");
     $('.master').click(function(event) {
     location.href=`/user`;
   });
+
+  /* PROFILE NAVBAR */
+$('.master,.profile-menu').mouseover(function(event){
+  $('.profile-menu').removeClass("hidden");
+  });
+
+  $('.profile-menu').mouseout(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+
+  $('.main').mouseover(function(event){
+    $('.profile-menu').addClass("hidden");
+    });
+
+    $(document).mouseleave(function () {
+      $('.profile-menu').addClass("hidden");
+  });
